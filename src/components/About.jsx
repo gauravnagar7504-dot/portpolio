@@ -53,16 +53,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Floating experience badge */}
-            <motion.div
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute right-0 md:-right-8 top-12 md:top-16 glass-card rounded-2xl p-4 border border-neon-blue/25 shadow-neon-blue z-10 scale-90 md:scale-100 origin-right"
-            >
-              <div className="text-2xl font-display font-800 text-gradient">3+</div>
-              <div className="text-xs text-white/50 mt-0.5">Years of</div>
-              <div className="text-xs text-white/50">Experience</div>
-            </motion.div>
           </motion.div>
 
           {/* Right: Content */}
