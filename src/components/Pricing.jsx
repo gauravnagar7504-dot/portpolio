@@ -22,7 +22,7 @@ const plans = [
       'Basic SEO Setup',
       'Fast Loading',
     ],
-    prices: { USD: '36', INR: '3,000', EUR: '33', GBP: '29' },
+    prices: { USD: '179', INR: '15,000', EUR: '169', GBP: '139' },
     isFeatured: false,
     buttonText: 'Get Started',
   },
@@ -40,7 +40,7 @@ const plans = [
       'Social Media Integration',
       'Modern Animations',
     ],
-    prices: { USD: '179', INR: '15,000', EUR: '169', GBP: '139' },
+    prices: { USD: '349', INR: '30,000', EUR: '319', GBP: '269' },
     isFeatured: true,
     buttonText: 'Most Popular',
   },
@@ -162,7 +162,7 @@ export default function Pricing() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute left-0 md:left-auto md:right-0 top-full mt-2 w-48 glass-card border border-white/10 rounded-2xl p-2 z-50 overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
+                  className="absolute left-0 md:left-auto md:right-0 top-full mt-2 w-48 bg-[#121218] border border-white/10 rounded-2xl p-2 z-50 overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
                 >
                   {Object.keys(pricingData).map((code) => (
                     <button
