@@ -20,8 +20,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
           {/* Logo */}
-          <div className="flex flex-col items-center md:items-start">
+          <div className="flex flex-col items-center md:items-start max-w-xs">
             <span className="font-display text-2xl font-800 text-white tracking-tight">DYNAMIC DESIGNING</span>
+            <p className="text-[10px] text-white/30 mt-2 text-center md:text-left leading-normal">
+              Premium website development and design studio serving brands in Mumbai, Bangalore, Delhi NCR, Hyderabad, Pune, Chennai, and globally.
+            </p>
           </div>
 
           {/* Nav links */}

@@ -76,9 +76,8 @@ export default function About() {
             </motion.div>
 
             <motion.p {...fadeUp(0.2)} className="text-white/50 text-base leading-relaxed mb-6">
-            I'm <span className="text-gradient font-semibold">Dynamic Designing</span> — a premium web design studio
-              crafting cinematic digital experiences that help brands stand out
-              in a crowded marketplace.
+            I'm <span className="text-gradient font-semibold">Dynamic Designing</span> — a premium website development and design studio
+              crafting cinematic digital experiences. Based in India, we deliver high-performance website development services to premium brands in **Mumbai**, **Bangalore**, **Delhi NCR**, **Hyderabad**, **Pune**, and globally.
             </motion.p>
 
             <motion.p {...fadeUp(0.3)} className="text-white/40 text-sm leading-relaxed mb-10">
