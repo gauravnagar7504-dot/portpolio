@@ -77,7 +77,7 @@ export default function About() {
 
             <motion.p {...fadeUp(0.2)} className="text-white/50 text-base leading-relaxed mb-6">
             I'm <span className="text-gradient font-semibold">Dynamic Designing</span> — a premium website development and design studio
-              crafting cinematic digital experiences. Based in India, we deliver high-performance website development services to premium brands in **Mumbai**, **Bangalore**, **Delhi NCR**, **Hyderabad**, **Pune**, and globally.
+              crafting cinematic digital experiences. Based in India, we deliver high-performance website development services to premium brands in <strong className="text-white font-semibold">Mumbai</strong>, <strong className="text-white font-semibold">Bangalore</strong>, <strong className="text-white font-semibold">Delhi NCR</strong>, <strong className="text-white font-semibold">Hyderabad</strong>, <strong className="text-white font-semibold">Pune</strong>, and globally.
             </motion.p>
 
             <motion.p {...fadeUp(0.3)} className="text-white/40 text-sm leading-relaxed mb-10">
