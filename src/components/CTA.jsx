@@ -10,7 +10,7 @@ const socials = [
 export default function CTA() {
 
   return (
-    <section id="contact" className="relative py-32 overflow-hidden">
+    <section id="contact" className="relative py-16 md:py-32 overflow-hidden">
       {/* Bg */}
       <div className="absolute inset-0 bg-[#080B12]/80" />
 

@@ -19,7 +19,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="relative py-32 overflow-hidden">
+    <section id="about" className="relative py-16 md:py-32 overflow-hidden">
       {/* Glow orb */}
       <div className="glow-orb w-[500px] h-[500px] bg-neon-purple/8 top-1/2 -translate-y-1/2 left-[-200px]" />
 

@@ -103,14 +103,14 @@ function ProjectCard({ project, index }) {
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="relative py-32 overflow-hidden">
+    <section id="portfolio" className="relative py-16 md:py-32 overflow-hidden">
       {/* Glow orbs */}
       <div className="glow-orb w-[500px] h-[500px] bg-neon-purple/8 top-0 right-[-200px]" />
       <div className="glow-orb w-[400px] h-[400px] bg-neon-blue/6 bottom-0 left-[-100px]" />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="mb-16">
+        <div className="mb-10 md:mb-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
             <div>
               <motion.span

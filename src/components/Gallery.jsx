@@ -18,7 +18,7 @@ const galleryItems = [
 
 export default function Gallery() {
   return (
-    <section className="relative py-32 overflow-hidden">
+    <section className="relative py-16 md:py-32 overflow-hidden">
       <div className="glow-orb w-[500px] h-[500px] bg-neon-purple/8 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
       <div className="max-w-7xl mx-auto px-6">

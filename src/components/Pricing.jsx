@@ -99,7 +99,7 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="relative py-32 overflow-hidden bg-[#050508]">
+    <section id="pricing" className="relative py-16 md:py-32 overflow-hidden bg-[#050508]">
       {/* Floating particles/glow */}
       <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-neon-purple/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-neon-blue/5 blur-[150px] rounded-full pointer-events-none" />
@@ -107,7 +107,7 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header & Currency Switcher */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-12 md:mb-20 gap-8">
           <div className="max-w-2xl">
             <motion.span
               initial={{ opacity: 0, y: 20 }}

@@ -46,13 +46,13 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-32 overflow-hidden">
+    <section id="services" className="relative py-16 md:py-32 overflow-hidden">
       {/* Glow orb */}
       <div className="glow-orb w-[700px] h-[400px] bg-neon-blue/6 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2" />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 md:mb-20">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

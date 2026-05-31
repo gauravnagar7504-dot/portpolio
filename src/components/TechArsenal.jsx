@@ -124,7 +124,7 @@ function TiltCard({ tool, index }) {
 
 export default function TechArsenal() {
   return (
-    <section className="relative py-32 overflow-hidden bg-[#030305]">
+    <section className="relative py-16 md:py-32 overflow-hidden bg-[#030305]">
       {/* Cinematic Background Mesh */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-neon-purple/20 via-[#030305] to-transparent" />
@@ -136,7 +136,7 @@ export default function TechArsenal() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Header Section */}
-        <div className="text-center max-w-4xl mx-auto mb-20 relative">
+        <div className="text-center max-w-4xl mx-auto mb-12 md:mb-20 relative">
           {/* Subtle floating glow behind header */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[100px] bg-neon-blue/20 blur-[100px] rounded-full pointer-events-none" />
           

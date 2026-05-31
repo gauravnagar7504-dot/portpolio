@@ -51,7 +51,7 @@ const withWebsite = [
 
 export default function BusinessBenefits() {
   return (
-    <section id="benefits" className="relative py-32 overflow-hidden bg-[#050508]">
+    <section id="benefits" className="relative py-16 md:py-32 overflow-hidden bg-[#050508]">
       {/* Background Orbs */}
       <div className="glow-orb w-[600px] h-[600px] bg-neon-purple/5 top-[-100px] left-[-200px]" />
       <div className="glow-orb w-[500px] h-[500px] bg-neon-blue/5 bottom-[100px] right-[-150px]" />
@@ -59,7 +59,7 @@ export default function BusinessBenefits() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
         {/* Header Section */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-20">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function BusinessBenefits() {
         </div>
 
         {/* Benefit Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16 md:mb-32">
           {benefits.map((benefit, index) => (
             <motion.div
               key={index}
@@ -115,7 +115,7 @@ export default function BusinessBenefits() {
         </div>
 
         {/* Extra Premium Section: Comparison */}
-        <div className="w-full mx-auto mb-32 relative">
+        <div className="w-full mx-auto mb-16 md:mb-32 relative">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -36,13 +36,13 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="relative py-32 overflow-hidden">
-      {/* Bg stripe */}
-      <div className="absolute inset-0 bg-[#080B12]/60" />
+    <section className="relative py-16 md:py-32 overflow-hidden">
+      {/* Glow orbs */}
+      <div className="glow-orb w-[500px] h-[500px] bg-neon-purple/5 -bottom-[200px] right-[-100px]" />
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 md:mb-20">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
