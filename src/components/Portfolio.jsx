@@ -76,21 +76,21 @@ export default function Portfolio() {
           </div>
         </div>
 
-        {/* Category Filter Pills */}
+        {/* Category Filter Pills (Horizontal Slider) */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="flex items-center gap-2 overflow-x-auto pb-3 mb-10 scrollbar-none"
+          className="flex flex-nowrap items-center gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar scrollbar-none py-3.5 px-3 -mx-3 mb-10"
         >
           {filterCategories.map((filter) => (
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-300 cursor-pointer ${
+              className={`shrink-0 px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-300 cursor-pointer ${
                 activeFilter === filter.id
-                  ? 'bg-neon-blue text-white shadow-neon-blue border border-neon-blue'
+                  ? 'bg-neon-blue text-white shadow-[0_0_16px_rgba(79,142,247,0.45)] border border-neon-blue'
                   : 'glass-card text-white/60 hover:text-white border border-white/10 hover:border-white/25'
               }`}
             >
