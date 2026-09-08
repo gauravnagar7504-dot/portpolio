@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
       content: (
         <>
           <p className="mb-4">
-            Dynamic Designing ("we," "our," or "studio"), founded and led by Gaurav Nagar in Jaipur, Rajasthan, India, operates the website{' '}
+            Dynamic Designing ("we," "our," or "studio"), founded and led by Gaurav Nagar in Kota, Rajasthan, India, operates the website{' '}
             <a href="https://www.dynamicdesigninng.com" className="text-neon-blue hover:underline">
               dynamicdesigninng.com
             </a>{' '}
@@ -127,7 +127,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <div className="p-4 rounded-xl glass-card border border-white/10 inline-flex flex-col gap-1 text-sm">
             <span className="font-semibold text-white">Dynamic Designing — Gaurav Nagar</span>
-            <span className="text-white/70">Jaipur, Rajasthan, India (302001)</span>
+            <span className="text-white/70">Kota, Rajasthan, India</span>
             <span className="text-neon-blue font-medium mt-1">
               <a href="mailto:gauravnagar7504@gmail.com" className="hover:underline">
                 gauravnagar7504@gmail.com

@@ -30,7 +30,7 @@ export default function HomePage() {
     },
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Jaipur',
+      addressLocality: 'Kota',
       addressRegion: 'Rajasthan',
       addressCountry: 'IN',
     },
@@ -41,7 +41,7 @@ export default function HomePage() {
       { '@type': 'City', name: 'Hyderabad' },
       { '@type': 'City', name: 'Pune' },
       { '@type': 'City', name: 'Chennai' },
-      { '@type': 'City', name: 'Jaipur' },
+      { '@type': 'City', name: 'Kota' },
       { '@type': 'Country', name: 'India' },
       { '@type': 'AdministrativeArea', name: 'Worldwide' },
     ],

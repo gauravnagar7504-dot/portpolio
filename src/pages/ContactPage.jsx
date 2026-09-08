@@ -19,7 +19,7 @@ export default function ContactPage() {
       email: 'gauravnagar7504@gmail.com',
       address: {
         '@type': 'PostalAddress',
-        addressLocality: 'Jaipur',
+        addressLocality: 'Kota',
         addressRegion: 'Rajasthan',
         addressCountry: 'IN',
       },
@@ -107,7 +107,7 @@ export default function ContactPage() {
                 <MapPin size={20} />
               </div>
               <span className="text-xs text-white/70 uppercase tracking-wider block mb-1">Studio Location</span>
-              <h3 className="text-lg font-display font-700 text-white mb-1">Jaipur, Rajasthan</h3>
+              <h3 className="text-lg font-display font-700 text-white mb-1">Kota, Rajasthan</h3>
               <p className="text-xs text-white/80 mb-4">Serving India & Global Clients</p>
               <span className="text-xs text-white/70 flex items-center gap-1">
                 <Clock size={12} /> Response in &lt; 2 Hours

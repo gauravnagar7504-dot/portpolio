@@ -19,7 +19,7 @@ export default function TermsPage() {
       content: (
         <>
           <p className="mb-4">
-            These Terms of Service ("Terms") govern the professional relationship, project deliverables, and commercial engagements between Dynamic Designing ("studio," "we," "us," or "our," led by Gaurav Nagar in Jaipur, Rajasthan, India) and the client ("you," "your," or "client") engaging our services.
+            These Terms of Service ("Terms") govern the professional relationship, project deliverables, and commercial engagements between Dynamic Designing ("studio," "we," "us," or "our," led by Gaurav Nagar in Kota, Rajasthan, India) and the client ("you," "your," or "client") engaging our services.
           </p>
           <p>
             By commissioning a project, accepting a formal quotation or proposal, making an initial deposit, or utilizing our website, you agree to be bound by these Terms in full.
@@ -124,7 +124,7 @@ export default function TermsPage() {
       title: '9. Governing Law & Dispute Resolution',
       content: (
         <p>
-          These Terms of Service are governed by and construed in accordance with the laws of India. Any legal dispute, controversy, or claim arising from or relating to our services shall be subject to the exclusive jurisdiction of the competent courts located in <strong className="text-white">Jaipur, Rajasthan, India</strong>.
+          These Terms of Service are governed by and construed in accordance with the laws of India. Any legal dispute, controversy, or claim arising from or relating to our services shall be subject to the exclusive jurisdiction of the competent courts located in <strong className="text-white">Kota, Rajasthan, India</strong>.
         </p>
       ),
     },
@@ -136,7 +136,7 @@ export default function TermsPage() {
           <div className="p-4 rounded-xl glass-card border border-white/10 inline-flex flex-col gap-1 text-sm">
             <span className="font-semibold text-white">Dynamic Designing — Gaurav Nagar</span>
             <span className="text-white/70">Lead Designer & Full-Stack Developer</span>
-            <span className="text-white/70">Jaipur, Rajasthan, India</span>
+            <span className="text-white/70">Kota, Rajasthan, India</span>
             <span className="text-neon-blue font-medium mt-1">
               <a href="mailto:gauravnagar7504@gmail.com" className="hover:underline">
                 gauravnagar7504@gmail.com

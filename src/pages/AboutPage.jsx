@@ -12,7 +12,7 @@ export default function AboutPage() {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
     name: 'About Dynamic Designing & Founder Gaurav Nagar',
-    description: 'Learn about Dynamic Designing, a luxury web design and development studio founded by Gaurav Nagar in Jaipur, Rajasthan, serving elite brands worldwide.',
+    description: 'Learn about Dynamic Designing, a luxury web design and development studio founded by Gaurav Nagar in Kota, Rajasthan, serving elite brands worldwide.',
     url: 'https://www.dynamicdesigninng.com/about',
     mainEntity: {
       '@type': 'Person',
@@ -26,7 +26,7 @@ export default function AboutPage() {
     <div className="pt-16 pb-16">
       <SEOHead
         title="About Dynamic Designing | Luxury Web Design Studio"
-        description="Learn about Dynamic Designing, a luxury web design and development studio founded by Gaurav Nagar in Jaipur, Rajasthan, crafting elite digital experiences for brands worldwide."
+        description="Learn about Dynamic Designing, a luxury web design and development studio founded by Gaurav Nagar in Kota, Rajasthan, crafting elite digital experiences for brands worldwide."
         canonicalUrl="https://www.dynamicdesigninng.com/about"
         schemaData={aboutSchema}
       />

@@ -31,7 +31,7 @@ const routes = [
   {
     path: 'about',
     title: 'About Dynamic Designing | Luxury Web Design Studio',
-    description: 'Learn about Dynamic Designing, a luxury web design and development studio founded by Gaurav Nagar in Jaipur, Rajasthan, crafting elite digital experiences for brands worldwide.',
+    description: 'Learn about Dynamic Designing, a luxury web design and development studio founded by Gaurav Nagar in Kota, Rajasthan, crafting elite digital experiences for brands worldwide.',
     canonical: 'https://www.dynamicdesigninng.com/about',
   },
   {
