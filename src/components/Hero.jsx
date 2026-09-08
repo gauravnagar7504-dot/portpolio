@@ -158,7 +158,7 @@ export default function Hero() {
             <img
               src={heroImg}
               alt="Dynamic Designing — Premium Web Design Studio"
-              fetchpriority="high"
+              fetchPriority="high"
               decoding="async"
               width="460"
               height="613"
