@@ -192,20 +192,20 @@ export default function BlogPostPage() {
         </div>
 
         {/* Share & Consultation Bar */}
-        <div className="p-6 rounded-2xl glass-card border border-white/10 mb-16 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="p-5 sm:p-6 rounded-2xl glass-card border border-white/10 mb-16 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 sm:gap-6">
           <div>
             <span className="text-xs uppercase tracking-wider text-white/70 block mb-1">Found this helpful?</span>
-            <p className="text-sm font-semibold text-white">Share this guide with founders & creators</p>
+            <p className="text-sm sm:text-base font-semibold text-white">Share this guide with founders & creators</p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="grid grid-cols-3 gap-2 sm:flex sm:items-center sm:gap-3 w-full sm:w-auto">
             <a
               href={`https://wa.me/?text=${encodeURIComponent(`${post.title} - Read here: ${currentUrl}`)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg glass-card border border-white/10 hover:border-emerald-500/40 text-emerald-400 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+              className="h-10 px-2 sm:px-4 rounded-lg glass-card border border-white/10 hover:border-emerald-500/40 text-emerald-400 text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors whitespace-nowrap"
             >
-              <MessageCircle size={15} />
+              <MessageCircle size={15} className="shrink-0" />
               <span>WhatsApp</span>
             </a>
 
@@ -213,9 +213,9 @@ export default function BlogPostPage() {
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(currentUrl)}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-2 rounded-lg glass-card border border-white/10 hover:border-sky-400/40 text-sky-400 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+              className="h-10 px-2 sm:px-4 rounded-lg glass-card border border-white/10 hover:border-sky-400/40 text-sky-400 text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors whitespace-nowrap"
             >
-              <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+              <svg className="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
               </svg>
               <span>Share</span>
@@ -223,9 +223,9 @@ export default function BlogPostPage() {
 
             <button
               onClick={handleCopyLink}
-              className="px-4 py-2 rounded-lg glass-card border border-white/10 hover:border-neon-blue/40 text-white/80 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
+              className="h-10 px-2 sm:px-4 rounded-lg glass-card border border-white/10 hover:border-neon-blue/40 text-white/80 text-[11px] sm:text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors cursor-pointer whitespace-nowrap"
             >
-              {copied ? <Check size={15} className="text-emerald-400" /> : <Share2 size={15} />}
+              {copied ? <Check size={15} className="text-emerald-400 shrink-0" /> : <Share2 size={15} className="shrink-0" />}
               <span>{copied ? 'Copied!' : 'Copy Link'}</span>
             </button>
           </div>
