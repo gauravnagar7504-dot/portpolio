@@ -225,3 +225,11 @@ export const categories = [
     designs: [],
   },
 ];
+
+export const allDesigns = categories.flatMap((category) =>
+  (category.designs || []).map((design) => ({
+    ...design,
+    categoryId: category.id,
+    categoryTitle: category.shortTitle || category.title,
+  }))
+);

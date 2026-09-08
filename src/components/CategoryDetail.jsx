@@ -119,18 +119,7 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
                       <h3 className="font-display font-700 text-xl text-white mb-1.5 group-hover:text-gradient transition-colors">
                         {design.title}
                       </h3>
-                      <p className="text-xs text-neon-blue/90 font-medium mb-2">{design.subtitle}</p>
-                      <p className="text-xs text-white/60 leading-relaxed mb-4">{design.description}</p>
-
-                      {design.tags && (
-                        <div className="flex flex-wrap gap-1.5 mb-2">
-                          {design.tags.map((t) => (
-                            <span key={t} className="text-[10px] px-2 py-0.5 rounded glass-card text-white/50 border border-white/5">
-                              {t}
-                            </span>
-                          ))}
-                        </div>
-                      )}
+                      <p className="text-xs text-neon-blue/90 font-medium">{design.subtitle}</p>
                     </div>
                   </div>
 
