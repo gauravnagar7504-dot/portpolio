@@ -25,6 +25,24 @@ function PageLoader() {
   );
 }
 
+const demoPaths = [
+  'the-aravali-palace',
+  'solara-jaipur',
+  'aurelia-beauty-studio',
+  'elara-beauty-house',
+  'nova-care',
+  'dr-aarav-mehta',
+  'movehouse',
+  'forge-fitness',
+];
+
+function DemoRedirect({ slug }) {
+  React.useEffect(() => {
+    window.location.replace(`/${slug}/index.html`);
+  }, [slug]);
+  return <PageLoader />;
+}
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -57,6 +75,9 @@ export default function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              {demoPaths.map((slug) => (
+                <Route key={slug} path={`/${slug}/*`} element={<DemoRedirect slug={slug} />} />
+              ))}
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>

@@ -1,7 +1,72 @@
 {
+  "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/the-aravali-palace",
+      "destination": "/the-aravali-palace/index.html"
+    },
+    {
+      "source": "/the-aravali-palace/:match*",
+      "destination": "/the-aravali-palace/:match*"
+    },
+    {
+      "source": "/solara-jaipur",
+      "destination": "/solara-jaipur/index.html"
+    },
+    {
+      "source": "/solara-jaipur/:match*",
+      "destination": "/solara-jaipur/:match*"
+    },
+    {
+      "source": "/aurelia-beauty-studio",
+      "destination": "/aurelia-beauty-studio/index.html"
+    },
+    {
+      "source": "/aurelia-beauty-studio/:match*",
+      "destination": "/aurelia-beauty-studio/:match*"
+    },
+    {
+      "source": "/elara-beauty-house",
+      "destination": "/elara-beauty-house/index.html"
+    },
+    {
+      "source": "/elara-beauty-house/:match*",
+      "destination": "/elara-beauty-house/:match*"
+    },
+    {
+      "source": "/nova-care",
+      "destination": "/nova-care/index.html"
+    },
+    {
+      "source": "/nova-care/:match*",
+      "destination": "/nova-care/:match*"
+    },
+    {
+      "source": "/dr-aarav-mehta",
+      "destination": "/dr-aarav-mehta/index.html"
+    },
+    {
+      "source": "/dr-aarav-mehta/:match*",
+      "destination": "/dr-aarav-mehta/:match*"
+    },
+    {
+      "source": "/movehouse",
+      "destination": "/movehouse/index.html"
+    },
+    {
+      "source": "/movehouse/:match*",
+      "destination": "/movehouse/:match*"
+    },
+    {
+      "source": "/forge-fitness",
+      "destination": "/forge-fitness/index.html"
+    },
+    {
+      "source": "/forge-fitness/:match*",
+      "destination": "/forge-fitness/:match*"
+    },
+    {
+      "source": "/((?!the-aravali-palace|solara-jaipur|aurelia-beauty-studio|elara-beauty-house|nova-care|dr-aarav-mehta|movehouse|forge-fitness).*)",
       "destination": "/index.html"
     }
   ]
