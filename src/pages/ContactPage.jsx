@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, MessageCircle, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import ContactForm from '../components/ContactForm';
 import CTA from '../components/CTA';
 
 export default function ContactPage() {
@@ -116,7 +117,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Embedded CTA Section */}
+      {/* Interactive Consultation Form Section */}
+      <section className="px-6 mb-24 relative z-10">
+        <ContactForm />
+      </section>
+
+      {/* Consultation Banner */}
       <CTA />
     </div>
   );
