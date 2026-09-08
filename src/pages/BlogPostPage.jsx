@@ -43,30 +43,57 @@ export default function BlogPostPage() {
 
   const articleSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.description,
-    author: {
-      '@type': 'Person',
-      name: post.author,
-      jobTitle: post.authorRole,
-      url: 'https://www.dynamicdesigninng.com/about',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Dynamic Designing',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://www.dynamicdesigninng.com/favicon.png',
+    '@graph': [
+      {
+        '@type': 'Article',
+        headline: post.title,
+        description: post.description,
+        author: {
+          '@type': 'Person',
+          name: post.author,
+          jobTitle: post.authorRole,
+          url: 'https://www.dynamicdesigninng.com/about',
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'Dynamic Designing',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://www.dynamicdesigninng.com/favicon.png',
+          },
+        },
+        datePublished: post.isoDate,
+        dateModified: post.isoDate,
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': currentUrl,
+        },
+        keywords: post.keywords,
       },
-    },
-    datePublished: post.isoDate,
-    dateModified: post.isoDate,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': currentUrl,
-    },
-    keywords: post.keywords,
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://www.dynamicdesigninng.com/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Blog',
+            item: 'https://www.dynamicdesigninng.com/blog',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: post.title,
+            item: currentUrl,
+          },
+        ],
+      },
+    ],
   };
 
   return (

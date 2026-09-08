@@ -292,6 +292,9 @@ export default function Portfolio() {
                 <img
                   src={imageModal.src}
                   alt={imageModal.title}
+                  width="819"
+                  height="1024"
+                  decoding="async"
                   className="max-h-[82vh] w-auto object-contain rounded-lg shadow-2xl border border-white/5"
                   style={{ aspectRatio: '819/1024' }}
                 />

@@ -24,20 +24,47 @@ export default function CategoryPage() {
 
   const categorySchema = {
     '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    name: `${category.title} Website Designs | Dynamic Designing`,
-    description: category.description,
-    url: `https://www.dynamicdesigninng.com/category/${category.id}`,
-    mainEntity: {
-      '@type': 'ItemList',
-      itemListElement: (category.designs || []).map((d, i) => ({
-        '@type': 'ListItem',
-        position: i + 1,
-        url: `https://www.dynamicdesigninng.com${d.liveUrl}`,
-        name: d.title,
-        description: d.description,
-      })),
-    },
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        name: `${category.title} Website Designs | Dynamic Designing`,
+        description: category.description,
+        url: `https://www.dynamicdesigninng.com/category/${category.id}`,
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: (category.designs || []).map((d, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            url: `https://www.dynamicdesigninng.com${d.liveUrl}`,
+            name: d.title,
+            description: d.description,
+          })),
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://www.dynamicdesigninng.com/',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Portfolio',
+            item: 'https://www.dynamicdesigninng.com/portfolio',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: category.title,
+            item: `https://www.dynamicdesigninng.com/category/${category.id}`,
+          },
+        ],
+      },
+    ],
   };
 
   return (

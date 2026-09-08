@@ -36,45 +36,60 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Dynamic Designing",
-        "url": "https://www.dynamicdesigninng.com/",
-        "logo": "https://www.dynamicdesigninng.com/favicon.png",
-        "image": "https://www.dynamicdesigninng.com/images/frame%201.png",
-        "description": "Dynamic Designing is a luxury website development and UI/UX design studio. We build ultra-fast, bespoke websites that make brands look luxury and premium.",
-        "telephone": "+917597557904",
-        "email": "gauravnagar7504@gmail.com",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Jaipur",
-          "addressRegion": "Rajasthan",
-          "addressCountry": "IN"
-        },
-        "areaServed": [
-          "Mumbai",
-          "Bangalore",
-          "Delhi NCR",
-          "Hyderabad",
-          "Pune",
-          "Chennai",
-          "Jaipur",
-          "India",
-          "Worldwide"
-        ],
-        "founder": {
-          "@type": "Person",
-          "name": "Gaurav Nagar",
-          "jobTitle": "Lead Designer & Developer",
-          "url": "https://www.dynamicdesigninng.com/"
-        },
-        "knowsAbout": [
-          "Website Development",
-          "UI/UX Design",
-          "Custom Web Design",
-          "React Development",
-          "Performance Optimization",
-          "Brand Identity"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://www.dynamicdesigninng.com/#website",
+            "url": "https://www.dynamicdesigninng.com/",
+            "name": "Dynamic Designing",
+            "description": "Premium luxury website development & UI/UX studio by Gaurav Nagar.",
+            "publisher": {
+              "@id": "https://www.dynamicdesigninng.com/#organization"
+            }
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://www.dynamicdesigninng.com/#organization",
+            "name": "Dynamic Designing",
+            "url": "https://www.dynamicdesigninng.com/",
+            "logo": "https://www.dynamicdesigninng.com/favicon.png",
+            "image": "https://www.dynamicdesigninng.com/images/frame%201.png",
+            "description": "Dynamic Designing is a luxury website development and UI/UX design studio. We build ultra-fast, bespoke websites that make brands look luxury and premium.",
+            "telephone": "+917597557904",
+            "email": "gauravnagar7504@gmail.com",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Jaipur",
+              "addressRegion": "Rajasthan",
+              "addressCountry": "IN"
+            },
+            "areaServed": [
+              "Mumbai",
+              "Bangalore",
+              "Delhi NCR",
+              "Hyderabad",
+              "Pune",
+              "Chennai",
+              "Jaipur",
+              "India",
+              "Worldwide"
+            ],
+            "founder": {
+              "@type": "Person",
+              "name": "Gaurav Nagar",
+              "jobTitle": "Lead Designer & Developer",
+              "url": "https://www.dynamicdesigninng.com/"
+            },
+            "knowsAbout": [
+              "Website Development",
+              "UI/UX Design",
+              "Custom Web Design",
+              "React Development",
+              "Performance Optimization",
+              "Brand Identity"
+            ]
+          }
         ]
       }
     </script>
