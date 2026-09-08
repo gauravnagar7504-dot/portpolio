@@ -99,11 +99,11 @@ export default function PortfolioPage() {
                   <h3 className="text-xl font-display font-700 text-white mb-2 group-hover:text-gradient transition-colors">
                     {cat.title}
                   </h3>
-                  <p className="text-xs text-white/50 line-clamp-2 leading-relaxed">
+                  <p className="text-xs text-white/75 line-clamp-2 leading-relaxed">
                     {cat.description}
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-white/40 group-hover:text-neon-blue transition-colors">
+                <div className="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-white/70 group-hover:text-neon-blue transition-colors">
                   <span>{cat.designs?.length || 0} Demos</span>
                   <span className="flex items-center gap-1 font-semibold group-hover:translate-x-1 transition-transform">
                     Explore Category <ArrowRight size={13} />

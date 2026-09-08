@@ -27,7 +27,7 @@ export default function Footer() {
             <Link to="/" className="font-display text-2xl font-800 text-white tracking-tight">
               DYNAMIC DESIGNING
             </Link>
-            <p className="text-[10px] text-white/30 mt-2 text-center md:text-left leading-normal">
+            <p className="text-xs text-white/70 mt-2 text-center md:text-left leading-normal">
               Premium website development and design studio serving brands in Mumbai, Bangalore, Delhi NCR, Hyderabad, Pune, Chennai, and globally.
             </p>
           </div>
@@ -39,7 +39,7 @@ export default function Footer() {
                 <li key={link.label}>
                   <Link
                     to={link.to}
-                    className="text-sm text-white/40 hover:text-white transition-colors duration-300"
+                    className="text-sm text-white/70 hover:text-white transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -60,7 +60,7 @@ export default function Footer() {
                   title={s.label}
                   target={s.href.startsWith('http') ? '_blank' : undefined}
                   rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="w-9 h-9 glass-card rounded-lg border border-white/8 flex items-center justify-center text-white/40 hover:text-neon-blue hover:border-neon-blue/30 transition-all duration-300"
+                  className="w-9 h-9 glass-card rounded-lg border border-white/10 flex items-center justify-center text-white/70 hover:text-neon-blue hover:border-neon-blue/30 transition-all duration-300"
                 >
                   <Icon size={15} aria-hidden="true" />
                 </a>
@@ -74,14 +74,14 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/25 font-medium">
+          <p className="text-xs text-white/60 font-medium">
             © {new Date().getFullYear()} Gaurav Nagar. All rights reserved. Crafted with passion and precision.
           </p>
 
           {/* Back to top */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-2 text-xs text-white/30 hover:text-neon-blue transition-colors duration-300 group cursor-pointer"
+            className="flex items-center gap-2 text-xs text-white/70 hover:text-neon-blue transition-colors duration-300 group cursor-pointer"
           >
             Back to top
             <ArrowUp size={14} className="group-hover:-translate-y-1 transition-transform duration-300" />

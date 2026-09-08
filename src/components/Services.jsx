@@ -75,7 +75,7 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-white/40 text-sm mt-4 max-w-md mx-auto"
+            className="text-white/70 text-sm mt-4 max-w-md mx-auto"
           >
             Every service is delivered with obsessive attention to detail and a luxury-first mindset.
           </motion.p>
@@ -109,7 +109,7 @@ export default function Services() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/45 text-sm leading-relaxed mb-6">
+                <p className="text-white/70 text-sm leading-relaxed mb-6">
                   {service.description}
                 </p>
 

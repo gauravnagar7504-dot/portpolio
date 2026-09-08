@@ -185,7 +185,7 @@ export default function TechArsenal() {
         <div className="flex whitespace-nowrap w-max items-center animate-marquee">
           {[...marqueeText, ...marqueeText].map((text, i) => (
             <div key={i} className="flex items-center">
-              <span className="px-10 text-white/40 font-display font-semibold uppercase tracking-[0.2em] text-sm md:text-base hover:text-white hover:text-shadow-glow transition-all duration-300 cursor-default">
+              <span className="px-10 text-white/70 font-display font-semibold uppercase tracking-[0.2em] text-sm md:text-base hover:text-white hover:text-shadow-glow transition-all duration-300 cursor-default">
                 {text}
               </span>
               <span className="w-2 h-2 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple shadow-[0_0_10px_rgba(79,142,247,0.5)]" />
@@ -199,7 +199,7 @@ export default function TechArsenal() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-white/30 text-sm font-light max-w-lg mx-auto"
+          className="text-white/70 text-sm font-light max-w-lg mx-auto"
         >
           Focused on modern UI/UX, smooth animations, responsive development, and premium digital experiences.
         </motion.p>

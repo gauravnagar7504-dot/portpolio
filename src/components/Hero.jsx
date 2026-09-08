@@ -108,7 +108,7 @@ export default function Hero() {
           </h1>
 
           {/* Description */}
-          <p className="text-white/50 text-sm sm:text-base md:text-lg leading-relaxed mb-8 sm:mb-10 max-w-xl">
+          <p className="text-white/75 text-sm sm:text-base md:text-lg leading-relaxed mb-8 sm:mb-10 max-w-xl">
             I craft cinematic digital experiences that elevate brands through
             custom website development, bold UI/UX design, and pixel-perfect execution.
             Let's build something iconic together.
@@ -139,7 +139,7 @@ export default function Hero() {
             ].map((stat) => (
               <div key={stat.label}>
                 <div className="font-display text-xl sm:text-2xl font-800 text-gradient">{stat.value}</div>
-                <div className="text-[11px] sm:text-xs text-white/40 font-medium tracking-wide mt-0.5">{stat.label}</div>
+                <div className="text-[11px] sm:text-xs text-white/70 font-medium tracking-wide mt-0.5">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -172,7 +172,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-white/30">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-white/60">
         <MousePointer2 size={14} />
         <div
           className="w-px h-12 bg-gradient-to-b from-neon-blue/50 to-transparent animate-pulse"

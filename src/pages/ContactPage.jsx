@@ -79,9 +79,9 @@ export default function ContactPage() {
               <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4 group-hover:scale-110 transition-transform">
                 <MessageCircle size={20} />
               </div>
-              <span className="text-xs text-white/40 uppercase tracking-wider block mb-1">Instant Chat</span>
+              <span className="text-xs text-white/70 uppercase tracking-wider block mb-1">Instant Chat</span>
               <h3 className="text-lg font-display font-700 text-white mb-1">WhatsApp Direct</h3>
-              <p className="text-xs text-white/60 mb-4">+91 75975 57904</p>
+              <p className="text-xs text-white/80 mb-4">+91 75975 57904</p>
               <span className="text-xs text-emerald-400 font-semibold flex items-center gap-1">
                 Chat Now <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
               </span>
@@ -94,9 +94,9 @@ export default function ContactPage() {
               <div className="w-10 h-10 rounded-xl bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center text-neon-blue mb-4 group-hover:scale-110 transition-transform">
                 <Mail size={20} />
               </div>
-              <span className="text-xs text-white/40 uppercase tracking-wider block mb-1">Email Inquiries</span>
+              <span className="text-xs text-white/70 uppercase tracking-wider block mb-1">Email Inquiries</span>
               <h3 className="text-lg font-display font-700 text-white mb-1">Direct Mail</h3>
-              <p className="text-xs text-white/60 mb-4 truncate">gauravnagar7504@gmail.com</p>
+              <p className="text-xs text-white/80 mb-4 truncate">gauravnagar7504@gmail.com</p>
               <span className="text-xs text-neon-blue font-semibold flex items-center gap-1">
                 Send Email <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
               </span>
@@ -106,10 +106,10 @@ export default function ContactPage() {
               <div className="w-10 h-10 rounded-xl bg-neon-purple/10 border border-neon-purple/20 flex items-center justify-center text-neon-purple mb-4">
                 <MapPin size={20} />
               </div>
-              <span className="text-xs text-white/40 uppercase tracking-wider block mb-1">Studio Location</span>
+              <span className="text-xs text-white/70 uppercase tracking-wider block mb-1">Studio Location</span>
               <h3 className="text-lg font-display font-700 text-white mb-1">Jaipur, Rajasthan</h3>
-              <p className="text-xs text-white/60 mb-4">Serving India & Global Clients</p>
-              <span className="text-xs text-white/40 flex items-center gap-1">
+              <p className="text-xs text-white/80 mb-4">Serving India & Global Clients</p>
+              <span className="text-xs text-white/70 flex items-center gap-1">
                 <Clock size={12} /> Response in &lt; 2 Hours
               </span>
             </div>

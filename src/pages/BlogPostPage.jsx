@@ -121,7 +121,7 @@ export default function BlogPostPage() {
             <span>All Articles</span>
           </Link>
 
-          <nav aria-label="Breadcrumb" className="text-xs text-white/40">
+          <nav aria-label="Breadcrumb" className="text-xs text-white/70">
             <ol className="flex items-center gap-2">
               <li>
                 <Link to="/" className="hover:text-neon-blue transition-colors">Home</Link>
@@ -131,7 +131,7 @@ export default function BlogPostPage() {
                 <Link to="/blog" className="hover:text-neon-blue transition-colors">Blog</Link>
               </li>
               <li aria-hidden="true">/</li>
-              <li className="text-white/70 truncate max-w-[180px] sm:max-w-xs" aria-current="page">
+              <li className="text-white/90 truncate max-w-[180px] sm:max-w-xs" aria-current="page">
                 {post.category}
               </li>
             </ol>
@@ -148,7 +148,7 @@ export default function BlogPostPage() {
             {post.title}
           </h1>
 
-          <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-8">
+          <p className="text-white/80 text-base sm:text-lg leading-relaxed mb-8">
             {post.excerpt}
           </p>
 
@@ -160,11 +160,11 @@ export default function BlogPostPage() {
               </div>
               <div>
                 <p className="text-sm font-semibold text-white">{post.author}</p>
-                <p className="text-[11px] text-white/40">{post.authorRole}</p>
+                <p className="text-xs text-white/70">{post.authorRole}</p>
               </div>
             </div>
 
-            <div className="flex items-center gap-4 text-xs text-white/50">
+            <div className="flex items-center gap-4 text-xs text-white/70">
               <span className="flex items-center gap-1.5">
                 <Calendar size={14} />
                 {post.date}
@@ -194,7 +194,7 @@ export default function BlogPostPage() {
         {/* Share & Consultation Bar */}
         <div className="p-6 rounded-2xl glass-card border border-white/10 mb-16 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <span className="text-xs uppercase tracking-wider text-white/40 block mb-1">Found this helpful?</span>
+            <span className="text-xs uppercase tracking-wider text-white/70 block mb-1">Found this helpful?</span>
             <p className="text-sm font-semibold text-white">Share this guide with founders & creators</p>
           </div>
 
@@ -274,9 +274,9 @@ export default function BlogPostPage() {
                     <h4 className="font-display font-700 text-lg text-white mb-2 group-hover:text-gradient transition-colors">
                       {related.title}
                     </h4>
-                    <p className="text-xs text-white/50 line-clamp-2">{related.excerpt}</p>
+                    <p className="text-xs text-white/75 line-clamp-2">{related.excerpt}</p>
                   </div>
-                  <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-white/40">
+                  <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-white/70">
                     <span>{related.readTime}</span>
                     <span className="text-neon-blue flex items-center gap-1 font-semibold group-hover:translate-x-1 transition-transform">
                       Read <ArrowRight size={12} />

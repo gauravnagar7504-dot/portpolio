@@ -216,7 +216,7 @@ export default function Pricing() {
                 )}
 
                 <h3 className="text-xl md:text-2xl font-display font-semibold text-white mb-2">{plan.name}</h3>
-                <p className="text-white/50 text-sm mb-8 leading-relaxed min-h-[60px]">{plan.description}</p>
+                <p className="text-white/70 text-sm mb-8 leading-relaxed min-h-[60px]">{plan.description}</p>
                 
                 <div className="mb-8 flex items-baseline gap-1">
                   <AnimatePresence mode="wait">
@@ -264,7 +264,7 @@ export default function Pricing() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-white/40 text-sm max-w-2xl mx-auto font-light"
+          className="text-center text-white/70 text-sm max-w-2xl mx-auto font-light"
         >
           Every project is designed with modern UI/UX principles, responsive performance, and business-focused design strategy.
         </motion.p>

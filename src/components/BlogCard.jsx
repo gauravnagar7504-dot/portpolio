@@ -18,7 +18,7 @@ export default function BlogCard({ post, index = 0 }) {
           <span className="glass-card text-[11px] font-semibold text-neon-blue px-3 py-1 rounded-full border border-neon-blue/20">
             {post.category}
           </span>
-          <div className="flex items-center gap-3 text-xs text-white/40">
+          <div className="flex items-center gap-3 text-xs text-white/70">
             <span className="flex items-center gap-1">
               <Clock size={12} />
               {post.readTime}
@@ -34,7 +34,7 @@ export default function BlogCard({ post, index = 0 }) {
         </Link>
 
         {/* Excerpt */}
-        <p className="text-white/60 text-sm leading-relaxed mb-6 flex-1">
+        <p className="text-white/75 text-sm leading-relaxed mb-6 flex-1">
           {post.excerpt}
         </p>
 
@@ -43,7 +43,7 @@ export default function BlogCard({ post, index = 0 }) {
           {post.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="text-[10px] text-white/40 bg-white/5 px-2 py-0.5 rounded-md"
+              className="text-[11px] text-white/70 bg-white/5 px-2 py-0.5 rounded-md"
             >
               #{tag}
             </span>
@@ -53,7 +53,7 @@ export default function BlogCard({ post, index = 0 }) {
 
       {/* Footer / Read More */}
       <div className="px-6 sm:px-7 py-4 border-t border-white/10 flex items-center justify-between bg-white/[0.01]">
-        <span className="text-xs text-white/40 flex items-center gap-1.5">
+        <span className="text-xs text-white/70 flex items-center gap-1.5">
           <Calendar size={13} />
           {post.date}
         </span>

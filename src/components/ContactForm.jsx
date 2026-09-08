@@ -131,7 +131,7 @@ export default function ContactForm() {
             <h3 className="font-display font-700 text-2xl sm:text-3xl text-white mb-2">
               Tell Us About Your Project
             </h3>
-            <p className="text-white/50 text-xs sm:text-sm mb-8">
+            <p className="text-white/75 text-xs sm:text-sm mb-8">
               Fill in your details below and we will get back with a tailored scope, timeline, and quote.
             </p>
 
@@ -145,7 +145,7 @@ export default function ContactForm() {
               {/* Row 1: Name & Email */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-white/70 mb-2">
+                  <label htmlFor="name" className="block text-xs font-semibold uppercase tracking-wider text-white/80 mb-2">
                     Your Name <span className="text-neon-blue">*</span>
                   </label>
                   <input
@@ -156,12 +156,12 @@ export default function ContactForm() {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="e.g. Gaurav Sharma"
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 focus:border-neon-blue focus:ring-1 focus:ring-neon-blue text-sm text-white placeholder-white/30 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 focus:border-neon-blue focus:ring-1 focus:ring-neon-blue text-sm text-white placeholder-white/50 outline-none transition-all"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-white/70 mb-2">
+                  <label htmlFor="email" className="block text-xs font-semibold uppercase tracking-wider text-white/80 mb-2">
                     Email Address <span className="text-neon-blue">*</span>
                   </label>
                   <input
@@ -172,7 +172,7 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="name@company.com"
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 focus:border-neon-blue focus:ring-1 focus:ring-neon-blue text-sm text-white placeholder-white/30 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 focus:border-neon-blue focus:ring-1 focus:ring-neon-blue text-sm text-white placeholder-white/50 outline-none transition-all"
                   />
                 </div>
               </div>
@@ -180,7 +180,7 @@ export default function ContactForm() {
               {/* Row 2: Phone & Project Type */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-30">
                 <div>
-                  <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-wider text-white/70 mb-2">
+                  <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-wider text-white/80 mb-2">
                     Phone / WhatsApp Number
                   </label>
                   <input
@@ -190,7 +190,7 @@ export default function ContactForm() {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+91 98765 43210"
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 focus:border-neon-blue focus:ring-1 focus:ring-neon-blue text-sm text-white placeholder-white/30 outline-none transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 focus:border-neon-blue focus:ring-1 focus:ring-neon-blue text-sm text-white placeholder-white/50 outline-none transition-all"
                   />
                 </div>
 
@@ -220,7 +220,7 @@ export default function ContactForm() {
 
               {/* Row 4: Project Details / Message */}
               <div className="relative z-10">
-                <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-white/70 mb-2">
+                <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-white/80 mb-2">
                   Project Vision & Scope
                 </label>
                 <textarea
@@ -230,7 +230,7 @@ export default function ContactForm() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Tell us about your brand, preferred deadline, inspirations, or specific features you need (e.g. online booking, multi-page layout, animations)..."
-                  className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 focus:border-neon-blue focus:ring-1 focus:ring-neon-blue text-sm text-white placeholder-white/30 outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 focus:border-neon-blue focus:ring-1 focus:ring-neon-blue text-sm text-white placeholder-white/50 outline-none transition-all resize-none"
                 />
               </div>
 
@@ -254,7 +254,7 @@ export default function ContactForm() {
                 </button>
               </div>
 
-              <p className="text-[11px] text-white/30 text-center pt-2">
+              <p className="text-xs text-white/70 text-center pt-2">
                 🔒 We respect your privacy. No spam. Direct consultation with lead developer.
               </p>
             </div>

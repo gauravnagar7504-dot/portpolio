@@ -40,7 +40,7 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
             <span>Back to Selected Creations</span>
           </Link>
 
-          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-white/40">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-white/70">
             <ol className="flex items-center gap-2">
               <li>
                 <Link
@@ -221,7 +221,7 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
                 }}
                 className="glass-card rounded-xl p-3 text-left border border-white/5 hover:border-neon-blue/30 transition-all duration-300 group cursor-pointer block"
               >
-                <div className="text-[11px] text-white/40 truncate group-hover:text-neon-blue transition-colors">
+                <div className="text-[11px] text-white/70 truncate group-hover:text-neon-blue transition-colors">
                   {c.label}
                 </div>
                 <div className="font-display text-xs sm:text-sm font-600 text-white truncate mt-0.5">
@@ -309,7 +309,7 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
                   <span className="text-sm text-white font-medium">
                     {imageModal.title}
                   </span>
-                  <span className="text-xs text-white/40 hidden sm:inline font-mono">
+                  <span className="text-xs text-white/70 hidden sm:inline font-mono">
                     (Exact uploaded size: 819 × 1024)
                   </span>
                 </div>

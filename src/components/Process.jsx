@@ -86,7 +86,7 @@ export default function Process() {
               <h3 className="font-display text-xl font-700 text-white mb-3 group-hover:text-gradient transition-all duration-300">
                 {step.title}
               </h3>
-              <p className="text-white/40 text-sm leading-relaxed">{step.desc}</p>
+              <p className="text-white/70 text-sm leading-relaxed">{step.desc}</p>
             </motion.li>
           ))}
         </ol>

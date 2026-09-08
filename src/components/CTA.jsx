@@ -64,7 +64,7 @@ export default function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-white/40 text-base max-w-lg mx-auto"
+            className="text-white/70 text-base max-w-lg mx-auto"
           >
             Let's craft a digital experience that sets your brand apart.
             Drop me a message and let's get started.

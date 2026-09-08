@@ -263,7 +263,7 @@ export default function Portfolio() {
               <div className="h-14 px-5 bg-[#0e0e18] border-b border-white/10 flex items-center justify-between shrink-0">
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-white font-medium">{imageModal.title}</span>
-                  <span className="text-xs text-white/40 hidden sm:inline font-mono">
+                  <span className="text-xs text-white/70 hidden sm:inline font-mono">
                     (Exact uploaded size: 819 × 1024)
                   </span>
                 </div>

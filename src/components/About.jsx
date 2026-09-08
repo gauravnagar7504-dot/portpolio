@@ -56,12 +56,12 @@ export default function About() {
               </h2>
             </div>
 
-            <p className="text-white/50 text-base leading-relaxed mb-6">
+            <p className="text-white/75 text-base leading-relaxed mb-6">
               I'm <span className="text-gradient font-semibold">Dynamic Designing</span> — a premium website development and design studio
               crafting cinematic digital experiences. Based in India, we deliver high-performance website development services to premium brands in <strong className="text-white font-semibold">Mumbai</strong>, <strong className="text-white font-semibold">Bangalore</strong>, <strong className="text-white font-semibold">Delhi NCR</strong>, <strong className="text-white font-semibold">Hyderabad</strong>, <strong className="text-white font-semibold">Pune</strong>, and globally.
             </p>
 
-            <p className="text-white/40 text-sm leading-relaxed mb-10">
+            <p className="text-white/70 text-sm leading-relaxed mb-10">
               My approach blends cinematic aesthetics with strategic design thinking.
               Every pixel is intentional, every interaction purposeful. I believe
               that great design isn't just beautiful — it's a business asset that
@@ -71,7 +71,7 @@ export default function About() {
             {/* Highlight list */}
             <ul className="space-y-3 mb-10">
               {highlights.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm text-white/60">
+                <li key={item} className="flex items-center gap-3 text-sm text-white/80">
                   <CheckCircle2 size={16} className="text-neon-blue shrink-0" />
                   {item}
                 </li>
@@ -85,9 +85,9 @@ export default function About() {
                 { value: '30+', label: 'Clients' },
                 { value: '3+', label: 'Years' },
               ].map((stat) => (
-                <div key={stat.label} className="glass-card rounded-2xl p-4 text-center border border-white/6">
+                <div key={stat.label} className="glass-card rounded-2xl p-4 text-center border border-white/10">
                   <div className="font-display text-2xl font-800 text-gradient">{stat.value}</div>
-                  <div className="text-xs text-white/40 mt-1 font-medium">{stat.label}</div>
+                  <div className="text-xs text-white/70 mt-1 font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>
