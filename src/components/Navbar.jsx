@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Contact', href: '#contact' },
 ];
 
-export default function Navbar() {
+export default function Navbar({ onNavClick }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -34,7 +34,11 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <a href="#home" className="flex items-center">
+          <a
+            href="#home"
+            className="flex items-center"
+            onClick={() => onNavClick && onNavClick()}
+          >
             <span className="font-sans font-500 text-xl text-white tracking-wide">
               Dynamic Designing
             </span>
@@ -46,6 +50,7 @@ export default function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
+                onClick={() => onNavClick && onNavClick()}
                 className="relative text-sm text-white/60 hover:text-white transition-colors duration-300 font-medium group"
               >
                 {link.label}
@@ -87,7 +92,10 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.08 }}
                 className="text-3xl font-display font-700 text-white/80 hover:text-white transition-colors"
-                onClick={() => setMobileOpen(false)}
+                onClick={() => {
+                  setMobileOpen(false);
+                  if (onNavClick) onNavClick();
+                }}
               >
                 {link.label}
               </motion.a>

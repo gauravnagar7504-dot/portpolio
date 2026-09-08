@@ -63,7 +63,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-[auto] md:min-h-screen flex items-center overflow-hidden">
       {/* Particle canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 z-0 pointer-events-none" />
 
@@ -83,13 +83,13 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-20 grid lg:grid-cols-2 gap-16 items-center w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-24 sm:pt-28 md:pt-32 pb-14 md:pb-20 grid lg:grid-cols-2 gap-16 items-center w-full">
         {/* Left: Text content */}
         <div>
           {/* Badge */}
           <motion.div
             {...fadeUp(0.1)}
-            className="inline-flex items-center gap-2 glass-card rounded-full px-4 py-2 mb-8 border border-neon-blue/20"
+            className="hidden md:inline-flex items-center gap-2 glass-card rounded-full px-4 py-2 mb-8 border border-neon-blue/20"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-neon-blue animate-pulse-glow" />
             <span className="text-xs font-display font-semibold text-white/60 tracking-widest uppercase">
@@ -100,7 +100,7 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             {...fadeUp(0.2)}
-            className="section-title text-5xl md:text-6xl xl:text-7xl text-white mb-6"
+            className="section-title text-4xl sm:text-5xl md:text-6xl xl:text-7xl text-white mb-5 leading-[1.12]"
           >
             I Build{' '}
             <span className="text-gradient">Modern</span>
@@ -115,7 +115,7 @@ export default function Hero() {
           {/* Description */}
           <motion.p
             {...fadeUp(0.35)}
-            className="text-white/50 text-base md:text-lg leading-relaxed mb-10 max-w-xl"
+            className="text-white/50 text-sm sm:text-base md:text-lg leading-relaxed mb-8 sm:mb-10 max-w-xl"
           >
             I craft cinematic digital experiences that elevate brands through
             bold design, smooth interactions, and pixel-perfect execution.
@@ -136,7 +136,7 @@ export default function Hero() {
           {/* Stats row */}
           <motion.div
             {...fadeUp(0.65)}
-            className="mt-16 flex items-center gap-10"
+            className="mt-10 sm:mt-16 grid grid-cols-3 gap-4 sm:flex sm:items-center sm:gap-10"
           >
             {[
               { value: '3+', label: 'Years of Craft' },
@@ -144,8 +144,8 @@ export default function Hero() {
               { value: '100%', label: 'Client Satisfaction' },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="font-display text-2xl font-800 text-gradient">{stat.value}</div>
-                <div className="text-xs text-white/40 font-medium tracking-wide mt-0.5">{stat.label}</div>
+                <div className="font-display text-xl sm:text-2xl font-800 text-gradient">{stat.value}</div>
+                <div className="text-[11px] sm:text-xs text-white/40 font-medium tracking-wide mt-0.5">{stat.label}</div>
               </div>
             ))}
           </motion.div>
@@ -175,25 +175,6 @@ export default function Hero() {
             {/* Bottom gradient */}
             <div className="absolute bottom-0 inset-x-0 h-1/3 bg-gradient-to-t from-[#050508] to-transparent" />
           </div>
-
-          {/* Floating badge */}
-          <motion.div
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute -top-4 -right-4 glass-card rounded-2xl px-5 py-3 border border-neon-blue/20 shadow-neon-blue"
-          >
-            <div className="text-xs text-white/50 font-medium">Avg. Rating</div>
-            <div className="font-display font-700 text-lg text-gradient">5.0 ★</div>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-            className="absolute -bottom-4 -left-4 glass-card rounded-2xl px-5 py-3 border border-neon-purple/20 shadow-neon-purple"
-          >
-            <div className="text-xs text-white/50 font-medium">Projects Delivered</div>
-            <div className="font-display font-700 text-lg text-gradient">50+</div>
-          </motion.div>
         </motion.div>
       </div>
 
@@ -202,7 +183,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-white/30"
       >
         <MousePointer2 size={14} />
         <div

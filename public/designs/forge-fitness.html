@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed-variant": "#43474d", "secondary-container": "#43474d", "surface-variant": "#333537", "on-primary-fixed": "#151f00", "tertiary": "#ffffff", "primary-fixed-dim": "#a4d700", "inverse-on-surface": "#2f3033", "surface-container-highest": "#333537", "background": "#121416", "error": "#ffb4ab", "inverse-primary": "#4d6700", "surface-container-lowest": "#0c0e10", "error-container": "#93000a", "surface-dim": "#121416", "on-primary-container": "#526d00", "inverse-surface": "#e2e2e5", "on-primary": "#263500", "surface-container-high": "#282a2c", "on-primary-fixed-variant": "#394d00", "on-error": "#690005", "tertiary-fixed": "#e5dff5", "on-secondary": "#2d3136", "surface-container-low": "#1a1c1e", "primary-fixed": "#bef525", "outline": "#8d947a", "secondary-fixed-dim": "#c3c6cd", "secondary-fixed": "#e0e2e9", "tertiary-container": "#e5dff5", "on-secondary-fixed": "#181c21", "on-tertiary-fixed-variant": "#484556", "tertiary-fixed-dim": "#c9c4d9", "surface": "#121416", "surface-container": "#1e2022", "on-surface-variant": "#c3c9ae", "surface-tint": "#a4d700", "secondary": "#c3c6cd", "on-tertiary-fixed": "#1c1a29", "on-secondary-container": "#b2b5bc", "outline-variant": "#434934", "primary": "#ffffff", "on-tertiary-container": "#666274", "primary-container": "#bef525", "on-background": "#e2e2e5", "on-surface": "#e2e2e5", "surface-bright": "#38393c", "on-error-container": "#ffdad6", "on-tertiary": "#312e3f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xs": "0.25rem", "space-xl": "2rem", "space-md": "1rem", "space-lg": "1.5rem", "space-grid-margin": "2rem", "space-3xl": "4rem", "space-4xl": "6rem", "space-2xl": "3rem", "space-xs": "0.5rem", "space-grid-gutter": "1.5rem", "space-sm": "0.75rem" }, "fontFamily": { "headline-md": [ "Syne" ], "body-sm": [ "Inter" ], "body-md": [ "Inter" ], "body-xl": [ "Inter" ], "label-md": [ "Inter" ], "label-mono": [ "Inter" ], "display-hero": [ "Syne" ], "display-hero-mobile": [ "Syne" ], "headline-lg": [ "Syne" ], "label-lg": [ "Inter" ], "headline-lg-mobile": [ "Syne" ], "headline-sm": [ "Syne" ] }, "fontSize": { "headline-md": [ "32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-sm": [ "13px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-md": [ "15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" } ], "body-xl": [ "18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-md": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" } ], "label-mono": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.14em", "fontWeight": "500" } ], "display-hero": [ "72px", { "lineHeight": "76px", "letterSpacing": "-0.04em", "fontWeight": "800" } ], "display-hero-mobile": [ "40px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "800" } ], "headline-lg": [ "48px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "label-lg": [ "14px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "600" } ], "headline-lg-mobile": [ "32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "headline-sm": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-fixed"><header class="fixed top-0 left-0 w-full z-50 bg-surface-container-lowest/95 backdrop-blur-xl border-b border-outline-variant/30"><div class="h-20 w-full max-w-7xl mx-auto px-space-md lg:px-space-grid-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-primary">FORGE</span></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary-fixed border-b-2 border-primary-fixed font-semibold"><a aria-current="page" class="uppercase transition-colors py-space-xs text-primary-fixed border-b-2 border-primary-fixed font-semibold" data-path="training" href="#">Training</a><a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary-fixed transition-colors py-space-xs border-b-2 border-transparent" data-path="programs" href="#">Programs</a><a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary-fixed transition-colors py-space-xs border-b-2 border-transparent" data-path="coaches" href="#">Coaches</a><a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary-fixed transition-colors py-space-xs border-b-2 border-transparent" data-path="membership" href="#">Membership</a><a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary-fixed transition-colors py-space-xs border-b-2 border-transparent" data-path="results" href="#">Results</a><a class="font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary-fixed transition-colors py-space-xs border-b-2 border-transparent" data-path="experience" href="#">Experience</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider text-on-surface border border-outline-variant/60 px-space-md py-space-xs rounded-none transition-all duration-200 hover:border-primary-fixed hover:text-primary-fixed" data-path="book-visit" href="#">BOOK A VISIT</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- 1. HERO SECTION -->
+<section class="relative w-full min-h-[88vh] flex flex-col justify-between overflow-hidden bg-surface-container-lowest">
+<!-- Cinematic Background with Scrim -->
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover object-center opacity-45 scale-105 transition-transform duration-1000 ease-out hover:scale-100" data-alt="Cinematic high contrast photograph of an athletic Indian man performing a heavy barbell deadlift in a moody brutalist architectural gym facility, dark concrete pillars, dramatic rim light casting highlights on muscle definition, chalk dust suspended in air, pitch obsidian shadows with subtle lime accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo90i8gL4rTQxB13GwXBBDnlOSVyxMSbDKIrhy-YHaBWOhwtN6icm2Y4RBefVv8Vdigwi60wROLlM9j9wQ0IDqlOuuQqrPnGygXVhZtq2cS3JI8jJPKdWBiY9OIBGq2yPAb5TR4-iP1SuQoYY3_sHkdFMopH04ChGmVoJBYw199yEdpGPP_EcoeU2AgplVEo8oxj15JXcwlyTVxoELkev6nLeiF9ozZYGwUcMItsKiLw-jLzVtPGt-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<!-- Architectural Grid Lines (Atmospheric) -->
+<div class="absolute inset-0 pointer-events-none z-[1] opacity-10">
+<div class="max-w-7xl mx-auto h-full grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 gap-space-grid-gutter px-space-md lg:px-space-grid-margin">
+<div class="border-r border-tertiary h-full"></div>
+<div class="border-r border-tertiary h-full hidden md:block"></div>
+<div class="border-r border-tertiary h-full hidden lg:block"></div>
+<div class="border-r border-tertiary h-full"></div>
+<div class="border-r border-tertiary h-full hidden md:block"></div>
+<div class="border-r border-tertiary h-full hidden lg:block"></div>
+<div class="border-r border-tertiary h-full"></div>
+<div class="border-r border-tertiary h-full hidden md:block"></div>
+<div class="border-r border-tertiary h-full hidden lg:block"></div>
+<div class="border-r border-tertiary h-full"></div>
+<div class="border-r border-tertiary h-full hidden md:block"></div>
+<div class="border-r border-tertiary h-full hidden lg:block"></div>
+</div>
+</div>
+<!-- Hero Content Container -->
+<div class="relative z-10 max-w-7xl mx-auto w-full px-space-md lg:px-space-grid-margin pt-space-3xl lg:pt-space-4xl pb-space-2xl flex-1 flex flex-col justify-center">
+<div class="max-w-3xl flex flex-col gap-space-md">
+<!-- Monolithic Overline Pill -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container px-space-sm py-1 border border-outline-variant/40 w-fit">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-on-surface">FORGE PERFORMANCE CLUB — MUMBAI &amp; GURGAON</span>
+</div>
+<!-- Colossal Display Headline -->
+<h1 class="font-display-hero text-[56px] leading-[60px] lg:text-display-hero uppercase tracking-tighter text-tertiary drop-shadow-sm">
+          BUILD THE BODY.<br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-tertiary via-secondary-fixed to-secondary">FORGE THE MIND.</span>
+</h1>
+<!-- High-Impact Editorial Subtext -->
+<p class="font-body-xl text-body-xl text-secondary max-w-2xl font-normal leading-relaxed">
+          Elite athletic conditioning, precision biomechanics, and holistic body recomposition engineered for high-performing individuals. No gimmicks. Only measurable human output.
+        </p>
+<!-- CTA Action Cluster -->
+<div class="flex flex-wrap items-center gap-space-lg pt-space-md">
+<a class="inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider bg-primary-fixed text-on-primary-fixed font-bold px-space-xl py-space-md transition-all duration-150 hover:bg-tertiary hover:scale-[1.02] active:scale-[0.98]" href="#transformation">
+            START YOUR TRANSFORMATION
+          </a>
+<a class="group inline-flex items-center gap-space-xs font-label-lg text-label-lg uppercase tracking-wider text-tertiary hover:text-primary-fixed transition-colors py-space-xs" href="#disciplines">
+<span>EXPLORE TRAINING</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1.5 transition-transform duration-200">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Vertical Editorial Scroll Marker -->
+<div class="relative z-10 w-full pb-space-lg flex flex-col items-center justify-center gap-space-2xs pointer-events-none opacity-80">
+<span class="font-label-mono text-label-mono tracking-widest text-on-surface-variant uppercase text-[10px]">SCROLL TO DISCOVER</span>
+<div class="w-[1px] h-8 bg-gradient-to-b from-primary-fixed via-outline to-transparent animate-pulse"></div>
+</div>
+</section>
+<!-- 2. PERFORMANCE STATISTICS BAR -->
+<section class="w-full bg-surface-container-lowest border-y border-outline-variant/30">
+<div class="max-w-7xl mx-auto px-space-md lg:px-space-grid-margin py-space-xl">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-lg lg:gap-space-grid-gutter divide-y lg:divide-y-0 lg:divide-x divide-outline-variant/20">
+<div class="flex flex-col pt-space-md lg:pt-0 lg:px-space-md first:pt-0 first:px-0">
+<div class="font-headline-lg text-headline-lg font-display-hero text-tertiary flex items-baseline gap-1">
+            2,500<span class="text-primary-fixed">+</span>
+</div>
+<span class="font-label-mono text-label-mono uppercase tracking-wider text-secondary mt-1">Athletes &amp; Executives Trained</span>
+</div>
+<div class="flex flex-col pt-space-md lg:pt-0 lg:px-space-md">
+<div class="font-headline-lg text-headline-lg font-display-hero text-tertiary flex items-baseline gap-1">
+            35<span class="text-primary-fixed">+</span>
+</div>
+<span class="font-label-mono text-label-mono uppercase tracking-wider text-secondary mt-1">Tier-1 Certified Coaches</span>
+</div>
+<div class="flex flex-col pt-space-md lg:pt-0 lg:px-space-md">
+<div class="font-headline-lg text-headline-lg font-display-hero text-tertiary flex items-baseline gap-1">
+            12
+          </div>
+<span class="font-label-mono text-label-mono uppercase tracking-wider text-secondary mt-1">Specialized Periodized Programs</span>
+</div>
+<div class="flex flex-col pt-space-md lg:pt-0 lg:px-space-md">
+<div class="font-headline-lg text-headline-lg font-display-hero text-tertiary flex items-baseline gap-1">
+            08
+          </div>
+<span class="font-label-mono text-label-mono uppercase tracking-wider text-secondary mt-1">Years Engineering Elite Athletes</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. TRAINING PHILOSOPHY (ASYMMETRIC EDITORIAL) -->
+<section class="w-full bg-background py-space-3xl lg:py-space-4xl">
+<div class="max-w-7xl mx-auto px-space-md lg:px-space-grid-margin">
+<!-- Asymmetric Editorial Intro -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-grid-gutter items-start pb-space-2xl border-b border-outline-variant/20">
+<div class="lg:col-span-6 flex flex-col">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed mb-space-xs">PHILOSOPHY &amp; BIOMECHANICS</span>
+<h2 class="font-display-hero text-[44px] leading-[48px] lg:text-headline-lg uppercase text-tertiary tracking-tight">
+            TRAIN WITH<br/>
+<span class="text-primary-fixed">PURPOSE.</span>
+</h2>
+</div>
+<div class="lg:col-span-6 flex flex-col gap-space-md pt-space-sm lg:pt-space-md">
+<p class="font-body-xl text-body-xl text-on-surface leading-relaxed">
+            The human system is not an aggregate of isolated muscles; it is an integrated architectural tensegrity network. At FORGE, every rep, microcycle, and recovery protocol is calibrated against objective telemetry.
+          </p>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+            We reject the dogma of exhaustion for its own sake. By isolating neural fatigue, optimizing dynamic torque profiles, and utilizing force-plate load metrics, our athletes build dense skeletal density, bulletproof connective tissues, and unyielding cardiovascular engines.
+          </p>
+</div>
+</div>
+<!-- 3 Feature Monoliths -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-grid-gutter pt-space-2xl">
+<!-- Feature 01 -->
+<div class="group relative bg-surface-container p-space-xl border border-outline-variant/30 flex flex-col justify-between h-full hover:border-primary-fixed/40 transition-colors duration-300">
+<div>
+<div class="flex justify-between items-center mb-space-xl">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">01 / DISCIPLINE</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-primary-fixed transition-colors">fitness_center</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary tracking-wider mb-space-sm">STRENGTH &amp; HYPERTROPHY</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Barbell velocity tracking, periodized compound progression, and mechanical tension threshold development targeting structural density.
+            </p>
+</div>
+<div class="pt-space-xl mt-space-lg border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-on-surface-variant uppercase">Biometric Velocity Lab</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary-fixed group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</div>
+<!-- Feature 02 -->
+<div class="group relative bg-surface-container p-space-xl border border-outline-variant/30 flex flex-col justify-between h-full hover:border-primary-fixed/40 transition-colors duration-300">
+<div>
+<div class="flex justify-between items-center mb-space-xl">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">02 / DISCIPLINE</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-primary-fixed transition-colors">ecg_heart</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary tracking-wider mb-space-sm">METABOLIC CONDITIONING</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              VO2 max optimization, lactate buffer conditioning, and Zone 2 mitochondrial expansion engineered through assault protocols and prowler sleds.
+            </p>
+</div>
+<div class="pt-space-xl mt-space-lg border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-on-surface-variant uppercase">Spirometry Telemetry</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary-fixed group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</div>
+<!-- Feature 03 -->
+<div class="group relative bg-surface-container p-space-xl border border-outline-variant/30 flex flex-col justify-between h-full hover:border-primary-fixed/40 transition-colors duration-300">
+<div>
+<div class="flex justify-between items-center mb-space-xl">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">03 / DISCIPLINE</span>
+<span class="material-symbols-outlined text-secondary group-hover:text-primary-fixed transition-colors">spa</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary tracking-wider mb-space-sm">MOBILITY &amp; RECOVERY</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Fascial restoration, 3°C contrast ice immersion, and 85°C Finnish dry sauna suites engineered for immediate autonomic nervous down-regulation.
+            </p>
+</div>
+<div class="pt-space-xl mt-space-lg border-t border-outline-variant/20 flex items-center justify-between">
+<span class="font-label-mono text-[11px] text-on-surface-variant uppercase">Contrast Hydro Suites</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary-fixed group-hover:translate-x-1 transition-all">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. ARCHITECTED DISCIPLINES & PROGRAMS -->
+<section class="w-full bg-surface-container-lowest py-space-3xl lg:py-space-4xl border-y border-outline-variant/20" id="disciplines">
+<div class="max-w-7xl mx-auto px-space-md lg:px-space-grid-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl">
+<div>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">CURRICULUM SPECIFICATIONS</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-tertiary tracking-tight mt-space-xs">ARCHITECTED DISCIPLINES</h2>
+</div>
+<p class="font-body-md text-body-md text-secondary max-w-sm mt-space-sm md:mt-0">
+          Select your dedicated athletic pathway. All protocols incorporate biometric testing every 30 days.
+        </p>
+</div>
+<!-- 4-Column Program Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-grid-gutter">
+<!-- Program 1 -->
+<div class="group flex flex-col bg-surface-container border border-outline-variant/30 overflow-hidden hover:border-primary-fixed transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out grayscale" data-alt="Close up dramatic black and white shot of knurled steel Olympic barbell loaded with black bumper plates in a luxury moody gym, chalk residue on knurling, low-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNRBTvrNZOGFZujx3G9NYPzGyitHjfxEGDj3jDYTkb2t9aVNRPIKRUr4uK6PHznJx1zRhJXp04ui78rp2J3jaNfndYsww-kM3RNmzN6XLlb9Mzjd1tqy37AbOdzmJKuuSY2aLkAIZPZLEkuOhGXh4NYo3KHKeq7scdvOsgmkr1X1L3tj9WCWgOod4VdrfN1iUi30z87tsjKS4duoQhceZlWvOHpgdhrgZAaMFHFZIN5t7FbtIVPMl_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<span class="absolute top-space-sm right-space-sm bg-surface-container-lowest/90 px-space-xs py-0.5 font-label-mono text-[10px] text-primary-fixed uppercase tracking-wider">CODE: S-01</span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-tertiary mb-space-xs">Strength &amp; Hypertrophy</h4>
+<p class="font-body-sm text-body-sm text-secondary mb-space-md">
+                Periodized progressive overload, mechanical tension calibration, and barbell mastery for dense contractile mass.
+              </p>
+<ul class="space-y-space-xs font-label-mono text-[11px] text-on-surface-variant">
+<li class="flex items-center gap-1.5"><span class="w-1 h-1 bg-primary-fixed"></span>GymAware Linear Encoders</li>
+<li class="flex items-center gap-1.5"><span class="w-1 h-1 bg-primary-fixed"></span>4-Day Mesocycle Splits</li>
+</ul>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-outline-variant/20 flex items-center justify-between text-tertiary group-hover:text-primary-fixed">
+<span class="font-label-lg text-label-lg uppercase">View Syllabus</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Program 2 -->
+<div class="group flex flex-col bg-surface-container border border-outline-variant/30 overflow-hidden hover:border-primary-fixed transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out grayscale" data-alt="Athletic Indian female coach adjusting barbell form of male athlete in an architectural concrete gym with warm spotlighting, high aesthetic focus, professional biomechanics analysis." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Puia4owjMhI_bk8a4crgEPX7VKocrjZqbOHGU6v13B5gMlZYnYXPxXs_mA9zoh9JO24L-Kxj2OYewQ_lbQpx1ILGgbgXPs3lEZomyvjB7m_qwwv-W3iic2MjW8OLxDQWTEDET62dUt-0MstbWH-l_OYxjJwPeVXyfp8IH6xNbN5s_GNFupoHaX29O4emk6NFg4tOjr6GYZTX0Ozhh8pWoZQ3kOdyYUcn5r_oplCAlQeeBpepq4SY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<span class="absolute top-space-sm right-space-sm bg-surface-container-lowest/90 px-space-xs py-0.5 font-label-mono text-[10px] text-primary-fixed uppercase tracking-wider">CODE: PT-X</span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-tertiary mb-space-xs">Personal Training</h4>
+<p class="font-body-sm text-body-sm text-secondary mb-space-md">
+                1-on-1 bespoke programming with biometric telemetry, force plate gait analysis, and daily nutrition accountability.
+              </p>
+<ul class="space-y-space-xs font-label-mono text-[11px] text-on-surface-variant">
+<li class="flex items-center gap-1.5"><span class="w-1 h-1 bg-primary-fixed"></span>Dedicated Tier-1 Coach</li>
+<li class="flex items-center gap-1.5"><span class="w-1 h-1 bg-primary-fixed"></span>Real-Time CGM Tracking</li>
+</ul>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-outline-variant/20 flex items-center justify-between text-tertiary group-hover:text-primary-fixed">
+<span class="font-label-lg text-label-lg uppercase">Apply For PT</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Program 3 -->
+<div class="group flex flex-col bg-surface-container border border-outline-variant/30 overflow-hidden hover:border-primary-fixed transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out grayscale" data-alt="Athletic sprinter performing dynamic kettlebell rotational lunges on black rubber gym flooring with stark industrial lights and minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXHh5CQQuo-CtdxspAgULUGCDkOSx6FGhpWTgupYniQwJKfdC933wjWnUN5dxo-nbHCMdMibukFjwZpWX6iE-cCMDFBj7FMaJo1-SjBsM7HB00Hi_wFwd7WzoBYIKTPWN0BIH8nbRqNVYdB7UfO2NBIzNQGOBZZH2m2cEdT_i_9-bgDjR7iD_EENub70DKY4bhfP5OXXOadRXPtX9pZ3-3TvnS2tKXTB6ujX2zfthMa3xMRSTPIluk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<span class="absolute top-space-sm right-space-sm bg-surface-container-lowest/90 px-space-xs py-0.5 font-label-mono text-[10px] text-primary-fixed uppercase tracking-wider">CODE: FN-03</span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-tertiary mb-space-xs">Functional Performance</h4>
+<p class="font-body-sm text-body-sm text-secondary mb-space-md">
+                Rotational torque power, deceleration safety, multi-planar plyometrics, and connective tissue durability.
+              </p>
+<ul class="space-y-space-xs font-label-mono text-[11px] text-on-surface-variant">
+<li class="flex items-center gap-1.5"><span class="w-1 h-1 bg-primary-fixed"></span>Keiser Pneumatic Rig</li>
+<li class="flex items-center gap-1.5"><span class="w-1 h-1 bg-primary-fixed"></span>3D Kinetic Mapping</li>
+</ul>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-outline-variant/20 flex items-center justify-between text-tertiary group-hover:text-primary-fixed">
+<span class="font-label-lg text-label-lg uppercase">View Syllabus</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Program 4 -->
+<div class="group flex flex-col bg-surface-container border border-outline-variant/30 overflow-hidden hover:border-primary-fixed transition-all duration-300">
+<div class="relative h-64 overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out grayscale" data-alt="Small group of disciplined elite athletes pushing turf sleds in an underground dark gym with moody spotlights overhead, intense focus and sweat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeLvp8Qm1M3GTYudcxcvnXo32I4e7frS9iZTDNM5E_EFezjx-aiI58CyN6_u9Qmi1CPAiXnX0xXTL7_bE3f99G2vY67paahV7qlUachjF4VblMU2AcRoqLiaWtfwx5XH7jSW9Yq9PIQp0ST-9v-MKQ_iPgy-eQxofqFGIArDniIpCtr0oF5hNtmR27Xt2qa7c5D6Ey-uiGKpQKWD_1LZxhTs-zb5x1d2YAyx--Xx4b4g6TU4s5dAVU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<span class="absolute top-space-sm right-space-sm bg-surface-container-lowest/90 px-space-xs py-0.5 font-label-mono text-[10px] text-primary-fixed uppercase tracking-wider">CODE: GC-04</span>
+</div>
+<div class="p-space-lg flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-sm text-headline-sm uppercase text-tertiary mb-space-xs">Group Conditioning</h4>
+<p class="font-body-sm text-body-sm text-secondary mb-space-md">
+                High-density anaerobic threshold conditioning. Capped cohorts of 10 athletes executing synced metabolic blocks.
+              </p>
+<ul class="space-y-space-xs font-label-mono text-[11px] text-on-surface-variant">
+<li class="flex items-center gap-1.5"><span class="w-1 h-1 bg-primary-fixed"></span>Max 10 Athletes / Group</li>
+<li class="flex items-center gap-1.5"><span class="w-1 h-1 bg-primary-fixed"></span>Heart-Rate Telemetry</li>
+</ul>
+</div>
+<div class="mt-space-lg pt-space-sm border-t border-outline-variant/20 flex items-center justify-between text-tertiary group-hover:text-primary-fixed">
+<span class="font-label-lg text-label-lg uppercase">Cohort Schedule</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. CLIENT TRANSFORMATION STORIES -->
+<section class="w-full bg-background py-space-3xl lg:py-space-4xl" id="transformation">
+<div class="max-w-7xl mx-auto px-space-md lg:px-space-grid-margin">
+<div class="flex flex-col gap-space-xs mb-space-2xl">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">VERIFIABLE BIOMETRIC DATA</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-tertiary tracking-tight">MEASURABLE TRANSLATION</h2>
+<p class="font-body-md text-body-md text-secondary max-w-xl">
+          Real case histories from our Mumbai and Gurgaon facilities. Verified via dual-energy X-ray absorptiometry (DEXA) scans.
+        </p>
+</div>
+<!-- 3 Transformation Dossiers -->
+<div class="flex flex-col gap-space-xl">
+<!-- Story 1 -->
+<div class="bg-surface-container border border-outline-variant/30 p-space-lg lg:p-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-grid-gutter items-center">
+<div class="lg:col-span-4 flex flex-col">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="px-space-xs py-0.5 bg-primary-fixed text-on-primary-fixed font-label-mono text-[10px] uppercase font-bold tracking-wider">16 WEEKS DURATION</span>
+<span class="font-label-mono text-label-mono text-secondary">MUMBAI HQ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary">Kabir Malhotra</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">34, Tech Founder &amp; Angel Investor</span>
+<p class="font-body-md text-body-md text-secondary italic leading-relaxed">
+              “Between 70-hour work weeks and transatlantic flights, my energy was completely depleted. FORGE eliminated the guesswork. The metrics do not lie.”
+            </p>
+</div>
+<div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-space-md bg-surface-container-lowest p-space-lg border border-outline-variant/20">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Body Fat Delta</span>
+<span class="font-headline-md text-headline-md text-primary-fixed mt-1">-14.2 kg</span>
+<span class="font-label-mono text-[10px] text-secondary">28.4% → 14.1% DEXA</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Lean Mass Accretion</span>
+<span class="font-headline-md text-headline-md text-tertiary mt-1">+6.1 kg</span>
+<span class="font-label-mono text-[10px] text-secondary">Hypertrophy Block</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Resting HR</span>
+<span class="font-headline-md text-headline-md text-tertiary mt-1">48 bpm</span>
+<span class="font-label-mono text-[10px] text-secondary">Down from 68 bpm</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Squat 1RM</span>
+<span class="font-headline-md text-headline-md text-tertiary mt-1">165 kg</span>
+<span class="font-label-mono text-[10px] text-secondary">+55kg Total Gain</span>
+</div>
+</div>
+</div>
+<!-- Story 2 -->
+<div class="bg-surface-container border border-outline-variant/30 p-space-lg lg:p-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-grid-gutter items-center">
+<div class="lg:col-span-4 flex flex-col">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="px-space-xs py-0.5 bg-primary-fixed text-on-primary-fixed font-label-mono text-[10px] uppercase font-bold tracking-wider">24 WEEKS DURATION</span>
+<span class="font-label-mono text-label-mono text-secondary">GURGAON</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary">Ananya Sen</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">29, Private Equity Director</span>
+<p class="font-body-md text-body-md text-secondary italic leading-relaxed">
+              “I wanted raw athletic power without joint dysfunction. We rebuilt my hinge mechanics from scratch. Pulling double bodyweight was a personal milestone.”
+            </p>
+</div>
+<div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-space-md bg-surface-container-lowest p-space-lg border border-outline-variant/20">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Deadlift PR</span>
+<span class="font-headline-md text-headline-md text-primary-fixed mt-1">135 kg</span>
+<span class="font-label-mono text-[10px] text-secondary">+45kg Overload</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Body Composition</span>
+<span class="font-headline-md text-headline-md text-tertiary mt-1">18.2%</span>
+<span class="font-label-mono text-[10px] text-secondary">Lean Athletic Baseline</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">VO2 Peak</span>
+<span class="font-headline-md text-headline-md text-tertiary mt-1">49.4</span>
+<span class="font-label-mono text-[10px] text-secondary">ml/kg/min</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Injury Markers</span>
+<span class="font-headline-md text-headline-md text-tertiary mt-1">Zero</span>
+<span class="font-label-mono text-[10px] text-secondary">Resolved Lumbar Torque</span>
+</div>
+</div>
+</div>
+<!-- Story 3 -->
+<div class="bg-surface-container border border-outline-variant/30 p-space-lg lg:p-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-grid-gutter items-center">
+<div class="lg:col-span-4 flex flex-col">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="px-space-xs py-0.5 bg-primary-fixed text-on-primary-fixed font-label-mono text-[10px] uppercase font-bold tracking-wider">12 WEEKS DURATION</span>
+<span class="font-label-mono text-label-mono text-secondary">MUMBAI HQ</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary">Rohan Varma</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">41, Senior Managing Partner</span>
+<p class="font-body-md text-body-md text-secondary italic leading-relaxed">
+              “Severe desk anterior pelvic tilt and borderline HbA1c. Twelve weeks of structured eccentric loading and VO2 max blocks restored my metabolic baseline.”
+            </p>
+</div>
+<div class="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-space-md bg-surface-container-lowest p-space-lg border border-outline-variant/20">
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Waistline Redux</span>
+<span class="font-headline-md text-headline-md text-primary-fixed mt-1">-11 cm</span>
+<span class="font-label-mono text-[10px] text-secondary">Visceral Adiposity Cut</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">HbA1c Metric</span>
+<span class="font-headline-md text-headline-md text-tertiary mt-1">5.1%</span>
+<span class="font-label-mono text-[10px] text-secondary">Normalized from 6.3%</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">Thoracic Extension</span>
+<span class="font-headline-md text-headline-md text-tertiary mt-1">+18°</span>
+<span class="font-label-mono text-[10px] text-secondary">FMS Assessment 19/21</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-mono text-label-mono uppercase text-on-surface-variant">VO2 Max Delta</span>
+<span class="font-headline-md text-headline-md text-tertiary mt-1">+22%</span>
+<span class="font-label-mono text-[10px] text-secondary">Zone 2 Aerobic Base</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. COACHES (THE CADRE) -->
+<section class="w-full bg-surface-container-lowest py-space-3xl lg:py-space-4xl border-y border-outline-variant/20">
+<div class="max-w-7xl mx-auto px-space-md lg:px-space-grid-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl">
+<div>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">FACULTY &amp; DIRECTORS</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-tertiary tracking-tight mt-space-xs">THE CADRE</h2>
+</div>
+<p class="font-body-md text-body-md text-secondary max-w-sm mt-space-sm md:mt-0">
+          World-class sports scientists, Olympic specialists, and national team conditioning leads.
+        </p>
+</div>
+<!-- Coach Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-grid-gutter">
+<!-- Coach 1 (Head Coach) with specific image placeholder -->
+<div class="group relative bg-surface-container border border-outline-variant/30 overflow-hidden flex flex-col justify-end min-h-[480px]">
+<img alt="Head Coach Vikramaditya Rana" class="absolute inset-0 w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnOT2e5wS0sy8Z3o0ff02xjpiZ1jlTAdURhnFnZ5_ZB9rcH-kG0eIJM7AAero81YB6kcAudnRaPdwv__WsATbEOdmsII1ev0SyNUzJv-b7MDN-0QxkB_yV7LYMfsAfa-q_A7lkKDmtTs_VMr1BXJOqTm_QKk1E1FBuU77zfERgQu0667ebKsoNXnfoJIWZecQ8lowIrDsn6YWHa_VqZobpa0aec1w7RryTCSFum_c5mucZnJio_VDn"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
+<div class="relative z-10 p-space-lg flex flex-col">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed mb-1">HEAD OF PERFORMANCE</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary">Vikramaditya Rana</h3>
+<span class="font-body-sm text-body-sm text-secondary mb-space-xs">CSCS, Ex-National Rugby S&amp;C</span>
+<div class="pt-space-xs border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant font-label-mono text-[10px]">
+<span>11 YRS EXP</span>
+<span class="group-hover:text-primary-fixed flex items-center gap-1">CONSULT <span class="material-symbols-outlined text-[12px]">arrow_outward</span></span>
+</div>
+</div>
+</div>
+<!-- Coach 2 -->
+<div class="group relative bg-surface-container border border-outline-variant/30 overflow-hidden flex flex-col justify-end min-h-[480px]">
+<img class="w-full h-full absolute inset-0 object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" data-alt="Monochrome athletic portrait of an elite Indian female Olympic weightlifting coach, intense determined gaze, high ponytail, black compression tee, dark studio background with dramatic side lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjGbtZdA_iHmXwPhgyIrPwaOu61RSJo_sYaTJ0oW0wRmRNR7AESqP8TrPa0O0W-PxbAVq8chKwDE19VjmYQIP0TjUrbCiRQ2NdzgFfg2ncO2hmEa2RtC_LuI1oKNPyz7VBDjLMAqIx3fOblHuH6hBXTE8dvuwQ7FAAzG1sLPJeUHKLuGRcSFPeTZHfzUL-BGEjKvn0nWnwhxLqu_sAUCwHoFi2VnydfEscwMgfoWuAiL-hIC2UIBCA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
+<div class="relative z-10 p-space-lg flex flex-col">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed mb-1">BIOMECHANICS &amp; WEIGHTLIFTING</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary">Devika Kulkarni</h3>
+<span class="font-body-sm text-body-sm text-secondary mb-space-xs">USAW-2, M.Sc Sports Kinematics</span>
+<div class="pt-space-xs border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant font-label-mono text-[10px]">
+<span>8 YRS EXP</span>
+<span class="group-hover:text-primary-fixed flex items-center gap-1">CONSULT <span class="material-symbols-outlined text-[12px]">arrow_outward</span></span>
+</div>
+</div>
+</div>
+<!-- Coach 3 -->
+<div class="group relative bg-surface-container border border-outline-variant/30 overflow-hidden flex flex-col justify-end min-h-[480px]">
+<img class="w-full h-full absolute inset-0 object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" data-alt="Athletic portrait of a south Asian male coach in his mid-30s with trimmed beard, wearing technical sportswear, looking focused into camera with high contrast black and grey tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFqZEbYlr6ugrM-_gJyXnVoA4lG57sBNKYt1DkPken31N8FjIag_aPD17jd98X_GxUADQpg_VHCZUPXux3axJkjYMQv2_-F2nthLyqWL6Zv4kxy9FfuYc5z7dLJIaJxgz40TXKgLVTn7A7s_Krn6S7WmTaZ6AfA3QfEdgBKWppqBlA9nzlI79nohNBH5w3MZoHIoLo6KCnU7oAZou03PQDnsugw4G0BIsrcTPSIapEA0-YV1L-lYXS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
+<div class="relative z-10 p-space-lg flex flex-col">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed mb-1">METABOLIC &amp; BREATH LEAD</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary">Arjun Nambiar</h3>
+<span class="font-body-sm text-body-sm text-secondary mb-space-xs">EXOS Performance, Oxygen Advantage</span>
+<div class="pt-space-xs border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant font-label-mono text-[10px]">
+<span>9 YRS EXP</span>
+<span class="group-hover:text-primary-fixed flex items-center gap-1">CONSULT <span class="material-symbols-outlined text-[12px]">arrow_outward</span></span>
+</div>
+</div>
+</div>
+<!-- Coach 4 -->
+<div class="group relative bg-surface-container border border-outline-variant/30 overflow-hidden flex flex-col justify-end min-h-[480px]">
+<img class="w-full h-full absolute inset-0 object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" data-alt="Close up sharp monochrome portrait of a female fitness director with confident demeanor, athletic posture, dark athletic apparel, clean architectural lines in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHoal36ZvGVSp4-FL5tnXqbPl8y_8DnexMHqDfgyK4gKTV3TOeEh3EI64yIkfMKVHpbviARWxpbVWqr3M_DRdpBQ4WMy7Sj4XwWQJg5E1_B5My6QNuQM4SXXkyHv8DQwspt_UQHRv-rMjJppCtfhjdaSwRQER5_4RoO-GGNbQJ4ihWtfGHq_QDuxI1SOb2zvMwVELp4QIafobO_ukmyKMYKQIUsTXpOPgJgYKuqiW2JJFxRhjNdWzu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/60 to-transparent"></div>
+<div class="relative z-10 p-space-lg flex flex-col">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed mb-1">MOVEMENT LONGEVITY LEAD</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary">Zoya Merchant</h3>
+<span class="font-body-sm text-body-sm text-secondary mb-space-xs">FMS-2, Poliquin PICP Level 2</span>
+<div class="pt-space-xs border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant font-label-mono text-[10px]">
+<span>7 YRS EXP</span>
+<span class="group-hover:text-primary-fixed flex items-center gap-1">CONSULT <span class="material-symbols-outlined text-[12px]">arrow_outward</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. ARCHITECTURAL GYM EXPERIENCE -->
+<section class="w-full bg-background py-space-3xl lg:py-space-4xl">
+<div class="max-w-7xl mx-auto px-space-md lg:px-space-grid-margin">
+<div class="flex flex-col gap-space-xs mb-space-2xl">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">FACILITY ARCHITECTURE</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-tertiary tracking-tight">SANCTUARY OF RAW OUTPUT</h2>
+<p class="font-body-md text-body-md text-secondary max-w-xl">
+          Engineered by brutalist architects. 24,000 sq.ft of industrial concrete, sound-damped Eleiko platforms, and advanced thermal recovery chambers.
+        </p>
+</div>
+<!-- Masonry Editorial Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-12 gap-space-grid-gutter">
+<!-- Main Large Monolith -->
+<div class="lg:col-span-8 group relative min-h-[380px] bg-surface-container overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" data-alt="Wide angle architectural interior of a state of the art minimalist gym with rows of Eleiko barbell stations, raw concrete walls, high ceilings with dark exposed ductwork, soft linear LED lighting recessed into beams." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnaV3y3sbr50vPk64wk3uK-umvnkCK0u43MP2S_MssNR11eNGNDejEZS4i2n2SiDibgxbIby6hAcfnnMS7ZyfUX7bvhGjABLvCcdwOKwk4PDJbyaXp7Rvgm6wg20K5RQuhGPZG7tllypVKafLmql4yl9TK06vsAJfDY7zFfFsFxEerj2IDmEEYf8m5-Ba2amB09KVsWQoVhCn1ErXyB58gvHJN1cDqnHSMAgXGukpGjpEwVG7SN_p0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-space-lg left-space-lg right-space-lg flex justify-between items-end">
+<div>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">MAIN ARENA</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary">Eleiko Olympic Platforms &amp; Racks</h3>
+</div>
+<span class="font-label-mono text-label-mono text-secondary">01 / LAB</span>
+</div>
+</div>
+<!-- Side Monolith 1 -->
+<div class="lg:col-span-4 group relative min-h-[380px] bg-surface-container overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" data-alt="Moody dark recovery spa interior with stainless steel cold plunge tub filled with clear water and ice, subtle warm ambient backlighting against charcoal slate stone." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHt19EQHVu3kc9LPjgb8oyGbIoFrqbWgITy2QgGDdx2pMEPH7uxnf9Ld1Om-pDPMmRlhKSlZPIQLfwgI5m3ASamAWsqIBByi05_eBaQM4rePXkCwkCyVBDwsnRgo8dO0c8QbHOQGnV4KWWVnuv2hIDY3Wyx5BW5NYol7jZT6Qwjyv0XciweJCrOnWXgUm9PmEFZe0kcxadrfS5F27SyxMvGXYYUMMa25uvM-uZh_eMQ5-vEXblaNlK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-space-lg left-space-lg right-space-lg flex justify-between items-end">
+<div>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">HYDRO SUITE</span>
+<h3 class="font-headline-sm text-headline-sm uppercase text-tertiary">3°C Contrast Cold Plunge</h3>
+</div>
+<span class="font-label-mono text-label-mono text-secondary">02 / SPA</span>
+</div>
+</div>
+<!-- Bottom Trio -->
+<div class="lg:col-span-4 group relative min-h-[300px] bg-surface-container overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist cedar wood sauna interior with clean bench slats and dark volcanic stones in heater, dark modern luxury sauna design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIwEAbAJO_UVr18nudxC0AWd_wlwoFfpQfXF_fDnTeRIudwIikJUPYTHSHKHJwV_oP_FUlXOVaWtLZA_cJpOQgahapBDYlHc-xifxu6so1sGwKh6QNdQcE4EbIOmtHPdE-rN9E62k0492X7FjqZFBar11QH2JC-KVmJKLswSfWnqTZ1T0SrvFOrBqUeJ1rLxCMmo_PuMY4jfodLpmFRYxpBu_OFDmf6A_5a-mMoVPzRSEr9CU8xDxS"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-space-lg left-space-lg right-space-lg flex justify-between items-end">
+<div>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">THERMAL</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-tertiary">85°C Finnish Dry Sauna</h4>
+</div>
+<span class="font-label-mono text-label-mono text-secondary">03</span>
+</div>
+</div>
+<div class="lg:col-span-4 group relative min-h-[300px] bg-surface-container overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" data-alt="Biomechanics assessment lab inside gym featuring dual force plates flush with floor, high speed motion capture cameras on black aluminum rig." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmp5A2EhWkLgexgiqIEdwHCEJqhMkfoxJaf82vWA6CS26Kwn0v8jgSksa9PdUx25sq_yBVjIK6m_1tqZ74SmivP2feS5CLUfuKmxnPCsz-oLkjSJHZEsJXi6sP036q1T2WzKdzzaiJcPewTFti9pHME_vAPxxPpW9rJyObTJbfktHW6u2E_ZIA3fdSEnNoUuBhr20MpGJIc0N77XjC6Ih00mTQfdatrKzijSiKa7bNZLr56ha--DAT"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-space-lg left-space-lg right-space-lg flex justify-between items-end">
+<div>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">DIAGNOSTICS</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-tertiary">Hawkin Force Plate Lab</h4>
+</div>
+<span class="font-label-mono text-label-mono text-secondary">04</span>
+</div>
+</div>
+<div class="lg:col-span-4 group relative min-h-[300px] bg-surface-container overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover grayscale contrast-125 group-hover:scale-105 transition-transform duration-700" data-alt="Ultra luxury modern executive locker room with dark walnut wood lockers, matte black hardware, monolithic grey concrete washbasins, warm backlit mirrors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoQL4JRV34SzeTcEoOnM53v6XTnrIedI92AV4Isufpkc2ROVvb53skMkGSlZreaRqB4m-b1GydzG8P9nf94_duJ6ZxwGLbkvkbaxAT4DS_DPNHi85ATRfmPBO94_gV-Qwgrtnm6k63nmjC06zG-sSMpKL5Kyq-Fr7lIjuQs8ah48Coxegpd0_HTf-mqBz3A0hecqVG9OqcSa9_hioe1rtEf0OhUN_2Qbxl0ayENupvi3p662Qn1XxO"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-space-lg left-space-lg right-space-lg flex justify-between items-end">
+<div>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">LOUNGE</span>
+<h4 class="font-headline-sm text-headline-sm uppercase text-tertiary">Executive Private Suites</h4>
+</div>
+<span class="font-label-mono text-label-mono text-secondary">05</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. MEMBERSHIP TIERS -->
+<section class="w-full bg-surface-container-lowest py-space-3xl lg:py-space-4xl border-y border-outline-variant/20">
+<div class="max-w-7xl mx-auto px-space-md lg:px-space-grid-margin">
+<div class="text-center max-w-2xl mx-auto mb-space-3xl">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">TRANSPARENT COMMITMENT</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-tertiary tracking-tight mt-space-xs">MEMBERSHIP TIERS</h2>
+<p class="font-body-md text-body-md text-secondary mt-space-xs">
+          Exclusive admissions strictly capped at 250 members per location to guarantee zero equipment congestion and uncompromised coaching quality.
+        </p>
+</div>
+<!-- Tiers Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-grid-gutter items-stretch">
+<!-- Tier 1: STARTER -->
+<div class="bg-surface-container border border-outline-variant/30 p-space-xl flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-secondary">FOUNDATION</span>
+<span class="font-label-mono text-[10px] text-on-surface-variant uppercase">MONTHLY BILLED</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-tertiary mb-space-xs">STARTER</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-space-lg">
+              For experienced athletes needing uninterrupted access to international-grade strength apparatus.
+            </p>
+<div class="flex items-baseline gap-1 mb-space-xl pb-space-lg border-b border-outline-variant/20">
+<span class="font-headline-lg text-headline-lg font-bold text-tertiary">₹14,500</span>
+<span class="font-body-sm text-body-sm text-secondary">/ month + GST</span>
+</div>
+<ul class="space-y-space-sm font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>Unrestricted floor &amp; platform access</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>40m indoor sprint &amp; sled turf</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>Executive locker &amp; grooming amenities</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>2x Bi-monthly biomechanics assessments</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-xl mt-space-xl border-t border-outline-variant/20">
+<a class="w-full inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider text-tertiary border border-outline-variant/60 py-space-md hover:border-primary-fixed hover:text-primary-fixed transition-colors" href="#">
+              SELECT STARTER
+            </a>
+</div>
+</div>
+<!-- Tier 2: PERFORMANCE (FEATURED) -->
+<div class="relative bg-surface-container-high border-2 border-primary-fixed p-space-xl flex flex-col justify-between shadow-2xl scale-100 lg:-translate-y-2">
+<!-- Recommended Badge -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary-fixed text-on-primary-fixed font-label-mono text-[10px] font-bold uppercase tracking-widest px-space-md py-1">
+            RECOMMENDED CADRE
+          </div>
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">CORE ATHLETE</span>
+<span class="font-label-mono text-[10px] text-primary-fixed uppercase">MOST POPULAR</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-tertiary mb-space-xs">PERFORMANCE</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-space-lg">
+              The flagship standard. Full program periodization, contrast recovery, and personal coaching oversight.
+            </p>
+<div class="flex items-baseline gap-1 mb-space-xl pb-space-lg border-b border-outline-variant/30">
+<span class="font-headline-lg text-headline-lg font-bold text-primary-fixed">₹24,000</span>
+<span class="font-body-sm text-body-sm text-secondary">/ month + GST</span>
+</div>
+<ul class="space-y-space-sm font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>Everything in Starter Tier</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>4x 1-on-1 Tier-1 coaching sessions / mo</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>Unlimited Contrast Ice Plunge &amp; Sauna</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>Monthly DEXA full body scanner telemetry</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>Tailored metabolic nutrition protocol</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-xl mt-space-xl border-t border-outline-variant/30">
+<a class="w-full inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider bg-primary-fixed text-on-primary-fixed font-bold py-space-md hover:bg-tertiary transition-colors" href="#">
+              CLAIM ADMISSION
+            </a>
+</div>
+</div>
+<!-- Tier 3: ELITE -->
+<div class="bg-surface-container border border-outline-variant/30 p-space-xl flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-center mb-space-md">
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-secondary">EXECUTIVE CONCIERGE</span>
+<span class="font-label-mono text-[10px] text-on-surface-variant uppercase">BESPOKE</span>
+</div>
+<h3 class="font-headline-md text-headline-md uppercase text-tertiary mb-space-xs">ELITE</h3>
+<p class="font-body-sm text-body-sm text-secondary mb-space-lg">
+              Full unconstrained executive athletic management. Daily one-on-one direction and complete health-span tracking.
+            </p>
+<div class="flex items-baseline gap-1 mb-space-xl pb-space-lg border-b border-outline-variant/20">
+<span class="font-headline-lg text-headline-lg font-bold text-tertiary">₹42,000</span>
+<span class="font-body-sm text-body-sm text-secondary">/ month + GST</span>
+</div>
+<ul class="space-y-space-sm font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>Unlimited 1-on-1 private coaching</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>Dedicated performance director on-call</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>Priority recovery pod booking</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>International luxury reciprocal club access</span>
+</li>
+<li class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-primary-fixed text-[18px] shrink-0">check</span>
+<span>Complimentary daily recovery shake bar</span>
+</li>
+</ul>
+</div>
+<div class="pt-space-xl mt-space-xl border-t border-outline-variant/20">
+<a class="w-full inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider text-tertiary border border-outline-variant/60 py-space-md hover:border-primary-fixed hover:text-primary-fixed transition-colors" href="#">
+              APPLY FOR ELITE
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. FINAL IMMERSIVE CTA -->
+<section class="w-full bg-background py-space-4xl relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest to-background pointer-events-none"></div>
+<div class="relative z-10 max-w-5xl mx-auto px-space-md lg:px-space-grid-margin text-center flex flex-col items-center gap-space-lg">
+<div class="w-12 h-1 bg-primary-fixed mb-space-xs"></div>
+<span class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">ADMISSIONS OPEN FOR NEXT COHORT</span>
+<h2 class="font-display-hero text-[42px] leading-[46px] lg:text-display-hero uppercase text-tertiary tracking-tighter">
+        YOUR NEXT LEVEL<br/>STARTS HERE.
+      </h2>
+<p class="font-body-xl text-body-xl text-secondary max-w-xl font-normal leading-relaxed">
+        Speak with a Senior Performance Director. Experience a 60-minute movement screen and facility walkthrough.
+      </p>
+<div class="flex flex-wrap items-center justify-center gap-space-md pt-space-md">
+<a class="inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider bg-primary-fixed text-on-primary-fixed font-bold px-space-xl py-space-md hover:bg-tertiary transition-all duration-200 hover:scale-105 active:scale-95" href="#">
+          BOOK A FREE CONSULTATION
+        </a>
+<a class="inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider text-tertiary border border-outline-variant/60 px-space-xl py-space-md hover:border-primary-fixed hover:text-primary-fixed transition-colors" href="#">
+          VIEW MEMBERSHIP PLANS
+        </a>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30 text-on-surface"><div class="max-w-7xl mx-auto px-space-md lg:px-space-grid-margin pt-space-3xl pb-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-grid-gutter"><div class="lg:col-span-5 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-primary">FORGE</span></div><p class="font-body-md text-body-md text-secondary max-w-md">Engineered athletic development, biomechanics, and human transformation.</p><div class="flex flex-col gap-space-xs pt-space-xs font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-fixed shrink-0 mt-0.5">location_on</span><span>Level 4, The Mill, Lower Parel, Mumbai &amp; Sector 29, Gurgaon</span></div><div class="flex items-start gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary-fixed shrink-0 mt-0.5">schedule</span><span>Mon – Sat: 05:30 – 22:30 | Sun: 07:00 – 18:00</span></div></div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h4 class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">Disciplines &amp; Lab</h4><ul class="flex flex-col gap-space-xs font-body-md text-body-md text-secondary"><li><a class="hover:text-primary-fixed transition-colors" data-path="training" href="#">Strength &amp; Conditioning</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="training" href="#">Olympic Weightlifting</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="programs" href="#">Biomechanics Lab</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="experience" href="#">Recovery Suite</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="coaches" href="#">Private Coaching</a></li><li><a class="hover:text-primary-fixed transition-colors" data-path="membership" href="#">Membership Tiers</a></li></ul></div><div class="lg:col-span-4 flex flex-col gap-space-sm"><h4 class="font-label-mono text-label-mono uppercase tracking-widest text-primary-fixed">Direct Access</h4><div class="flex flex-col gap-space-sm font-body-md text-body-md text-secondary"><div><span class="block font-label-mono text-label-mono uppercase text-on-surface-variant">Concierge / Inquiries</span><a class="text-primary hover:text-primary-fixed transition-colors font-mono" href="tel:+912284920100">+91 22 8492 0100</a></div><div><span class="block font-label-mono text-label-mono uppercase text-on-surface-variant">Admissions</span><a class="text-primary hover:text-primary-fixed transition-colors font-mono" href="mailto:join@forgetraining.in">join@forgetraining.in</a></div><div><span class="block font-label-mono text-label-mono uppercase text-on-surface-variant">Dispatch &amp; Media</span><span class="text-primary font-mono">@forge.performance</span></div></div></div></div><div class="mt-space-3xl pt-space-lg border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-mono text-label-mono"><p>© 2025 FORGE Performance Club India. All rights reserved.</p><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="hover:text-primary transition-colors" data-path="athletic-charter" href="#">Athletic Charter</a></div></div></div></footer></body></html>
