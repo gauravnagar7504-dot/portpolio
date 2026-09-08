@@ -118,6 +118,25 @@ const routes = [
     canonical: 'https://www.dynamicdesigninng.com/blog/top-web-design-trends-2026-dark-luxury-kinetic-ui',
     ogType: 'article',
   },
+  // Legal Policies
+  {
+    path: 'privacy-policy',
+    title: 'Privacy Policy | Dynamic Designing',
+    description: 'Read the official Privacy Policy of Dynamic Designing. Learn how your data, project specifications, and privacy rights are protected under DPDP Act 2023 and GDPR.',
+    canonical: 'https://www.dynamicdesigninng.com/privacy-policy',
+  },
+  {
+    path: 'terms-of-service',
+    title: 'Terms of Service | Dynamic Designing',
+    description: 'Official Terms of Service for Dynamic Designing. Learn about project deliverables, milestone payments, intellectual property ownership, and 30-day warranty terms.',
+    canonical: 'https://www.dynamicdesigninng.com/terms-of-service',
+  },
+  {
+    path: 'refund-policy',
+    title: 'Refund & Cancellation Policy | Dynamic Designing',
+    description: 'Official Refund and Cancellation Policy of Dynamic Designing. Learn about our deposit terms, milestone cancellations, and 30-day quality guarantee for digital services.',
+    canonical: 'https://www.dynamicdesigninng.com/refund-policy',
+  },
 ];
 
 console.log(`Prerendering ${routes.length} SEO routes...`);

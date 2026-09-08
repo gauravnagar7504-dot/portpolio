@@ -73,15 +73,30 @@ export default function Footer() {
         <div className="h-px bg-gradient-to-r from-transparent via-white/8 to-transparent mb-8" />
 
         {/* Bottom row */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/60 font-medium">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 text-xs">
+          <p className="text-white/60 font-medium text-center lg:text-left">
             © {new Date().getFullYear()} Gaurav Nagar. All rights reserved. Crafted with passion and precision.
           </p>
+
+          {/* Legal Policies */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-white/60">
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-white/20">•</span>
+            <Link to="/terms-of-service" className="hover:text-white transition-colors">
+              Terms of Service
+            </Link>
+            <span className="text-white/20">•</span>
+            <Link to="/refund-policy" className="hover:text-white transition-colors">
+              Refund & Cancellation
+            </Link>
+          </div>
 
           {/* Back to top */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="flex items-center gap-2 text-xs text-white/70 hover:text-neon-blue transition-colors duration-300 group cursor-pointer"
+            className="flex items-center gap-2 text-white/70 hover:text-neon-blue transition-colors duration-300 group cursor-pointer"
           >
             Back to top
             <ArrowUp size={14} className="group-hover:-translate-y-1 transition-transform duration-300" />
