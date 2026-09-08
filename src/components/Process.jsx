@@ -36,7 +36,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className="relative py-16 md:py-32 overflow-hidden">
+    <section id="process" className="relative py-16 md:py-32 overflow-hidden">
       {/* Glow orbs */}
       <div className="glow-orb w-[500px] h-[500px] bg-neon-purple/5 -bottom-[200px] right-[-100px]" />
 
@@ -58,23 +58,23 @@ export default function Process() {
             transition={{ delay: 0.1 }}
             className="section-title text-4xl md:text-5xl text-white"
           >
-            The <span className="text-gradient">Process</span>
+            Our Web Design & <span className="text-gradient">Development Process</span>
           </motion.h2>
         </div>
 
         {/* Steps grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <ol className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 list-none p-0 m-0">
           {steps.map((step, i) => (
-            <motion.div
+            <motion.li
               key={step.num}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: i * 0.08 }}
-              className="glass-card glass-card-hover rounded-2xl p-7 relative overflow-hidden group"
+              className="glass-card glass-card-hover rounded-2xl p-7 relative overflow-hidden group list-none"
             >
               {/* Step number (large background) */}
-              <div className="absolute -top-2 right-2 font-display text-7xl font-800 text-white/3 select-none group-hover:text-white/5 transition-colors duration-500">
+              <div aria-hidden="true" className="absolute -top-2 right-2 font-display text-7xl font-800 text-white/3 select-none group-hover:text-white/5 transition-colors duration-500">
                 {step.num}
               </div>
 
@@ -87,9 +87,9 @@ export default function Process() {
                 {step.title}
               </h3>
               <p className="text-white/40 text-sm leading-relaxed">{step.desc}</p>
-            </motion.div>
+            </motion.li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

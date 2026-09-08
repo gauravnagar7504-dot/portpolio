@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, MousePointer2 } from 'lucide-react';
-import heroImg from '../assets/images/hero_workspace.png';
+import heroImg from '../assets/images/hero_workspace.webp';
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 40 },
@@ -118,13 +118,13 @@ export default function Hero() {
             className="text-white/50 text-sm sm:text-base md:text-lg leading-relaxed mb-8 sm:mb-10 max-w-xl"
           >
             I craft cinematic digital experiences that elevate brands through
-            bold design, smooth interactions, and pixel-perfect execution.
+            custom website development, bold UI/UX design, and pixel-perfect execution.
             Let's build something iconic together.
           </motion.p>
 
           {/* CTAs */}
           <motion.div {...fadeUp(0.5)} className="flex flex-wrap gap-4">
-            <a href="https://wa.me/917597557904?text=Hi%20Dynamic%20Designing,%20I'd%20like%20to%20view%20your%20work%20and%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" className="btn-primary flex items-center gap-2 relative z-10">
+            <a href="#portfolio" className="btn-primary flex items-center gap-2 relative z-10">
               View My Work
               <ArrowRight size={16} />
             </a>
@@ -169,6 +169,10 @@ export default function Hero() {
             <img
               src={heroImg}
               alt="Dynamic Designing — Premium Web Design Studio"
+              fetchpriority="high"
+              decoding="async"
+              width="460"
+              height="613"
               className="w-full max-w-[460px] object-cover object-center"
               style={{ aspectRatio: '3/4' }}
             />

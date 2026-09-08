@@ -1,16 +1,16 @@
-import frame3Img from '../assets/images/Frame 3.png';
-import frame1Img from '../assets/images/frame 1.png';
-import aureliaImg from '../assets/images/aurelia_beauty.png';
-import elaraImg from '../assets/images/elara_beauty.png';
-import novaCareImg from '../assets/images/nova_care.png';
-import drAaravImg from '../assets/images/dr_aarav_mehta.png';
-import movehouseImg from '../assets/images/movehouse_fitness.png';
-import forgeImg from '../assets/images/forge_fitness.png';
-import salonBeautyImg from '../assets/images/salon_beauty.jpg';
-import dentistClinicImg from '../assets/images/iron_fitness.png'; // Medicare Clinic mockup
-import gymFitnessImg from '../assets/images/wanderlux_travel.png'; // Iron Fitness mockup
-import coachingInstituteImg from '../assets/images/coaching_institute.jpg';
-import weddingPhotoImg from '../assets/images/wedding_photography.jpg';
+import frame3Img from '../assets/images/Frame 3.webp';
+import frame1Img from '../assets/images/frame 1.webp';
+import aureliaImg from '../assets/images/aurelia_beauty.webp';
+import elaraImg from '../assets/images/elara_beauty.webp';
+import novaCareImg from '../assets/images/nova_care.webp';
+import drAaravImg from '../assets/images/dr_aarav_mehta.webp';
+import movehouseImg from '../assets/images/movehouse_fitness.webp';
+import forgeImg from '../assets/images/forge_fitness.webp';
+import salonBeautyImg from '../assets/images/salon_beauty.webp';
+import dentistClinicImg from '../assets/images/iron_fitness.webp'; // Medicare Clinic mockup
+import gymFitnessImg from '../assets/images/wanderlux_travel.webp'; // Iron Fitness mockup
+import coachingInstituteImg from '../assets/images/coaching_institute.webp';
+import weddingPhotoImg from '../assets/images/wedding_photography.webp';
 
 export const categories = [
   {
@@ -34,7 +34,7 @@ export const categories = [
         'Jharokha Royale Fine Dining & Wine Cellar Selection',
         'Royal Weddings & Milestones Gallery',
       ],
-      liveDemo: '/designs/the-aravali-palace.html',
+      liveDemo: '/the-aravali-palace/',
     },
     designs: [
       {
@@ -44,7 +44,7 @@ export const categories = [
         description: 'Interactive demo design showcasing royal Rajput aesthetics, suite reservation engines, courtyard dining menus, and wedding inquiry workflows.',
         image: frame3Img,
         aspectRatio: '819/1024',
-        liveUrl: '/designs/the-aravali-palace.html',
+        liveUrl: '/the-aravali-palace/',
         tags: ['Demo Design', 'Heritage Resort', 'Booking Bar', 'Jaipur'],
       },
       {
@@ -54,7 +54,7 @@ export const categories = [
         description: 'Brutalist modern sanctuary demo featuring open-air infinity pools overlooking the Aravallis, private garden pavilions, and farm-to-table dining.',
         image: frame1Img,
         aspectRatio: '819/1024',
-        liveUrl: '/designs/solara-jaipur.html',
+        liveUrl: '/solara-jaipur/',
         tags: ['Demo Design', 'Minimalist Luxury', 'Aman Aesthetic', 'Jaipur'],
       },
     ],
@@ -79,7 +79,7 @@ export const categories = [
         'Artisan Hair & Skin Master Stylists Showcase',
         'Interactive Appointment Booking with Calendar & Time Slots',
       ],
-      liveDemo: '/designs/aurelia-beauty-studio.html',
+      liveDemo: '/aurelia-beauty-studio/',
     },
     designs: [
       {
@@ -89,7 +89,7 @@ export const categories = [
         description: 'Editorial luxury salon and bridal atelier demo featuring treatment menus, master colorist portfolios, bridal inquiry flow, and real-time appointment booking.',
         image: aureliaImg,
         aspectRatio: '819/1024',
-        liveUrl: '/designs/aurelia-beauty-studio.html',
+        liveUrl: '/aurelia-beauty-studio/',
         tags: ['Demo Design', 'Editorial Aesthetics', 'Beauty Salon', 'Jaipur'],
       },
       {
@@ -99,7 +99,7 @@ export const categories = [
         description: 'Quiet luxury beauty house demo featuring interactive floating ritual previews, Kansa wand skin therapies, 2025 trousseau bridal suite, and private atelier reservations.',
         image: elaraImg,
         aspectRatio: '819/1024',
-        liveUrl: '/designs/elara-beauty-house.html',
+        liveUrl: '/elara-beauty-house/',
         tags: ['Demo Design', 'Quiet Luxury', 'Bridal Atelier', 'Jaipur'],
       },
     ],
@@ -124,7 +124,7 @@ export const categories = [
         'Doctor Discovery Roster with Verified Accreditations',
         'Real-Time Operatory Chair Synchronization & WhatsApp Booking',
       ],
-      liveDemo: '/designs/nova-care.html',
+      liveDemo: '/nova-care/',
     },
     designs: [
       {
@@ -134,7 +134,7 @@ export const categories = [
         description: 'Modern patient-first healthcare experience with interactive care finder, 3D CBCT diagnostic technology showcase, specialist roster, and real-time chair booking.',
         image: novaCareImg,
         aspectRatio: '819/1024',
-        liveUrl: '/designs/nova-care.html',
+        liveUrl: '/nova-care/',
         tags: ['Demo Design', 'Multi-Specialty Clinic', 'Dental Care', 'Bengaluru'],
       },
       {
@@ -144,7 +144,7 @@ export const categories = [
         description: 'Evidence-based private dental consultancy demo featuring 3D CBCT guided implant workflows, smile rehabilitation, and patient consultation booking.',
         image: drAaravImg,
         aspectRatio: '819/1024',
-        liveUrl: '/designs/dr-aarav-mehta.html',
+        liveUrl: '/dr-aarav-mehta/',
         tags: ['Demo Design', 'Implantologist', 'The Blue Practice', 'Kota'],
       },
     ],
@@ -169,7 +169,7 @@ export const categories = [
         'Coach & Biomechanics Specialist Roster',
         'Architectural Sanctuary & Acoustic Shock-Absorbing Amenities',
       ],
-      liveDemo: '/designs/movehouse.html',
+      liveDemo: '/movehouse/',
     },
     designs: [
       {
@@ -179,7 +179,7 @@ export const categories = [
         description: 'Sun-drenched boutique functional training and reformer Pilates sanctuary demo featuring interactive class filters, live weekly timetable, coach roster, and transparent memberships.',
         image: movehouseImg,
         aspectRatio: '819/1024',
-        liveUrl: '/designs/movehouse.html',
+        liveUrl: '/movehouse/',
         tags: ['Demo Design', 'Boutique Fitness', 'Reformer Pilates', 'Kota'],
       },
       {
@@ -189,7 +189,7 @@ export const categories = [
         description: 'Monochrome high-performance athletic club demo featuring velocity-based training protocols, force plate diagnostics lab, coach cadre, and DEXA-verified results.',
         image: forgeImg,
         aspectRatio: '819/1024',
-        liveUrl: '/designs/forge-fitness.html',
+        liveUrl: '/forge-fitness/',
         tags: ['Demo Design', 'Athletic Club', 'Biomechanics', 'Performance'],
       },
     ],

@@ -14,13 +14,12 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
   const otherCategories = categories.filter((c) => c.id !== category.id);
 
   return (
-    <div className="relative min-h-screen pt-28 pb-24 text-white">
-      {/* Background glow orbs */}
-      <div className="glow-orb w-[600px] h-[600px] bg-neon-purple/10 top-[-100px] right-[-200px]" />
-      <div className="glow-orb w-[500px] h-[500px] bg-neon-blue/10 top-[400px] left-[-200px]" />
+    <section id="category-detail" className="min-h-screen pt-28 sm:pt-36 pb-24 relative overflow-hidden text-white">
+      {/* Background glow */}
+      <div className="glow-orb w-[600px] h-[600px] bg-neon-blue/10 top-0 left-1/2 -translate-x-1/2" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        {/* Back Navigation Bar */}
+        {/* Navigation bar: Back button + Breadcrumbs */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -34,11 +33,17 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
             <span>Back to Selected Creations</span>
           </button>
 
-          <div className="hidden sm:flex items-center gap-2 text-xs text-white/40">
-            <span>Portfolio</span>
-            <span>/</span>
-            <span className="text-white/80 font-medium">{category.title}</span>
-          </div>
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-white/40">
+            <ol className="flex items-center gap-2">
+              <li>
+                <button onClick={onBack} className="hover:text-neon-blue transition-colors cursor-pointer">
+                  Portfolio
+                </button>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li className="text-white/80 font-medium" aria-current="page">{category.title}</li>
+            </ol>
+          </nav>
         </motion.div>
 
         {/* Hero Header */}
@@ -97,13 +102,26 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
                 >
                   <div>
                     <div
-                      className="relative overflow-hidden bg-[#08080f] cursor-pointer flex items-center justify-center"
+                      role="button"
+                      tabIndex={0}
+                      aria-label={`View enlarged preview of ${design.title}`}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          setImageModal({ src: design.image, title: design.title });
+                        }
+                      }}
+                      className="relative overflow-hidden bg-[#08080f] cursor-pointer flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-neon-blue/50"
                       style={{ aspectRatio: design.aspectRatio || '4/3' }}
                       onClick={() => setImageModal({ src: design.image, title: design.title })}
                     >
                       <img
                         src={design.image}
-                        alt={design.title}
+                        alt={`Website design mockup for ${design.title}`}
+                        loading="lazy"
+                        decoding="async"
+                        width="819"
+                        height="1024"
                         className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#050508]/40 via-transparent to-transparent pointer-events-none" />
@@ -126,6 +144,7 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
                   <div className="px-5 py-4 flex items-center justify-between gap-3 border-t border-white/10">
                     <button
                       onClick={() => setPreviewUrl(design.liveUrl)}
+                      aria-label={`Preview live demo for ${design.title}`}
                       className="text-xs text-white/70 hover:text-white flex items-center gap-1.5 transition-colors cursor-pointer py-1"
                     >
                       <Eye size={14} className="text-neon-blue" />
@@ -135,6 +154,7 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
                       href={design.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label={`Open full live interactive demo for ${design.title}`}
                       className="btn-primary text-xs py-2 px-4 inline-flex items-center gap-1.5 shadow-sm"
                     >
                       <span>Open Demo</span>
@@ -170,9 +190,9 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
 
         {/* Explore Other Categories */}
         <div>
-          <h3 className="text-xl font-display font-700 text-white mb-6">
+          <h2 className="text-xl font-display font-700 text-white mb-6">
             Explore Other Categories
-          </h3>
+          </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             {otherCategories.map((c) => (
               <button
@@ -226,6 +246,7 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
                   </a>
                   <button
                     onClick={() => setPreviewUrl(null)}
+                    aria-label="Close demo preview"
                     className="p-1.5 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                   >
                     <X size={18} />
@@ -251,6 +272,9 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            role="dialog"
+            aria-modal="true"
+            aria-label={imageModal.title}
             className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl p-3 sm:p-6 flex flex-col justify-center items-center"
             onClick={() => setImageModal(null)}
           >
@@ -280,6 +304,7 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
                   </a>
                   <button
                     onClick={() => setImageModal(null)}
+                    aria-label="Close image modal"
                     className="p-1.5 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                   >
                     <X size={18} />
@@ -300,6 +325,6 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </section>
   );
 }

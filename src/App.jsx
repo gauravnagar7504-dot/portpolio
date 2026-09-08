@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import BusinessBenefits from './components/BusinessBenefits';
 import Portfolio from './components/Portfolio';
-import CategoryDetail from './components/CategoryDetail';
 import TechArsenal from './components/TechArsenal';
 import Process from './components/Process';
 import Pricing from './components/Pricing';
@@ -13,11 +12,12 @@ import CTA from './components/CTA';
 import Footer from './components/Footer';
 import { categories } from './data/categories';
 
+const CategoryDetail = lazy(() => import('./components/CategoryDetail'));
+
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   useEffect(() => {
-    // Smooth scroll with Lenis (optional polyfill for older browsers)
     document.documentElement.style.scrollBehavior = 'smooth';
 
     const handleHash = () => {
@@ -76,11 +76,13 @@ export default function App() {
 
       <main className="relative z-10">
         {selectedCategory ? (
-          <CategoryDetail
-            category={selectedCategory}
-            onBack={handleBackToPortfolio}
-            onSelectCategory={handleSelectCategory}
-          />
+          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-neon-blue border-t-transparent animate-spin" /></div>}>
+            <CategoryDetail
+              category={selectedCategory}
+              onBack={handleBackToPortfolio}
+              onSelectCategory={handleSelectCategory}
+            />
+          </Suspense>
         ) : (
           <>
             <Hero />
@@ -96,7 +98,7 @@ export default function App() {
         )}
       </main>
 
-      <Footer />
+      <Footer onNavClick={handleNavReset} />
     </div>
   );
 }

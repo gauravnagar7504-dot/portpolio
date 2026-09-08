@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /designs/
 
 Sitemap: https://www.dynamicdesigninng.com/sitemap.xml

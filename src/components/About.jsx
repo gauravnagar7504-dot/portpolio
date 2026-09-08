@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
-import heroImg from '../assets/images/gaurav_about.jpg';
+import heroImg from '../assets/images/gaurav_about.webp';
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 40 },
@@ -13,25 +13,25 @@ const fadeUp = (delay = 0) => ({
 const highlights = [
   'Premium Brand Identity Design',
   'Cinematic Web Experiences',
-  'Mobile-First Responsive UI',
-  'Conversion-Optimized Layouts',
+  'High-Converting Landing Pages',
+  'Tailored Digital Solutions',
 ];
 
 export default function About() {
   return (
-    <section id="about" className="relative py-16 md:py-32 overflow-hidden">
-      {/* Glow orb */}
-      <div className="glow-orb w-[500px] h-[500px] bg-neon-purple/8 top-1/2 -translate-y-1/2 left-[-200px]" />
+    <section id="about" className="relative py-20 sm:py-28 md:py-36 overflow-hidden">
+      {/* Background glow */}
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-neon-purple/8 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
+          {/* Left: Visual portrait */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] }}
-            className="relative"
+            transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1] }}
+            className="relative max-w-md mx-auto lg:max-w-none w-full"
           >
             {/* Background glow */}
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-neon-blue/15 to-neon-purple/15 blur-2xl" />
@@ -41,6 +41,10 @@ export default function About() {
               <img
                 src={heroImg}
                 alt="Dynamic Designing — The Architect of Digital Luxury"
+                loading="lazy"
+                decoding="async"
+                width="460"
+                height="575"
                 className="w-full object-cover object-top"
                 style={{ aspectRatio: '4/5', maxHeight: '580px' }}
               />

@@ -65,8 +65,11 @@ export default function Navbar({ onNavClick }) {
               Hire Me
             </a>
             <button
-              className="md:hidden text-white/70 hover:text-white transition-colors"
+              className="md:hidden text-white/70 hover:text-white transition-colors p-2"
               onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-navigation"
             >
               {mobileOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
@@ -78,28 +81,34 @@ export default function Navbar({ onNavClick }) {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
+            id="mobile-navigation"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile Navigation Menu"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-40 bg-[#050508]/98 backdrop-blur-2xl flex flex-col items-center justify-center gap-8"
           >
-            {navLinks.map((link, i) => (
-              <motion.a
-                key={link.label}
-                href={link.href}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.08 }}
-                className="text-3xl font-display font-700 text-white/80 hover:text-white transition-colors"
-                onClick={() => {
-                  setMobileOpen(false);
-                  if (onNavClick) onNavClick();
-                }}
-              >
-                {link.label}
-              </motion.a>
-            ))}
+            <nav aria-label="Mobile Navigation" className="flex flex-col items-center gap-8">
+              {navLinks.map((link, i) => (
+                <motion.a
+                  key={link.label}
+                  href={link.href}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.08 }}
+                  className="text-3xl font-display font-700 text-white/80 hover:text-white transition-colors"
+                  onClick={() => {
+                    setMobileOpen(false);
+                    if (onNavClick) onNavClick();
+                  }}
+                >
+                  {link.label}
+                </motion.a>
+              ))}
+            </nav>
             <motion.a
               href="https://wa.me/917597557904?text=Hi%20Dynamic%20Designing,%20I'd%20like%20to%20hire%20you."
               target="_blank"

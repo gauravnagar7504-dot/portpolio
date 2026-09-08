@@ -42,7 +42,7 @@ const plans = [
     ],
     prices: { USD: '349', INR: '30,000', EUR: '319', GBP: '269' },
     isFeatured: true,
-    buttonText: 'Most Popular',
+    buttonText: 'Choose Plan',
   },
   {
     id: 'custom',
@@ -146,6 +146,9 @@ export default function Pricing() {
           >
             <button 
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              aria-label="Select pricing currency"
+              aria-haspopup="listbox"
+              aria-expanded={isDropdownOpen}
               className="flex items-center gap-2 glass-card px-5 py-3 rounded-full border border-white/10 hover:border-neon-blue/30 transition-all text-white font-medium shadow-[0_0_15px_rgba(79,142,247,0.05)]"
             >
               <span className="w-6 h-6 rounded-full bg-white/5 flex items-center justify-center text-xs text-neon-blue">
@@ -162,11 +165,15 @@ export default function Pricing() {
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.95 }}
                   transition={{ duration: 0.2 }}
+                  role="listbox"
+                  aria-label="Available currencies"
                   className="absolute left-0 md:left-auto md:right-0 top-full mt-2 w-48 bg-[#121218] border border-white/10 rounded-2xl p-2 z-50 overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
                 >
                   {Object.keys(pricingData).map((code) => (
                     <button
                       key={code}
+                      role="option"
+                      aria-selected={currency === code}
                       onClick={() => handleCurrencySelect(code)}
                       className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-sm font-medium ${
                         currency === code ? 'bg-white/10 text-white' : 'text-white/60 hover:bg-white/5 hover:text-white'

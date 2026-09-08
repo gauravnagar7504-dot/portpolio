@@ -130,7 +130,7 @@ export default function BusinessBenefits() {
               <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 group-hover:bg-red-500/10 transition-all duration-500" />
               <div className="flex items-center gap-3 mb-8">
                 <XCircle className="w-6 h-6 text-red-400" />
-                <h4 className="text-xl font-display font-bold text-white tracking-wide">WITHOUT A WEBSITE</h4>
+                <h3 className="text-xl font-display font-bold text-white tracking-wide">WITHOUT A WEBSITE</h3>
               </div>
               <ul className="space-y-5">
                 {withoutWebsite.map((point, i) => (
@@ -154,7 +154,7 @@ export default function BusinessBenefits() {
               <div className="absolute top-0 right-0 w-64 h-64 bg-neon-blue/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 group-hover:bg-neon-blue/20 transition-all duration-500" />
               <div className="flex items-center gap-3 mb-8">
                 <CheckCircle2 className="w-6 h-6 text-neon-blue" />
-                <h4 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple tracking-wide">WITH A MODERN WEBSITE</h4>
+                <h3 className="text-xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-neon-blue to-neon-purple tracking-wide">WITH A MODERN WEBSITE</h3>
               </div>
               <ul className="space-y-5">
                 {withWebsite.map((point, i) => (

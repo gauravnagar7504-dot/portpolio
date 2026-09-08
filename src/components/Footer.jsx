@@ -4,17 +4,19 @@ import { Mail, MessageCircle, ArrowUp } from 'lucide-react';
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
+  { label: 'Benefits', href: '#benefits' },
   { label: 'Portfolio', href: '#portfolio' },
+  { label: 'Pricing', href: '#pricing' },
   { label: 'About', href: '#about' },
   { label: 'Contact', href: '#contact' },
 ];
 
 const socials = [
-  { icon: MessageCircle, href: 'https://wa.me/917597557904?text=Hi%20Dynamic%20Designing!' },
-  { icon: Mail, href: 'mailto:gauravnagar7504@gmail.com' },
+  { icon: MessageCircle, label: 'Chat on WhatsApp', href: 'https://wa.me/917597557904?text=Hi%20Dynamic%20Designing!' },
+  { icon: Mail, label: 'Send Email', href: 'mailto:gauravnagar7504@gmail.com' },
 ];
 
-export default function Footer() {
+export default function Footer({ onNavClick }) {
   return (
     <footer className="relative border-t border-white/5 py-16">
       <div className="max-w-7xl mx-auto px-6">
@@ -28,16 +30,20 @@ export default function Footer() {
           </div>
 
           {/* Nav links */}
-          <nav className="flex flex-wrap justify-center gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm text-white/40 hover:text-white transition-colors duration-300"
-              >
-                {link.label}
-              </a>
-            ))}
+          <nav aria-label="Footer Navigation" className="flex flex-wrap justify-center">
+            <ul className="flex flex-wrap justify-center gap-6 list-none p-0 m-0">
+              {navLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    onClick={() => onNavClick && onNavClick()}
+                    className="text-sm text-white/40 hover:text-white transition-colors duration-300"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </nav>
 
           {/* Socials */}
@@ -48,9 +54,13 @@ export default function Footer() {
                 <a
                   key={i}
                   href={s.href}
+                  aria-label={s.label}
+                  title={s.label}
+                  target={s.href.startsWith('http') ? '_blank' : undefined}
+                  rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="w-9 h-9 glass-card rounded-lg border border-white/8 flex items-center justify-center text-white/40 hover:text-neon-blue hover:border-neon-blue/30 transition-all duration-300"
                 >
-                  <Icon size={15} />
+                  <Icon size={15} aria-hidden="true" />
                 </a>
               );
             })}

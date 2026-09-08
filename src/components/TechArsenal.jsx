@@ -113,9 +113,9 @@ function TiltCard({ tool, index }) {
         </div>
 
         <div className="mt-8">
-          <h3 className={`font-display font-bold text-lg md:text-xl lg:text-2xl text-white transition-colors duration-500 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:${tool.color}`}>
+          <span className={`font-display font-bold text-lg md:text-xl lg:text-2xl text-white transition-colors duration-500 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:${tool.color} block`}>
             {tool.name}
-          </h3>
+          </span>
         </div>
       </div>
     </motion.div>
@@ -124,7 +124,7 @@ function TiltCard({ tool, index }) {
 
 export default function TechArsenal() {
   return (
-    <section className="relative py-16 md:py-32 overflow-hidden bg-[#030305]">
+    <section id="tech" className="relative py-16 md:py-32 overflow-hidden bg-[#030305]">
       {/* Cinematic Background Mesh */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-neon-purple/20 via-[#030305] to-transparent" />
@@ -153,9 +153,9 @@ export default function TechArsenal() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="section-title text-5xl md:text-6xl lg:text-7xl text-white tracking-tight mb-6"
+            className="section-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white tracking-tight mb-6"
           >
-            Tech <span className="text-gradient drop-shadow-2xl">Arsenal</span>
+            Modern Web Development <span className="text-gradient drop-shadow-2xl">Tech Stack</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

@@ -50,7 +50,7 @@ export default function Portfolio() {
                 transition={{ delay: 0.1 }}
                 className="section-title text-3xl sm:text-4xl md:text-5xl text-white mb-4"
               >
-                Selected <span className="text-gradient">Creations</span>
+                Selected <span className="text-gradient">Creations & Web Designs</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -113,13 +113,26 @@ export default function Portfolio() {
               <div>
                 {/* Mockup Preview Container */}
                 <div
-                  className="relative overflow-hidden bg-[#08080f] cursor-pointer flex items-center justify-center"
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`View enlarged preview of ${design.title}`}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setImageModal({ src: design.image, title: design.title });
+                    }
+                  }}
+                  className="relative overflow-hidden bg-[#08080f] cursor-pointer flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-neon-blue/50"
                   style={{ aspectRatio: design.aspectRatio || '819/1024' }}
                   onClick={() => setImageModal({ src: design.image, title: design.title })}
                 >
                   <img
                     src={design.image}
-                    alt={design.title}
+                    alt={`Website design mockup for ${design.title}`}
+                    loading="lazy"
+                    decoding="async"
+                    width="819"
+                    height="1024"
                     className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050508]/40 via-transparent to-transparent pointer-events-none" />
@@ -149,6 +162,7 @@ export default function Portfolio() {
               <div className="px-5 py-4 flex items-center justify-between gap-3 border-t border-white/10">
                 <button
                   onClick={() => setPreviewUrl(design.liveUrl)}
+                  aria-label={`Preview live demo for ${design.title}`}
                   className="text-xs text-white/70 hover:text-white flex items-center gap-1.5 transition-colors cursor-pointer py-1"
                 >
                   <Eye size={14} className="text-neon-blue" />
@@ -158,6 +172,7 @@ export default function Portfolio() {
                   href={design.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Open full live interactive demo for ${design.title}`}
                   className="btn-primary text-xs py-2 px-4 inline-flex items-center gap-1.5 shadow-sm"
                 >
                   <span>Open Demo</span>
@@ -203,6 +218,7 @@ export default function Portfolio() {
                   </a>
                   <button
                     onClick={() => setPreviewUrl(null)}
+                    aria-label="Close demo preview"
                     className="p-1.5 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                   >
                     <X size={18} />
@@ -228,6 +244,9 @@ export default function Portfolio() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            role="dialog"
+            aria-modal="true"
+            aria-label={imageModal.title}
             className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl p-3 sm:p-6 flex flex-col justify-center items-center"
             onClick={() => setImageModal(null)}
           >
@@ -255,6 +274,7 @@ export default function Portfolio() {
                   </a>
                   <button
                     onClick={() => setImageModal(null)}
+                    aria-label="Close image modal"
                     className="p-1.5 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                   >
                     <X size={18} />

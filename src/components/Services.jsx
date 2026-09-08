@@ -68,7 +68,7 @@ export default function Services() {
             transition={{ delay: 0.1 }}
             className="section-title text-4xl md:text-5xl text-white"
           >
-            Precision <span className="text-gradient">Services</span>
+            Web Design & <span className="text-gradient">Development Services</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -86,32 +86,38 @@ export default function Services() {
           {services.map((service, i) => {
             const Icon = service.icon;
             return (
-              <motion.div
+              <motion.article
                 key={service.title}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1], delay: i * 0.08 }}
-                className="glass-card glass-card-hover rounded-2xl p-7 group cursor-default"
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                whileHover={{ y: -6, transition: { duration: 0.3 } }}
+                className="group glass-card rounded-2xl p-7 relative overflow-hidden border border-white/8 hover:border-neon-blue/30 transition-all duration-300"
               >
+                {/* Hover gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/5 via-transparent to-neon-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
                 {/* Icon */}
-                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${service.accent} opacity-90 mb-5`}>
-                  <Icon size={20} className="text-white" />
+                <div className="w-12 h-12 rounded-xl bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center text-neon-blue mb-6 group-hover:scale-110 group-hover:bg-neon-blue/15 transition-all duration-300">
+                  <Icon size={22} aria-hidden="true" />
                 </div>
 
-                <h3 className="font-display font-700 text-lg text-white mb-3 group-hover:text-gradient transition-all duration-300">
+                {/* Title */}
+                <h3 className="font-display font-700 text-xl text-white mb-3 group-hover:text-gradient transition-colors duration-300">
                   {service.title}
                 </h3>
 
-                <p className="text-white/40 text-sm leading-relaxed">
+                {/* Description */}
+                <p className="text-white/45 text-sm leading-relaxed mb-6">
                   {service.description}
                 </p>
 
                 {/* Bottom line */}
                 <div
-                  className={`mt-6 h-px bg-gradient-to-r ${service.accent} opacity-0 group-hover:opacity-30 transition-opacity duration-500`}
+                  className={`h-px bg-gradient-to-r ${service.accent} opacity-0 group-hover:opacity-30 transition-opacity duration-500`}
                 />
-              </motion.div>
+              </motion.article>
             );
           })}
         </div>

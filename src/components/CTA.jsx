@@ -86,9 +86,12 @@ export default function CTA() {
                 key={s.label}
                 href={s.href}
                 title={s.label}
+                aria-label={`Contact Dynamic Designing via ${s.label}`}
+                target={s.href.startsWith('http') ? '_blank' : undefined}
+                rel={s.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className="flex items-center gap-3 px-8 py-5 glass-card rounded-2xl border border-white/8 text-white/60 hover:text-white hover:border-neon-blue/40 hover:shadow-neon-blue transition-all duration-300 group"
               >
-                <Icon size={24} className="group-hover:scale-110 transition-transform duration-300" />
+                <Icon size={24} aria-hidden="true" className="group-hover:scale-110 transition-transform duration-300" />
                 <span className="font-display font-600 text-lg">{s.label}</span>
               </a>
             );
