@@ -41,7 +41,8 @@ export default function About() {
               <img
                 src={heroImg}
                 alt="Dynamic Designing — The Architect of Digital Luxury"
-                loading="lazy"
+                fetchpriority="high"
+                loading="eager"
                 decoding="async"
                 width="460"
                 height="575"

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ChevronDown, Sparkles } from 'lucide-react';
 
@@ -64,34 +64,28 @@ const plans = [
   },
 ];
 
+const detectDefaultCurrency = () => {
+  try {
+    const tz = typeof Intl !== 'undefined' ? (Intl.DateTimeFormat().resolvedOptions().timeZone || '') : '';
+    const lang = typeof navigator !== 'undefined' ? (navigator.language || '') : '';
+    if (tz.includes('Calcutta') || tz.includes('Kolkata') || tz.includes('Asia/Colombo') || lang === 'en-IN') {
+      return 'INR';
+    }
+    if (tz.includes('London') || lang === 'en-GB') {
+      return 'GBP';
+    }
+    if (tz.startsWith('Europe/')) {
+      return 'EUR';
+    }
+    return 'USD';
+  } catch {
+    return 'USD';
+  }
+};
+
 export default function Pricing() {
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState(detectDefaultCurrency);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  // Detect user location for currency
-  useEffect(() => {
-    const fetchLocation = async () => {
-      try {
-        const response = await fetch('https://ipapi.co/json/');
-        const data = await response.json();
-        
-        // Map country to currency
-        if (data.country_code === 'IN') {
-          setCurrency('INR');
-        } else if (['GB'].includes(data.country_code)) {
-          setCurrency('GBP');
-        } else if (['AT','BE','CY','EE','FI','FR','DE','GR','IE','IT','LV','LT','LU','MT','NL','PT','SK','SI','ES'].includes(data.country_code)) {
-          setCurrency('EUR');
-        } else {
-          setCurrency('USD'); // Default
-        }
-      } catch (error) {
-        console.error('Failed to fetch location:', error);
-      }
-    };
-
-    fetchLocation();
-  }, []);
 
   const handleCurrencySelect = (code) => {
     setCurrency(code);
