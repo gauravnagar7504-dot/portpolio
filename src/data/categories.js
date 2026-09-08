@@ -6,9 +6,6 @@ import novaCareImg from '../assets/images/nova_care.webp';
 import drAaravImg from '../assets/images/dr_aarav_mehta.webp';
 import movehouseImg from '../assets/images/movehouse_fitness.webp';
 import forgeImg from '../assets/images/forge_fitness.webp';
-import salonBeautyImg from '../assets/images/salon_beauty.webp';
-import dentistClinicImg from '../assets/images/iron_fitness.webp'; // Medicare Clinic mockup
-import gymFitnessImg from '../assets/images/wanderlux_travel.webp'; // Iron Fitness mockup
 import coachingInstituteImg from '../assets/images/coaching_institute.webp';
 import weddingPhotoImg from '../assets/images/wedding_photography.webp';
 

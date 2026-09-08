@@ -1,104 +1,69 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import BusinessBenefits from './components/BusinessBenefits';
-import Portfolio from './components/Portfolio';
-import TechArsenal from './components/TechArsenal';
-import Process from './components/Process';
-import Pricing from './components/Pricing';
-import CTA from './components/CTA';
 import Footer from './components/Footer';
-import { categories } from './data/categories';
+import ScrollToTop from './components/ScrollToTop';
 
-const CategoryDetail = lazy(() => import('./components/CategoryDetail'));
+// Lazy-loaded pages for optimal bundle splitting
+const HomePage = lazy(() => import('./pages/HomePage'));
+const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const PortfolioPage = lazy(() => import('./pages/PortfolioPage'));
+const CategoryPage = lazy(() => import('./pages/CategoryPage'));
+const BlogListPage = lazy(() => import('./pages/BlogListPage'));
+const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const PricingPage = lazy(() => import('./pages/PricingPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
+
+function PageLoader() {
+  return (
+    <div className="min-h-[70vh] flex items-center justify-center">
+      <div className="w-8 h-8 rounded-full border-2 border-neon-blue border-t-transparent animate-spin" />
+    </div>
+  );
+}
 
 export default function App() {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
-  useEffect(() => {
-    document.documentElement.style.scrollBehavior = 'smooth';
-
-    const handleHash = () => {
-      const hash = window.location.hash;
-      if (hash.startsWith('#category/')) {
-        const catId = hash.replace('#category/', '');
-        const found = categories.find((c) => c.id === catId);
-        if (found) {
-          setSelectedCategory(found);
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          return;
-        }
-      }
-      if (hash && !hash.startsWith('#category/')) {
-        setSelectedCategory(null);
-      }
-    };
-
-    handleHash();
-    window.addEventListener('hashchange', handleHash);
-    return () => window.removeEventListener('hashchange', handleHash);
-  }, []);
-
-  const handleSelectCategory = (category) => {
-    setSelectedCategory(category);
-    window.location.hash = `category/${category.id}`;
-  };
-
-  const handleBackToPortfolio = () => {
-    setSelectedCategory(null);
-    window.location.hash = 'portfolio';
-    setTimeout(() => {
-      const el = document.getElementById('portfolio');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }, 50);
-  };
-
-  const handleNavReset = () => {
-    setSelectedCategory(null);
-  };
-
   return (
-    <div className="relative min-h-screen bg-[#050508] text-white overflow-x-hidden">
-      {/* Noise overlay */}
-      <div className="noise-overlay" />
+    <BrowserRouter>
+      <ScrollToTop />
+      <div className="relative min-h-screen bg-[#050508] text-white overflow-x-hidden flex flex-col justify-between">
+        {/* Ambient noise overlay */}
+        <div className="noise-overlay" />
 
-      {/* Global background gradient */}
-      <div
-        className="fixed inset-0 pointer-events-none z-0"
-        style={{
-          background: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(79,142,247,0.08) 0%, transparent 60%)',
-        }}
-      />
+        {/* Global ambient background gradient */}
+        <div
+          className="fixed inset-0 pointer-events-none z-0"
+          style={{
+            background: 'radial-gradient(ellipse 80% 50% at 50% -20%, rgba(79,142,247,0.08) 0%, transparent 60%)',
+          }}
+        />
 
-      <Navbar onNavClick={handleNavReset} />
+        {/* Header Navigation */}
+        <Navbar />
 
-      <main className="relative z-10">
-        {selectedCategory ? (
-          <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-8 h-8 rounded-full border-2 border-neon-blue border-t-transparent animate-spin" /></div>}>
-            <CategoryDetail
-              category={selectedCategory}
-              onBack={handleBackToPortfolio}
-              onSelectCategory={handleSelectCategory}
-            />
+        {/* Main Routed Content */}
+        <main className="relative z-10 flex-1">
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/portfolio" element={<PortfolioPage />} />
+              <Route path="/category/:slug" element={<CategoryPage />} />
+              <Route path="/blog" element={<BlogListPage />} />
+              <Route path="/blog/:slug" element={<BlogPostPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/pricing" element={<PricingPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
           </Suspense>
-        ) : (
-          <>
-            <Hero />
-            <About />
-            <Services />
-            <BusinessBenefits />
-            <Portfolio onSelectCategory={handleSelectCategory} />
-            <TechArsenal />
-            <Process />
-            <Pricing />
-            <CTA />
-          </>
-        )}
-      </main>
+        </main>
 
-      <Footer onNavClick={handleNavReset} />
-    </div>
+        {/* Footer Navigation */}
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }

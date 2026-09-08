@@ -1,18 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', to: '/' },
+  { label: 'Services', to: '/services' },
+  { label: 'Portfolio', to: '/portfolio' },
+  { label: 'Blog', to: '/blog' },
+  { label: 'Pricing', to: '/pricing' },
+  { label: 'About', to: '/about' },
+  { label: 'Contact', to: '/contact' },
 ];
 
-export default function Navbar({ onNavClick }) {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -34,38 +38,51 @@ export default function Navbar({ onNavClick }) {
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <a
-            href="#home"
+          <Link
+            to="/"
             className="flex items-center"
-            onClick={() => onNavClick && onNavClick()}
+            onClick={() => setMobileOpen(false)}
           >
             <span className="font-display font-800 text-xl text-white tracking-tight">
               DYNAMIC DESIGNING
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                onClick={() => onNavClick && onNavClick()}
-                className="relative text-sm text-white/60 hover:text-white transition-colors duration-300 font-medium group"
-              >
-                {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-neon-blue to-neon-purple group-hover:w-full transition-all duration-300" />
-              </a>
-            ))}
+          <div className="hidden lg:flex items-center gap-7">
+            {navLinks.map((link) => {
+              const isActive = location.pathname === link.to;
+              return (
+                <Link
+                  key={link.label}
+                  to={link.to}
+                  className={`relative text-sm transition-colors duration-300 font-medium group ${
+                    isActive ? 'text-white font-semibold' : 'text-white/60 hover:text-white'
+                  }`}
+                >
+                  {link.label}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-neon-blue to-neon-purple transition-all duration-300 ${
+                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
+                  />
+                </Link>
+              );
+            })}
           </div>
 
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <a href="https://wa.me/917597557904?text=Hi%20Dynamic%20Designing,%20I'd%20like%20to%20hire%20you." target="_blank" rel="noopener noreferrer" className="hidden md:block btn-primary text-sm py-2 px-5 relative z-10">
+            <a
+              href="https://wa.me/917597557904?text=Hi%20Dynamic%20Designing,%20I'd%20like%20to%20hire%20you."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:block btn-primary text-sm py-2 px-5 relative z-10"
+            >
               Hire Me
             </a>
             <button
-              className="md:hidden text-white/70 hover:text-white transition-colors p-2"
+              className="lg:hidden text-white/70 hover:text-white transition-colors p-2"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
               aria-expanded={mobileOpen}
@@ -89,25 +106,30 @@ export default function Navbar({ onNavClick }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[#050508]/98 backdrop-blur-2xl flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 z-40 bg-[#050508]/98 backdrop-blur-2xl flex flex-col items-center justify-center gap-6"
           >
-            <nav aria-label="Mobile Navigation" className="flex flex-col items-center gap-8">
-              {navLinks.map((link, i) => (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.08 }}
-                  className="text-3xl font-display font-700 text-white/80 hover:text-white transition-colors"
-                  onClick={() => {
-                    setMobileOpen(false);
-                    if (onNavClick) onNavClick();
-                  }}
-                >
-                  {link.label}
-                </motion.a>
-              ))}
+            <nav aria-label="Mobile Navigation" className="flex flex-col items-center gap-6">
+              {navLinks.map((link, i) => {
+                const isActive = location.pathname === link.to;
+                return (
+                  <motion.div
+                    key={link.label}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.05 }}
+                  >
+                    <Link
+                      to={link.to}
+                      className={`text-2xl sm:text-3xl font-display font-700 transition-colors ${
+                        isActive ? 'text-neon-blue' : 'text-white/80 hover:text-white'
+                      }`}
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                );
+              })}
             </nav>
             <motion.a
               href="https://wa.me/917597557904?text=Hi%20Dynamic%20Designing,%20I'd%20like%20to%20hire%20you."
@@ -115,7 +137,7 @@ export default function Navbar({ onNavClick }) {
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.4 }}
               className="btn-primary mt-4"
               onClick={() => setMobileOpen(false)}
             >

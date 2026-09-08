@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Eye, ExternalLink, X, Maximize2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { categories, allDesigns } from '../data/categories';
 
 export default function Portfolio() {
@@ -142,9 +143,13 @@ export default function Portfolio() {
                       Demo Design
                     </span>
                     {design.categoryTitle && (
-                      <span className="glass-card text-[10px] px-2 py-0.5 rounded-full text-white/60 border border-white/5 font-medium">
+                      <Link
+                        to={`/category/${design.categoryId}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="glass-card text-[10px] px-2 py-0.5 rounded-full text-white/60 hover:text-white hover:border-neon-blue/40 border border-white/5 font-medium transition-colors"
+                      >
                         {design.categoryTitle}
-                      </span>
+                      </Link>
                     )}
                   </div>
                 </div>

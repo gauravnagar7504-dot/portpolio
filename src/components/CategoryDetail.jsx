@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight, Sparkles, ExternalLink, Eye, X, Maximize2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { categories } from '../data/categories';
 
 export default function CategoryDetail({ category, onBack, onSelectCategory }) {
@@ -25,20 +26,35 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center justify-between mb-10 pb-6 border-b border-white/10"
         >
-          <button
-            onClick={onBack}
+          <Link
+            to="/portfolio"
+            onClick={(e) => {
+              if (onBack) {
+                e.preventDefault();
+                onBack();
+              }
+            }}
             className="group inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white transition-colors duration-300 px-4 py-2 rounded-full glass-card border border-white/10 hover:border-neon-blue/40 cursor-pointer"
           >
             <ArrowLeft size={16} className="transition-transform duration-300 group-hover:-translate-x-1 text-neon-blue" />
             <span>Back to Selected Creations</span>
-          </button>
+          </Link>
 
           <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-white/40">
             <ol className="flex items-center gap-2">
               <li>
-                <button onClick={onBack} className="hover:text-neon-blue transition-colors cursor-pointer">
+                <Link
+                  to="/portfolio"
+                  onClick={(e) => {
+                    if (onBack) {
+                      e.preventDefault();
+                      onBack();
+                    }
+                  }}
+                  className="hover:text-neon-blue transition-colors cursor-pointer"
+                >
                   Portfolio
-                </button>
+                </Link>
               </li>
               <li aria-hidden="true">/</li>
               <li className="text-white/80 font-medium" aria-current="page">{category.title}</li>
@@ -195,10 +211,15 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
             {otherCategories.map((c) => (
-              <button
+              <Link
                 key={c.id}
-                onClick={() => onSelectCategory(c)}
-                className="glass-card rounded-xl p-3 text-left border border-white/5 hover:border-neon-blue/30 transition-all duration-300 group cursor-pointer"
+                to={`/category/${c.id}`}
+                onClick={() => {
+                  if (onSelectCategory) {
+                    onSelectCategory(c);
+                  }
+                }}
+                className="glass-card rounded-xl p-3 text-left border border-white/5 hover:border-neon-blue/30 transition-all duration-300 group cursor-pointer block"
               >
                 <div className="text-[11px] text-white/40 truncate group-hover:text-neon-blue transition-colors">
                   {c.label}
@@ -206,7 +227,7 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
                 <div className="font-display text-xs sm:text-sm font-600 text-white truncate mt-0.5">
                   {c.shortTitle}
                 </div>
-              </button>
+              </Link>
             ))}
           </div>
         </div>
