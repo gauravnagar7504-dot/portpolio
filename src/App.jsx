@@ -63,7 +63,7 @@ export default function App() {
         <Navbar />
 
         {/* Main Routed Content */}
-        <main className="relative z-10 flex-1">
+        <main className="relative flex-1">
           <Suspense fallback={<PageLoader />}>
             <Routes>
               <Route path="/" element={<HomePage />} />

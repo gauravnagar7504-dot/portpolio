@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Eye, ExternalLink, X, Maximize2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -8,6 +9,17 @@ export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState('all');
   const [previewUrl, setPreviewUrl] = useState(null);
   const [imageModal, setImageModal] = useState(null);
+
+  useEffect(() => {
+    if (previewUrl || imageModal) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [previewUrl, imageModal]);
 
   const filterCategories = [
     { id: 'all', label: 'All Designs', count: allDesigns.length },
@@ -190,119 +202,122 @@ export default function Portfolio() {
       </div>
 
       {/* Live Interactive Preview Modal */}
-      <AnimatePresence>
-        {previewUrl && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-xl p-4 sm:p-8 flex flex-col justify-center items-center"
-          >
-            <div className="w-full max-w-6xl h-full flex flex-col bg-[#050508] rounded-2xl border border-white/15 overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.9)]">
-              {/* Modal Header */}
-              <div className="h-14 px-5 bg-[#0a0a10] border-b border-white/10 flex items-center justify-between shrink-0">
-                <div className="flex items-center gap-3">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-3 h-3 rounded-full bg-red-500/80" />
-                    <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                    <span className="w-3 h-3 rounded-full bg-green-500/80" />
-                  </div>
-                  <span className="text-xs text-white/70 font-mono hidden sm:inline ml-2">
-                    Interactive Demo Preview
-                  </span>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <a
-                    href={previewUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-neon-blue hover:text-white flex items-center gap-1 px-3 py-1.5 rounded-lg glass-card border border-white/10 transition-colors"
-                  >
-                    Open in Full Tab <Maximize2 size={13} />
-                  </a>
-                  <button
-                    onClick={() => setPreviewUrl(null)}
-                    aria-label="Close demo preview"
-                    className="p-1.5 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
-                  >
-                    <X size={18} />
-                  </button>
-                </div>
-              </div>
-
-              {/* Iframe Viewport */}
-              <div className="flex-1 w-full bg-[#fbf9f5] relative">
-                <iframe
-                  src={previewUrl}
-                  title="Demo Design Preview"
-                  className="w-full h-full border-0"
-                />
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-        {/* Exact Image Lightbox Modal */}
-        {imageModal && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            role="dialog"
-            aria-modal="true"
-            aria-label={imageModal.title}
-            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl p-3 sm:p-6 flex flex-col justify-center items-center"
-            onClick={() => setImageModal(null)}
-          >
-            <div
-              className="relative max-w-4xl max-h-[95vh] w-full flex flex-col bg-[#0a0a12] rounded-2xl border border-white/15 overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.9)]"
-              onClick={(e) => e.stopPropagation()}
+      {typeof document !== 'undefined' && createPortal(
+        <AnimatePresence>
+          {previewUrl && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-xl p-4 sm:p-8 flex flex-col justify-center items-center"
             >
-              {/* Modal Header */}
-              <div className="h-14 px-5 bg-[#0e0e18] border-b border-white/10 flex items-center justify-between shrink-0">
-                <div className="flex items-center gap-3">
-                  <span className="text-sm text-white font-medium">{imageModal.title}</span>
-                  <span className="text-xs text-white/70 hidden sm:inline font-mono">
-                    (Exact uploaded size: 819 × 1024)
-                  </span>
+              <div className="w-full max-w-6xl h-full flex flex-col bg-[#050508] rounded-2xl border border-white/15 overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.9)]">
+                {/* Modal Header */}
+                <div className="h-14 px-5 bg-[#0a0a10] border-b border-white/10 flex items-center justify-between shrink-0">
+                  <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-3 h-3 rounded-full bg-red-500/80" />
+                      <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                      <span className="w-3 h-3 rounded-full bg-green-500/80" />
+                    </div>
+                    <span className="text-xs text-white/70 font-mono hidden sm:inline ml-2">
+                      Interactive Demo Preview
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <a
+                      href={previewUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-neon-blue hover:text-white flex items-center gap-1 px-3 py-1.5 rounded-lg glass-card border border-white/10 transition-colors"
+                    >
+                      Open in Full Tab <Maximize2 size={13} />
+                    </a>
+                    <button
+                      onClick={() => setPreviewUrl(null)}
+                      aria-label="Close demo preview"
+                      className="p-1.5 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                    >
+                      <X size={18} />
+                    </button>
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-3">
-                  <a
-                    href={imageModal.src}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs text-neon-blue hover:text-white flex items-center gap-1 px-3 py-1.5 rounded-lg glass-card border border-white/10 transition-colors"
-                  >
-                    Open Original <ExternalLink size={13} />
-                  </a>
-                  <button
-                    onClick={() => setImageModal(null)}
-                    aria-label="Close image modal"
-                    className="p-1.5 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
-                  >
-                    <X size={18} />
-                  </button>
+                {/* Iframe Viewport */}
+                <div className="flex-1 w-full bg-[#fbf9f5] relative">
+                  <iframe
+                    src={previewUrl}
+                    title="Demo Design Preview"
+                    className="w-full h-full border-0"
+                  />
                 </div>
               </div>
+            </motion.div>
+          )}
 
-              {/* Exact Image Viewport */}
-              <div className="flex-1 overflow-auto p-4 flex items-center justify-center bg-[#07070d]">
-                <img
-                  src={imageModal.src}
-                  alt={imageModal.title}
-                  width="819"
-                  height="1024"
-                  decoding="async"
-                  className="max-h-[82vh] w-auto object-contain rounded-lg shadow-2xl border border-white/5"
-                  style={{ aspectRatio: '819/1024' }}
-                />
+          {/* Exact Image Lightbox Modal */}
+          {imageModal && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              role="dialog"
+              aria-modal="true"
+              aria-label={imageModal.title}
+              className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl p-3 sm:p-6 flex flex-col justify-center items-center"
+              onClick={() => setImageModal(null)}
+            >
+              <div
+                className="relative max-w-4xl max-h-[95vh] w-full flex flex-col bg-[#0a0a12] rounded-2xl border border-white/15 overflow-hidden shadow-[0_30px_100px_rgba(0,0,0,0.9)]"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Modal Header */}
+                <div className="h-14 px-5 bg-[#0e0e18] border-b border-white/10 flex items-center justify-between shrink-0">
+                  <div className="flex items-center gap-3">
+                    <span className="text-sm text-white font-medium">{imageModal.title}</span>
+                    <span className="text-xs text-white/70 hidden sm:inline font-mono">
+                      (Exact uploaded size: 819 × 1024)
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-3">
+                    <a
+                      href={imageModal.src}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-neon-blue hover:text-white flex items-center gap-1 px-3 py-1.5 rounded-lg glass-card border border-white/10 transition-colors"
+                    >
+                      Open Original <ExternalLink size={13} />
+                    </a>
+                    <button
+                      onClick={() => setImageModal(null)}
+                      aria-label="Close image modal"
+                      className="p-1.5 rounded-lg text-white/60 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                    >
+                      <X size={18} />
+                    </button>
+                  </div>
+                </div>
+
+                {/* Exact Image Viewport */}
+                <div className="flex-1 overflow-auto p-4 flex items-center justify-center bg-[#07070d]">
+                  <img
+                    src={imageModal.src}
+                    alt={imageModal.title}
+                    width="819"
+                    height="1024"
+                    decoding="async"
+                    className="max-h-[82vh] w-auto object-contain rounded-lg shadow-2xl border border-white/5"
+                    style={{ aspectRatio: '819/1024' }}
+                  />
+                </div>
               </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            </motion.div>
+          )}
+        </AnimatePresence>,
+        document.body
+      )}
     </section>
   );
 }
