@@ -94,14 +94,19 @@
       }
     </script>
 
-    <!-- Font Optimization with Preconnect and Non-render-blocking preload -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-    <noscript>
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet" />
-    </noscript>
+    <!-- Preload Critical Self-Hosted Fonts (0 Third-Party Latency) -->
+    <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin />
+
+    <!-- Preload Mobile LCP Image (Fixes 890ms Resource Load Delay) -->
+    <link rel="preload" as="image" type="image/webp" href="/images/gaurav_about.webp" fetchpriority="high" />
+
+    <!-- Critical Inlined CSS for Instant First Contentful Paint -->
+    <style>
+      :root{color-scheme:dark}
+      body{background-color:#050508;color:#F1F1F1;font-family:'Inter',system-ui,-apple-system,sans-serif;margin:0;padding:0;overflow-x:hidden}
+      #root{min-height:100vh;background-color:#050508}
+    </style>
   </head>
   <body>
     <div id="root"></div>

@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import SEOHead from '../components/SEOHead';
 import Hero from '../components/Hero';
 import About from '../components/About';
-import Services from '../components/Services';
-import BusinessBenefits from '../components/BusinessBenefits';
-import Portfolio from '../components/Portfolio';
-import TechArsenal from '../components/TechArsenal';
-import Process from '../components/Process';
-import Pricing from '../components/Pricing';
-import CTA from '../components/CTA';
+
+// Lazy-load below-the-fold components to slash initial JS bundle and main-thread work
+const Services = lazy(() => import('../components/Services'));
+const BusinessBenefits = lazy(() => import('../components/BusinessBenefits'));
+const Portfolio = lazy(() => import('../components/Portfolio'));
+const TechArsenal = lazy(() => import('../components/TechArsenal'));
+const Process = lazy(() => import('../components/Process'));
+const Pricing = lazy(() => import('../components/Pricing'));
+const CTA = lazy(() => import('../components/CTA'));
 
 export default function HomePage() {
   const homeSchema = {
@@ -61,15 +63,20 @@ export default function HomePage() {
         canonicalUrl="https://www.dynamicdesigninng.com/"
         schemaData={homeSchema}
       />
+      {/* Above-the-fold critical sections: rendered immediately with 0 JS delay */}
       <Hero />
       <About />
-      <Services />
-      <BusinessBenefits />
-      <Portfolio />
-      <TechArsenal />
-      <Process />
-      <Pricing />
-      <CTA />
+
+      {/* Below-the-fold sections: code-split to eliminate unused JS and long main-thread tasks */}
+      <Suspense fallback={null}>
+        <Services />
+        <BusinessBenefits />
+        <Portfolio />
+        <TechArsenal />
+        <Process />
+        <Pricing />
+        <CTA />
+      </Suspense>
     </>
   );
 }

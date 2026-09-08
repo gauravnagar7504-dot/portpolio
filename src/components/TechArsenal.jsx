@@ -182,11 +182,7 @@ export default function TechArsenal() {
         <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#030305] to-transparent z-20 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#030305] to-transparent z-20 pointer-events-none" />
 
-        <motion.div 
-          animate={{ x: [0, "-50%"] }} 
-          transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
-          className="flex whitespace-nowrap w-max items-center"
-        >
+        <div className="flex whitespace-nowrap w-max items-center animate-marquee">
           {[...marqueeText, ...marqueeText].map((text, i) => (
             <div key={i} className="flex items-center">
               <span className="px-10 text-white/40 font-display font-semibold uppercase tracking-[0.2em] text-sm md:text-base hover:text-white hover:text-shadow-glow transition-all duration-300 cursor-default">
@@ -195,7 +191,7 @@ export default function TechArsenal() {
               <span className="w-2 h-2 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple shadow-[0_0_10px_rgba(79,142,247,0.5)]" />
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
 
       <div className="text-center mt-12 relative z-10">

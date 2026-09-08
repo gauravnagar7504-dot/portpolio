@@ -1,14 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
-import heroImg from '../assets/images/gaurav_about.webp';
 
-const fadeUp = (delay = 0) => ({
-  initial: { opacity: 0, y: 40 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true },
-  transition: { duration: 0.8, ease: [0.23, 1, 0.32, 1], delay },
-});
+const heroImg = '/images/gaurav_about.webp';
 
 const highlights = [
   'Premium Brand Identity Design',
@@ -26,13 +19,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
           {/* Left: Visual portrait */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9, ease: [0.23, 1, 0.32, 1] }}
-            className="relative max-w-md mx-auto lg:max-w-none w-full"
-          >
+          <div className="relative max-w-md mx-auto lg:max-w-none w-full">
             {/* Background glow */}
             <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-neon-blue/15 to-neon-purple/15 blur-2xl" />
 
@@ -57,43 +44,42 @@ export default function About() {
                 <div className="font-display text-xl font-700 text-white">Dynamic Designing</div>
               </div>
             </div>
-
-          </motion.div>
+          </div>
 
           {/* Right: Content */}
           <div>
-            <motion.div {...fadeUp(0.1)}>
+            <div>
               <span className="section-label block mb-4">About Me</span>
               <h2 className="section-title text-4xl md:text-5xl text-white mb-6 leading-[1.1]">
                 The Architect of{' '}
                 <span className="text-gradient">Digital Luxury</span>
               </h2>
-            </motion.div>
+            </div>
 
-            <motion.p {...fadeUp(0.2)} className="text-white/50 text-base leading-relaxed mb-6">
-            I'm <span className="text-gradient font-semibold">Dynamic Designing</span> — a premium website development and design studio
+            <p className="text-white/50 text-base leading-relaxed mb-6">
+              I'm <span className="text-gradient font-semibold">Dynamic Designing</span> — a premium website development and design studio
               crafting cinematic digital experiences. Based in India, we deliver high-performance website development services to premium brands in <strong className="text-white font-semibold">Mumbai</strong>, <strong className="text-white font-semibold">Bangalore</strong>, <strong className="text-white font-semibold">Delhi NCR</strong>, <strong className="text-white font-semibold">Hyderabad</strong>, <strong className="text-white font-semibold">Pune</strong>, and globally.
-            </motion.p>
+            </p>
 
-            <motion.p {...fadeUp(0.3)} className="text-white/40 text-sm leading-relaxed mb-10">
+            <p className="text-white/40 text-sm leading-relaxed mb-10">
               My approach blends cinematic aesthetics with strategic design thinking.
               Every pixel is intentional, every interaction purposeful. I believe
               that great design isn't just beautiful — it's a business asset that
               drives real results.
-            </motion.p>
+            </p>
 
             {/* Highlight list */}
-            <motion.ul {...fadeUp(0.4)} className="space-y-3 mb-10">
+            <ul className="space-y-3 mb-10">
               {highlights.map((item) => (
                 <li key={item} className="flex items-center gap-3 text-sm text-white/60">
                   <CheckCircle2 size={16} className="text-neon-blue shrink-0" />
                   {item}
                 </li>
               ))}
-            </motion.ul>
+            </ul>
 
             {/* Stats */}
-            <motion.div {...fadeUp(0.5)} className="grid grid-cols-3 gap-6 mb-10">
+            <div className="grid grid-cols-3 gap-6 mb-10">
               {[
                 { value: '50+', label: 'Projects' },
                 { value: '30+', label: 'Clients' },
@@ -104,10 +90,9 @@ export default function About() {
                   <div className="text-xs text-white/40 mt-1 font-medium">{stat.label}</div>
                 </div>
               ))}
-            </motion.div>
+            </div>
 
-            <motion.a
-              {...fadeUp(0.6)}
+            <a
               href="https://wa.me/917597557904?text=Hi%20Dynamic%20Designing,%20I'd%20like%20to%20work%20with%20you!"
               target="_blank"
               rel="noopener noreferrer"
@@ -115,7 +100,7 @@ export default function About() {
             >
               Work With Me
               <ArrowRight size={16} />
-            </motion.a>
+            </a>
           </div>
         </div>
       </div>
