@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle2, MessageCircle, Mail, Sparkles } from 'lucide-react';
+import CustomDropdown from './CustomDropdown';
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -193,45 +194,27 @@ export default function ContactForm() {
                   />
                 </div>
 
-                <div>
-                  <label htmlFor="projectType" className="block text-xs font-semibold uppercase tracking-wider text-white/70 mb-2">
-                    Project Type / Industry
-                  </label>
-                  <select
-                    id="projectType"
-                    name="projectType"
-                    value={formData.projectType}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-xl bg-[#0a0a14] border border-white/10 focus:border-neon-blue focus:ring-1 focus:ring-neon-blue text-sm text-white outline-none transition-all cursor-pointer"
-                  >
-                    {projectTypes.map((type) => (
-                      <option key={type} value={type} className="bg-[#0a0a14] text-white">
-                        {type}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                <CustomDropdown
+                  id="projectType"
+                  label="Project Type / Industry"
+                  options={projectTypes}
+                  value={formData.projectType}
+                  onChange={(val) => {
+                    setFormData((prev) => ({ ...prev, projectType: val }));
+                  }}
+                />
               </div>
 
               {/* Row 3: Estimated Budget */}
-              <div>
-                <label htmlFor="budget" className="block text-xs font-semibold uppercase tracking-wider text-white/70 mb-2">
-                  Estimated Investment Budget
-                </label>
-                <select
-                  id="budget"
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-xl bg-[#0a0a14] border border-white/10 focus:border-neon-blue focus:ring-1 focus:ring-neon-blue text-sm text-white outline-none transition-all cursor-pointer"
-                >
-                  {budgetRanges.map((range) => (
-                    <option key={range} value={range} className="bg-[#0a0a14] text-white">
-                      {range}
-                    </option>
-                  ))}
-                </select>
-              </div>
+              <CustomDropdown
+                id="budget"
+                label="Estimated Investment Budget"
+                options={budgetRanges}
+                value={formData.budget}
+                onChange={(val) => {
+                  setFormData((prev) => ({ ...prev, budget: val }));
+                }}
+              />
 
               {/* Row 4: Project Details / Message */}
               <div>
