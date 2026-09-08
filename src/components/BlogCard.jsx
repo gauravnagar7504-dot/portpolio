@@ -53,10 +53,21 @@ export default function BlogCard({ post, index = 0 }) {
 
       {/* Footer / Read More */}
       <div className="px-6 sm:px-7 py-4 border-t border-white/10 flex items-center justify-between bg-white/[0.01]">
-        <span className="text-xs text-white/70 flex items-center gap-1.5">
-          <Calendar size={13} />
-          {post.date}
-        </span>
+        <div className="flex flex-wrap items-center gap-2 text-xs text-white/70">
+          <span className="flex items-center gap-1.5">
+            <Calendar size={13} className="text-neon-blue" />
+            <span>{post.date}</span>
+          </span>
+          {post.time && (
+            <>
+              <span className="text-white/30 hidden sm:inline">•</span>
+              <span className="flex items-center gap-1 text-white/60">
+                <Clock size={12} className="text-neon-purple" />
+                <span>{post.time}</span>
+              </span>
+            </>
+          )}
+        </div>
 
         <Link
           to={`/blog/${post.slug}`}

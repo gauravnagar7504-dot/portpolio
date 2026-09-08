@@ -164,13 +164,19 @@ export default function BlogPostPage() {
               </div>
             </div>
 
-            <div className="flex items-center gap-4 text-xs text-white/70">
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/70">
               <span className="flex items-center gap-1.5">
-                <Calendar size={14} />
-                {post.date}
+                <Calendar size={14} className="text-neon-blue" />
+                <span>{post.date}</span>
               </span>
-              <span className="flex items-center gap-1.5">
-                <Clock size={14} />
+              {post.time && (
+                <span className="flex items-center gap-1.5">
+                  <Clock size={14} className="text-neon-purple" />
+                  <span>Uploaded at {post.time}</span>
+                </span>
+              )}
+              <span className="text-white/30 hidden sm:inline">•</span>
+              <span className="text-white/70">
                 {post.readTime}
               </span>
             </div>
@@ -277,7 +283,7 @@ export default function BlogPostPage() {
                     <p className="text-xs text-white/75 line-clamp-2">{related.excerpt}</p>
                   </div>
                   <div className="mt-4 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-white/70">
-                    <span>{related.readTime}</span>
+                    <span>{related.date} • {related.readTime}</span>
                     <span className="text-neon-blue flex items-center gap-1 font-semibold group-hover:translate-x-1 transition-transform">
                       Read <ArrowRight size={12} />
                     </span>
