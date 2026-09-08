@@ -10,6 +10,13 @@ export default {
         sans: ['Inter', 'sans-serif'],
         display: ['Space Grotesk', 'sans-serif'],
       },
+      fontWeight: {
+        '500': '500',
+        '600': '600',
+        '700': '700',
+        '800': '800',
+        '900': '900',
+      },
       colors: {
         bg: {
           DEFAULT: '#050508',

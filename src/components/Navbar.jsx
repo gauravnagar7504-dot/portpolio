@@ -39,8 +39,8 @@ export default function Navbar({ onNavClick }) {
             className="flex items-center"
             onClick={() => onNavClick && onNavClick()}
           >
-            <span className="font-sans font-500 text-xl text-white tracking-wide">
-              Dynamic Designing
+            <span className="font-display font-800 text-xl text-white tracking-tight">
+              DYNAMIC DESIGNING
             </span>
           </a>
 
