@@ -43,7 +43,7 @@ export default function BlogListPage() {
   };
 
   return (
-    <div className="min-h-screen pt-28 sm:pt-36 pb-24 relative overflow-hidden text-white">
+    <div className="min-h-screen pt-20 sm:pt-24 pb-20 relative overflow-hidden text-white">
       <SEOHead
         title="Web Design & Digital Growth Blog | Dynamic Designing"
         description="Read expert guides on web development pricing in India, luxury UX design best practices, hotel reservation websites, and modern digital trends."

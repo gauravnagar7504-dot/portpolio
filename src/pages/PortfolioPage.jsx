@@ -26,7 +26,7 @@ export default function PortfolioPage() {
   };
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-16 pb-16">
       <SEOHead
         title="Web Design Portfolio & Live Interactive Demos | Dynamic Designing"
         description="Explore our curated portfolio of bespoke, high-performance website designs. Live interactive demos built for luxury hospitality, aesthetics, clinics, and modern fitness."
@@ -35,7 +35,7 @@ export default function PortfolioPage() {
       />
 
       {/* Hero Intro */}
-      <section className="py-16 sm:py-20 text-center relative overflow-hidden">
+      <section className="pt-8 pb-12 sm:pt-12 sm:pb-16 text-center relative overflow-hidden">
         <div className="glow-orb w-[500px] h-[500px] bg-neon-purple/10 top-0 left-1/2 -translate-x-1/2" />
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <motion.div

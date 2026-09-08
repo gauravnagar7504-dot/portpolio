@@ -12,7 +12,7 @@ export default function CategoryPage() {
 
   if (!category) {
     return (
-      <div className="min-h-screen pt-36 pb-24 flex flex-col items-center justify-center text-center px-6 text-white">
+      <div className="min-h-screen pt-24 sm:pt-28 pb-20 flex flex-col items-center justify-center text-center px-6 text-white">
         <h1 className="text-4xl font-display font-800 mb-4">Category Not Found</h1>
         <p className="text-white/60 mb-8 max-w-md">The portfolio category you requested could not be found.</p>
         <Link to="/portfolio" className="btn-primary py-2.5 px-6">

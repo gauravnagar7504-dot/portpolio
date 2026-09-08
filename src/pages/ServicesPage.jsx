@@ -51,7 +51,7 @@ export default function ServicesPage() {
   };
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-16 pb-16">
       <SEOHead
         title="Web Design & Development Services | Dynamic Designing"
         description="Explore luxury web design, bespoke UI/UX development, high-speed frontend engineering, and technical SEO services tailored for ambitious brands."
@@ -60,7 +60,7 @@ export default function ServicesPage() {
       />
 
       {/* Services Hero Banner */}
-      <section className="py-16 sm:py-24 text-center relative overflow-hidden">
+      <section className="pt-8 pb-12 sm:pt-12 sm:pb-16 text-center relative overflow-hidden">
         <div className="glow-orb w-[500px] h-[500px] bg-neon-blue/10 top-0 left-1/2 -translate-x-1/2" />
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <motion.div

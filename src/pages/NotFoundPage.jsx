@@ -6,7 +6,7 @@ import SEOHead from '../components/SEOHead';
 
 export default function NotFoundPage() {
   return (
-    <div className="min-h-screen pt-36 pb-24 flex flex-col items-center justify-center text-center px-6 relative overflow-hidden text-white">
+    <div className="min-h-screen pt-24 sm:pt-28 pb-20 flex flex-col items-center justify-center text-center px-6 relative overflow-hidden text-white">
       <SEOHead
         title="404 - Page Not Found | Dynamic Designing"
         description="The requested page could not be found."

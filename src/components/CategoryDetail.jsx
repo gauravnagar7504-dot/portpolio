@@ -27,7 +27,7 @@ export default function CategoryDetail({ category, onBack, onSelectCategory }) {
   const otherCategories = categories.filter((c) => c.id !== category.id);
 
   return (
-    <section id="category-detail" className="min-h-screen pt-28 sm:pt-36 pb-24 relative overflow-hidden text-white">
+    <section id="category-detail" className="min-h-screen pt-20 sm:pt-24 pb-20 relative overflow-hidden text-white">
       {/* Background glow */}
       <div className="glow-orb w-[600px] h-[600px] bg-neon-blue/10 top-0 left-1/2 -translate-x-1/2" />
 

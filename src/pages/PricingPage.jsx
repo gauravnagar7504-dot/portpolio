@@ -36,7 +36,7 @@ export default function PricingPage() {
   };
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-16 pb-16">
       <SEOHead
         title="Website Design Pricing & Packages | Dynamic Designing"
         description="Clear, transparent pricing packages for bespoke website design, high-speed engineering, and luxury UI/UX development. View starter, signature, and enterprise options."
@@ -45,7 +45,7 @@ export default function PricingPage() {
       />
 
       {/* Hero Banner */}
-      <section className="py-16 sm:py-20 text-center relative overflow-hidden">
+      <section className="pt-8 pb-12 sm:pt-12 sm:pb-16 text-center relative overflow-hidden">
         <div className="glow-orb w-[500px] h-[500px] bg-neon-blue/10 top-0 left-1/2 -translate-x-1/2" />
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <motion.div

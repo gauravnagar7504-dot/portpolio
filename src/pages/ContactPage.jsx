@@ -27,7 +27,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-16 pb-16">
       <SEOHead
         title="Contact Dynamic Designing | Hire A Luxury Web Designer"
         description="Ready to elevate your digital presence? Contact Dynamic Designing for bespoke web design inquiries, luxury UI/UX consulting, and fast project quotes."
@@ -36,7 +36,7 @@ export default function ContactPage() {
       />
 
       {/* Hero Header */}
-      <section className="py-16 sm:py-20 text-center relative overflow-hidden">
+      <section className="pt-8 pb-12 sm:pt-12 sm:pb-16 text-center relative overflow-hidden">
         <div className="glow-orb w-[500px] h-[500px] bg-neon-blue/10 top-0 left-1/2 -translate-x-1/2" />
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <motion.div

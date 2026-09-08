@@ -23,7 +23,7 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="pt-24 pb-16">
+    <div className="pt-16 pb-16">
       <SEOHead
         title="About Dynamic Designing | Luxury Web Design Studio"
         description="Learn about Dynamic Designing, a luxury web design and development studio founded by Gaurav Nagar in Jaipur, Rajasthan, crafting elite digital experiences for brands worldwide."
@@ -32,7 +32,7 @@ export default function AboutPage() {
       />
 
       {/* Hero Banner */}
-      <section className="py-16 sm:py-20 text-center relative overflow-hidden">
+      <section className="pt-8 pb-12 sm:pt-12 sm:pb-16 text-center relative overflow-hidden">
         <div className="glow-orb w-[500px] h-[500px] bg-neon-blue/10 top-0 left-1/2 -translate-x-1/2" />
         <div className="max-w-4xl mx-auto px-6 relative z-10">
           <motion.div
