@@ -13,7 +13,7 @@ const tools = [
   { name: 'JavaScript', short: 'Js', cat: 'Core Language', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-yellow-400 to-amber-600', textColors: 'text-yellow-400', shadow: 'shadow-yellow-500/20' },
   { name: 'HTML', short: 'Ht', cat: 'Markup', col: 'col-span-1 md:col-span-1 lg:col-span-1', row: 'row-span-1', color: 'from-orange-400 to-red-500', textColors: 'text-orange-400', shadow: 'shadow-orange-500/20' },
   { name: 'CSS', short: 'Cs', cat: 'Styling', col: 'col-span-1 md:col-span-1 lg:col-span-1', row: 'row-span-1', color: 'from-blue-400 to-cyan-500', textColors: 'text-blue-400', shadow: 'shadow-blue-500/20' },
-  { name: 'Photoshop', short: 'Ps', cat: 'Image Editing', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-blue-500 to-cyan-600', textColors: 'text-blue-400', shadow: 'shadow-blue-500/20' },
+  { name: 'Shopify', short: 'Sp', cat: 'E-commerce Platform', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-emerald-400 to-green-600', textColors: 'text-emerald-400', shadow: 'shadow-emerald-500/20' },
 ];
 
 const marqueeText = [
