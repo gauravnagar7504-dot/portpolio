@@ -178,7 +178,7 @@ export default function ContactForm() {
               </div>
 
               {/* Row 2: Phone & Project Type */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-30">
                 <div>
                   <label htmlFor="phone" className="block text-xs font-semibold uppercase tracking-wider text-white/70 mb-2">
                     Phone / WhatsApp Number
@@ -206,18 +206,20 @@ export default function ContactForm() {
               </div>
 
               {/* Row 3: Estimated Budget */}
-              <CustomDropdown
-                id="budget"
-                label="Estimated Investment Budget"
-                options={budgetRanges}
-                value={formData.budget}
-                onChange={(val) => {
-                  setFormData((prev) => ({ ...prev, budget: val }));
-                }}
-              />
+              <div className="relative z-20">
+                <CustomDropdown
+                  id="budget"
+                  label="Estimated Investment Budget"
+                  options={budgetRanges}
+                  value={formData.budget}
+                  onChange={(val) => {
+                    setFormData((prev) => ({ ...prev, budget: val }));
+                  }}
+                />
+              </div>
 
               {/* Row 4: Project Details / Message */}
-              <div>
+              <div className="relative z-10">
                 <label htmlFor="message" className="block text-xs font-semibold uppercase tracking-wider text-white/70 mb-2">
                   Project Vision & Scope
                 </label>

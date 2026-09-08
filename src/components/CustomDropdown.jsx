@@ -30,7 +30,7 @@ export default function CustomDropdown({
   };
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div className={`relative ${isOpen ? 'z-40' : 'z-10'}`} ref={dropdownRef}>
       {label && (
         <label
           htmlFor={id}
@@ -70,7 +70,8 @@ export default function CustomDropdown({
             transition={{ duration: 0.15, ease: 'easeOut' }}
             role="listbox"
             aria-label={label || 'Dropdown options'}
-            className="absolute left-0 right-0 top-full mt-2 bg-[#0a0a14]/98 backdrop-blur-2xl border border-white/15 rounded-2xl p-1.5 z-50 shadow-[0_20px_50px_rgba(0,0,0,0.8)] max-h-64 overflow-y-auto no-scrollbar scrollbar-none"
+            style={{ backgroundColor: '#0e0e18' }}
+            className="absolute left-0 right-0 top-full mt-2 bg-[#0e0e18] border border-white/20 rounded-2xl p-2 z-[999] shadow-[0_25px_60px_rgba(0,0,0,0.95)] max-h-64 overflow-y-auto no-scrollbar scrollbar-none"
           >
             {options.map((option) => {
               const isSelected = value === option;
@@ -83,8 +84,8 @@ export default function CustomDropdown({
                   onClick={() => handleSelect(option)}
                   className={`w-full text-left px-3.5 py-2.5 rounded-xl text-xs sm:text-sm font-medium flex items-center justify-between transition-all duration-150 cursor-pointer mb-0.5 last:mb-0 ${
                     isSelected
-                      ? 'bg-neon-blue/15 text-neon-blue font-semibold border border-neon-blue/30'
-                      : 'text-white/70 hover:bg-white/8 hover:text-white'
+                      ? 'bg-neon-blue/20 text-white font-semibold border border-neon-blue/40'
+                      : 'text-white/80 hover:bg-white/10 hover:text-white'
                   }`}
                 >
                   <span className="truncate">{option}</span>
