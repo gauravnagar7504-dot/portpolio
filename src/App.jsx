@@ -8,6 +8,14 @@ import HomePage from './pages/HomePage';
 
 // Lazy-loaded secondary pages for optimal bundle splitting
 const ServicesPage = lazy(() => import('./pages/ServicesPage'));
+const WebsiteDevelopmentPage = lazy(() => import('./pages/services/WebsiteDevelopmentPage'));
+const CustomWebsiteDevelopmentPage = lazy(() => import('./pages/services/CustomWebsiteDevelopmentPage'));
+const WordpressDevelopmentPage = lazy(() => import('./pages/services/WordpressDevelopmentPage'));
+const ShopifyDevelopmentPage = lazy(() => import('./pages/services/ShopifyDevelopmentPage'));
+const EcommerceDevelopmentPage = lazy(() => import('./pages/services/EcommerceDevelopmentPage'));
+const WebsiteRedesignPage = lazy(() => import('./pages/services/WebsiteRedesignPage'));
+const UiUxDesignPage = lazy(() => import('./pages/services/UiUxDesignPage'));
+
 const PortfolioPage = lazy(() => import('./pages/PortfolioPage'));
 const CategoryPage = lazy(() => import('./pages/CategoryPage'));
 const BlogListPage = lazy(() => import('./pages/BlogListPage'));
@@ -71,6 +79,14 @@ export default function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/website-development" element={<WebsiteDevelopmentPage />} />
+              <Route path="/services/custom-website-development" element={<CustomWebsiteDevelopmentPage />} />
+              <Route path="/services/wordpress-development" element={<WordpressDevelopmentPage />} />
+              <Route path="/services/shopify-development" element={<ShopifyDevelopmentPage />} />
+              <Route path="/services/ecommerce-development" element={<EcommerceDevelopmentPage />} />
+              <Route path="/services/website-redesign" element={<WebsiteRedesignPage />} />
+              <Route path="/services/ui-ux-design" element={<UiUxDesignPage />} />
+
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/category/:slug" element={<CategoryPage />} />
               <Route path="/blog" element={<BlogListPage />} />

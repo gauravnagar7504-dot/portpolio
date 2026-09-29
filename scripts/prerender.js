@@ -18,9 +18,51 @@ const template = fs.readFileSync(templatePath, 'utf8');
 const routes = [
   {
     path: 'services',
-    title: 'Web Design & Development Services | Dynamic Designing',
-    description: 'Explore luxury web design, bespoke UI/UX development, high-speed frontend engineering, and technical SEO services tailored for ambitious brands.',
+    title: 'Website Design & Development Services | Dynamic Designing',
+    description: 'Explore professional website development, WordPress, Shopify, e-commerce, custom development, website redesign and UI/UX design services from Dynamic Designing.',
     canonical: 'https://www.dynamicdesigninng.com/services',
+  },
+  {
+    path: 'services/website-development',
+    title: 'Website Development Services | Dynamic Designing',
+    description: 'We create fast, responsive and scalable websites that combine thoughtful design, reliable development and a clear business purpose.',
+    canonical: 'https://www.dynamicdesigninng.com/services/website-development',
+  },
+  {
+    path: 'services/custom-website-development',
+    title: 'Custom Website Development Services | Dynamic Designing',
+    description: 'Purpose-built custom website development without template limitations. Custom portals, custom workflows, API integrations, and scalable architectures.',
+    canonical: 'https://www.dynamicdesigninng.com/services/custom-website-development',
+  },
+  {
+    path: 'services/wordpress-development',
+    title: 'WordPress Development Services | Dynamic Designing',
+    description: 'Professional WordPress websites combining custom design, flexible content management and scalable functionality without plugin bloat.',
+    canonical: 'https://www.dynamicdesigninng.com/services/wordpress-development',
+  },
+  {
+    path: 'services/shopify-development',
+    title: 'Shopify Development Services | Dynamic Designing',
+    description: 'We design and develop Shopify experiences that make products easier to discover, understand and purchase. Custom OS 2.0 stores built for growth.',
+    canonical: 'https://www.dynamicdesigninng.com/services/shopify-development',
+  },
+  {
+    path: 'services/ecommerce-development',
+    title: 'E-commerce Website Development Services | Dynamic Designing',
+    description: 'We engineer complete online shopping experiences built around smooth customer journeys, robust order infrastructure, and scalable commerce architecture.',
+    canonical: 'https://www.dynamicdesigninng.com/services/ecommerce-development',
+  },
+  {
+    path: 'services/website-redesign',
+    title: 'Website Redesign Services | Dynamic Designing',
+    description: 'Transform outdated, slow websites into high-converting modern assets. Complete redesign with zero SEO disruption, 301 mapping, and speed optimization.',
+    canonical: 'https://www.dynamicdesigninng.com/services/website-redesign',
+  },
+  {
+    path: 'services/ui-ux-design',
+    title: 'UI/UX Design Services | Dynamic Designing',
+    description: 'Strategic user interface and experience design. Wireframing, interactive prototyping, design systems, and responsive Figma architectures.',
+    canonical: 'https://www.dynamicdesigninng.com/services/ui-ux-design',
   },
   {
     path: 'portfolio',

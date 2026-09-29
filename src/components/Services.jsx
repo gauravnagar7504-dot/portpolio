@@ -1,48 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
-  Globe, Sparkles, LayoutTemplate, Smartphone,
-  Palette, Code2,
+  Globe, Code2, Layers, ShoppingBag, ShoppingCart, RefreshCw, Palette,
+  ArrowRight
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { servicesData } from '../data/servicesData';
 
-const services = [
-  {
-    icon: Globe,
-    title: 'Website Design',
-    description: 'Bespoke websites that command attention and convert visitors into loyal customers.',
-    accent: 'from-blue-500 to-cyan-400',
-  },
-  {
-    icon: Palette,
-    title: 'Brand Identity',
-    description: 'Comprehensive brand systems — logos, color palettes, typography, and visual language.',
-    accent: 'from-purple-500 to-pink-400',
-  },
-  {
-    icon: LayoutTemplate,
-    title: 'Landing Pages',
-    description: 'High-converting, beautifully designed landing pages optimized for your goals.',
-    accent: 'from-orange-400 to-yellow-400',
-  },
-  {
-    icon: Smartphone,
-    title: 'UI / UX Design',
-    description: 'Intuitive interfaces and seamless experiences designed for delight and usability.',
-    accent: 'from-green-400 to-emerald-400',
-  },
-  {
-    icon: Sparkles,
-    title: 'Motion Design',
-    description: 'Cinematic animations and micro-interactions that make your brand feel alive.',
-    accent: 'from-neon-blue to-neon-purple',
-  },
-  {
-    icon: Code2,
-    title: 'Web Development',
-    description: 'Clean, scalable code using React, Tailwind CSS, and modern WordPress builds.',
-    accent: 'from-red-400 to-orange-400',
-  },
-];
+const icons = {
+  'website-development': Globe,
+  'custom-website-development': Code2,
+  'wordpress-development': Layers,
+  'shopify-development': ShoppingBag,
+  'ecommerce-development': ShoppingCart,
+  'website-redesign': RefreshCw,
+  'ui-ux-design': Palette,
+};
 
 export default function Services() {
   return (
@@ -59,7 +32,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="section-label block mb-4"
           >
-            What I Offer
+            What We Build
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -68,55 +41,113 @@ export default function Services() {
             transition={{ delay: 0.1 }}
             className="section-title text-4xl md:text-5xl text-white"
           >
-            Web Design & <span className="text-gradient">Development Services</span>
+            Website Design & <span className="text-gradient">Development Services</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-white/70 text-sm mt-4 max-w-md mx-auto"
+            className="text-white/70 text-sm mt-4 max-w-lg mx-auto"
           >
-            Every service is delivered with obsessive attention to detail and a luxury-first mindset.
+            Fast, scalable, and conversion-focused websites engineered for businesses that want more than just an online presence.
           </motion.p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {services.map((service, i) => {
-            const Icon = service.icon;
+        {/* Grid of 7 services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {servicesData.map((service, i) => {
+            const Icon = icons[service.id] || Globe;
+            const isLarge = i === 6;
             return (
               <motion.article
-                key={service.title}
+                key={service.id}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.08 }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
                 whileHover={{ y: -6, transition: { duration: 0.3 } }}
-                className="group glass-card rounded-2xl p-7 relative overflow-hidden border border-white/8 hover:border-neon-blue/30 transition-all duration-300"
+                className={`group glass-card rounded-2xl p-7 relative overflow-hidden border border-white/8 hover:border-neon-blue/30 transition-all duration-300 flex flex-col justify-between ${
+                  isLarge ? 'md:col-span-2 lg:col-span-3' : ''
+                }`}
               >
                 {/* Hover gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-neon-blue/5 via-transparent to-neon-purple/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center text-neon-blue mb-6 group-hover:scale-110 group-hover:bg-neon-blue/15 transition-all duration-300">
-                  <Icon size={22} aria-hidden="true" />
+                {/* Top row: Number on left, Icon on far right */}
+                <div className="flex items-center justify-between mb-5 w-full">
+                  <span className="font-mono text-xs font-bold text-neon-blue/70">
+                    {service.number}
+                  </span>
+                  <div className="w-10 h-10 rounded-xl bg-neon-blue/10 border border-neon-blue/20 flex items-center justify-center text-neon-blue group-hover:scale-110 group-hover:bg-neon-blue/15 transition-all duration-300">
+                    <Icon size={18} aria-hidden="true" />
+                  </div>
                 </div>
 
-                {/* Title */}
-                <h3 className="font-display font-700 text-xl text-white mb-3 group-hover:text-gradient transition-colors duration-300">
-                  {service.title}
-                </h3>
+                {isLarge ? (
+                  <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+                    <div className="max-w-2xl">
+                      <h3 className="font-display font-700 text-xl text-white mb-2.5 group-hover:text-neon-blue transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-white/70 text-sm leading-relaxed mb-4">
+                        {service.shortDescription}
+                      </p>
+                      <div className="flex flex-wrap gap-1.5">
+                        {service.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-[11px] px-2.5 py-0.5 rounded-full bg-white/[0.03] border border-white/8 text-white/60 font-medium"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
 
-                {/* Description */}
-                <p className="text-white/70 text-sm leading-relaxed mb-6">
-                  {service.description}
-                </p>
+                    <div className="shrink-0 pt-3 lg:pt-0">
+                      <Link
+                        to={service.url}
+                        className="inline-flex items-center gap-1.5 text-xs font-display font-semibold text-neon-blue group-hover:text-white transition-colors"
+                      >
+                        <span>Explore Service</span>
+                        <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <div>
+                      <h3 className="font-display font-700 text-xl text-white mb-2.5 group-hover:text-neon-blue transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-white/70 text-sm leading-relaxed mb-5">
+                        {service.shortDescription}
+                      </p>
+                      <div className="flex flex-wrap gap-1.5 mb-6">
+                        {service.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-[11px] px-2.5 py-0.5 rounded-full bg-white/[0.03] border border-white/8 text-white/60 font-medium"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
 
-                {/* Bottom line */}
-                <div
-                  className={`h-px bg-gradient-to-r ${service.accent} opacity-0 group-hover:opacity-30 transition-opacity duration-500`}
-                />
+                    {/* Explore Link */}
+                    <div className="pt-3 border-t border-white/5">
+                      <Link
+                        to={service.url}
+                        className="inline-flex items-center gap-1.5 text-xs font-display font-semibold text-neon-blue group-hover:text-white transition-colors"
+                      >
+                        <span>Explore Service</span>
+                        <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                      </Link>
+                    </div>
+                  </>
+                )}
               </motion.article>
             );
           })}
