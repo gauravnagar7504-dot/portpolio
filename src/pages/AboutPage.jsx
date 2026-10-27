@@ -18,7 +18,7 @@ export default function AboutPage() {
       '@type': 'Person',
       name: 'Gaurav Nagar',
       jobTitle: 'Lead Designer & Full-Stack Developer',
-      knowsAbout: ['Luxury UI/UX', 'React', 'Tailwind CSS', 'High-Speed Web Engineering', 'SEO Optimization'],
+      knowsAbout: ['Luxury UI/UX', 'High-Speed Web Engineering', 'SEO Optimization'],
     },
   };
 

@@ -37,7 +37,7 @@ export default function TermsPage() {
           <p className="mb-3">Our core service capabilities include:</p>
           <ul className="list-disc list-inside space-y-2 text-white/80">
             <li>Custom website design, luxury UI/UX architecture, and interactive mockups.</li>
-            <li>High-performance frontend engineering (React, Next.js, Vite, Tailwind CSS).</li>
+            <li>High-performance frontend engineering (Vite).</li>
             <li>Technical SEO architecture, Core Web Vitals optimization, and schema.org integration.</li>
             <li>Speed audits, performance tuning, and domain DNS/deployment setup.</li>
           </ul>
@@ -65,7 +65,7 @@ export default function TermsPage() {
             <strong className="text-white">100% Client Code Ownership:</strong> Upon full settlement of all project invoices and milestone fees, complete intellectual property and copyright ownership of the customized frontend code, graphic assets, layouts, and bespoke branding created specifically for your project transfer entirely to you.
           </p>
           <p className="mb-4">
-            <strong className="text-white">Open-Source Technologies:</strong> Underpinning open-source software, packages, and frameworks (e.g., React, Tailwind CSS, Lucide icons) remain governed by their respective open-source licenses (MIT, Apache, etc.).
+            <strong className="text-white">Open-Source Technologies:</strong> Underpinning open-source software, packages, and frameworks (e.g., Lucide icons) remain governed by their respective open-source licenses (MIT, Apache, etc.).
           </p>
           <p>
             <strong className="text-white">Studio Portfolio Rights:</strong> Dynamic Designing retains the professional right to display completed project screenshots, animations, case studies, and live demo links within our portfolio and marketing channels, unless an explicit NDA prohibiting public attribution was executed prior to kickoff.

@@ -20,6 +20,8 @@ const PortfolioPage = lazy(() => import('./pages/PortfolioPage'));
 const CategoryPage = lazy(() => import('./pages/CategoryPage'));
 const BlogListPage = lazy(() => import('./pages/BlogListPage'));
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
+const WebsiteDevelopmentCostArticle = lazy(() => import('./pages/blog/WebsiteDevelopmentCostArticle'));
+const HowToChooseWebsiteDevelopmentCompanyArticle = lazy(() => import('./pages/blog/HowToChooseWebsiteDevelopmentCompanyArticle'));
 const AboutPage = lazy(() => import('./pages/AboutPage'));
 const PricingPage = lazy(() => import('./pages/PricingPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
@@ -90,6 +92,9 @@ export default function App() {
               <Route path="/portfolio" element={<PortfolioPage />} />
               <Route path="/category/:slug" element={<CategoryPage />} />
               <Route path="/blog" element={<BlogListPage />} />
+              <Route path="/blog/website-development-cost-india" element={<WebsiteDevelopmentCostArticle />} />
+              <Route path="/blog/how-much-does-a-website-cost-in-india-2026" element={<WebsiteDevelopmentCostArticle />} />
+              <Route path="/blog/how-to-choose-website-development-company" element={<HowToChooseWebsiteDevelopmentCompanyArticle />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/pricing" element={<PricingPage />} />

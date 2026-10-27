@@ -29,7 +29,7 @@ export default function CustomWebsiteDevelopmentPage() {
   };
 
   const capabilities = [
-    { title: 'Custom Frontend Development', desc: 'React, modern component architectures, and responsive micro-interactions engineered for extreme speed.' },
+    { title: 'Custom Frontend Development', desc: 'Modern component architectures and responsive micro-interactions engineered for extreme speed.' },
     { title: 'Custom Backend Functionality', desc: 'Secure APIs, serverless functions, and robust business logic tailored to your specific operational flows.' },
     { title: 'Third-Party API Integrations', desc: 'Seamless synchronization with ERPs, CRMs, logistics engines, SMS/WhatsApp gateways, and payment providers.' },
     { title: 'CRM & Lead Automations', desc: 'Direct pipeline routing to HubSpot, Salesforce, Zoho, or proprietary databases with zero manual data entry.' },
@@ -71,7 +71,7 @@ export default function CustomWebsiteDevelopmentPage() {
     },
     {
       q: 'What technology stack do you use for custom development?',
-      a: 'We build modern web architectures primarily utilizing React, Next.js / Vite, Tailwind CSS, Node.js, TypeScript, PostgreSQL / Supabase, and cloud-edge deployments (AWS, Vercel, Cloudflare). We select the optimal tools based on your specific performance, scalability, and internal team capabilities.',
+      a: 'We build modern web architectures utilizing Vite, Node.js, PostgreSQL / Supabase, and cloud-edge deployments (AWS, Vercel, Cloudflare). We select the optimal tools based on your specific performance, scalability, and internal team capabilities.',
     },
     {
       q: 'Do I own the full intellectual property (IP) and code?',
@@ -159,7 +159,7 @@ export default function CustomWebsiteDevelopmentPage() {
                 </div>
 
                 <div className="bg-[#070913] p-4 rounded-xl border border-white/8 space-y-2 text-[11px] leading-relaxed text-white/60">
-                  <p><span className="text-neon-blue">"framework"</span>: <span className="text-emerald-400">"React 19 / Modern Headless"</span>,</p>
+                  <p><span className="text-neon-blue">"architecture"</span>: <span className="text-emerald-400">"Modern Headless"</span>,</p>
                   <p><span className="text-neon-blue">"database"</span>: <span className="text-emerald-400">"PostgreSQL + Redis Cache"</span>,</p>
                   <p><span className="text-neon-blue">"api_layer"</span>: <span className="text-emerald-400">"GraphQL & RESTful Endpoints"</span>,</p>
                   <p><span className="text-neon-blue">"auth_security"</span>: <span className="text-emerald-400">"OAuth2 / JWT + RBAC"</span>,</p>

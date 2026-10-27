@@ -2,18 +2,14 @@ import React, { useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring, useTransform, useMotionTemplate } from 'framer-motion';
 
 const tools = [
-  { name: 'React', short: 'Re', cat: 'Frontend Library', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1 md:row-span-2', color: 'from-cyan-400 to-blue-600', textColors: 'text-cyan-400', shadow: 'shadow-cyan-500/20' },
-  { name: 'Tailwind CSS', short: 'Tw', cat: 'Styling Framework', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-teal-400 to-cyan-500', textColors: 'text-teal-400', shadow: 'shadow-teal-500/20' },
-  { name: 'Figma', short: 'Fg', cat: 'UI/UX Design', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-pink-500 to-purple-600', textColors: 'text-pink-400', shadow: 'shadow-pink-500/20' },
-  { name: 'Framer Motion', short: 'Fm', cat: 'Animation Library', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-violet-500 to-fuchsia-600', textColors: 'text-violet-400', shadow: 'shadow-violet-500/20' },
-  { name: 'GSAP', short: 'Gs', cat: 'Motion Design', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-green-400 to-emerald-600', textColors: 'text-green-400', shadow: 'shadow-green-500/20' },
-  { name: 'WordPress', short: 'Wp', cat: 'CMS Platform', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-blue-400 to-indigo-600', textColors: 'text-blue-400', shadow: 'shadow-blue-500/20' },
-  { name: 'Elementor', short: 'El', cat: 'Page Builder', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-rose-400 to-pink-600', textColors: 'text-rose-400', shadow: 'shadow-rose-500/20' },
-  { name: 'WooCommerce', short: 'Wo', cat: 'E-commerce', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-purple-400 to-indigo-600', textColors: 'text-purple-400', shadow: 'shadow-purple-500/20' },
-  { name: 'JavaScript', short: 'Js', cat: 'Core Language', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-yellow-400 to-amber-600', textColors: 'text-yellow-400', shadow: 'shadow-yellow-500/20' },
-  { name: 'HTML', short: 'Ht', cat: 'Markup', col: 'col-span-1 md:col-span-1 lg:col-span-1', row: 'row-span-1', color: 'from-orange-400 to-red-500', textColors: 'text-orange-400', shadow: 'shadow-orange-500/20' },
-  { name: 'CSS', short: 'Cs', cat: 'Styling', col: 'col-span-1 md:col-span-1 lg:col-span-1', row: 'row-span-1', color: 'from-blue-400 to-cyan-500', textColors: 'text-blue-400', shadow: 'shadow-blue-500/20' },
-  { name: 'Shopify', short: 'Sp', cat: 'E-commerce Platform', col: 'col-span-2 md:col-span-2 lg:col-span-2', row: 'row-span-1', color: 'from-emerald-400 to-green-600', textColors: 'text-emerald-400', shadow: 'shadow-emerald-500/20' },
+  { name: 'Figma', short: 'Fg', cat: 'UI/UX Design', col: 'col-span-1', row: 'row-span-1', color: 'from-pink-500 to-purple-600', textColors: 'text-pink-400', shadow: 'shadow-pink-500/20' },
+  { name: 'WordPress', short: 'Wp', cat: 'CMS Platform', col: 'col-span-1', row: 'row-span-1', color: 'from-blue-400 to-indigo-600', textColors: 'text-blue-400', shadow: 'shadow-blue-500/20' },
+  { name: 'Shopify', short: 'Sh', cat: 'E-commerce Platform', col: 'col-span-1', row: 'row-span-1', color: 'from-emerald-400 to-green-600', textColors: 'text-emerald-400', shadow: 'shadow-emerald-500/20' },
+  { name: 'JavaScript', short: 'Js', cat: 'Core Language', col: 'col-span-1', row: 'row-span-1', color: 'from-yellow-400 to-amber-600', textColors: 'text-yellow-400', shadow: 'shadow-yellow-500/20' },
+  { name: 'WooCommerce', short: 'Wo', cat: 'E-commerce', col: 'col-span-1', row: 'row-span-1', color: 'from-purple-400 to-indigo-600', textColors: 'text-purple-400', shadow: 'shadow-purple-500/20' },
+  { name: 'Elementor', short: 'El', cat: 'Page Builder', col: 'col-span-1', row: 'row-span-1', color: 'from-rose-400 to-pink-600', textColors: 'text-rose-400', shadow: 'shadow-rose-500/20' },
+  { name: 'HTML', short: 'Ht', cat: 'Markup', col: 'col-span-1', row: 'row-span-1', color: 'from-orange-400 to-red-500', textColors: 'text-orange-400', shadow: 'shadow-orange-500/20' },
+  { name: 'CSS', short: 'Cs', cat: 'Styling', col: 'col-span-1', row: 'row-span-1', color: 'from-blue-400 to-cyan-500', textColors: 'text-blue-400', shadow: 'shadow-blue-500/20' },
 ];
 
 const marqueeText = [
@@ -168,8 +164,8 @@ export default function TechArsenal() {
           </motion.p>
         </div>
 
-        {/* Asymmetrical Bento Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 lg:gap-6 perspective-[2000px]">
+        {/* Tech Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 perspective-[2000px]">
           {tools.map((tool, i) => (
             <TiltCard key={tool.name} tool={tool} index={i} />
           ))}

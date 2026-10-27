@@ -66,7 +66,7 @@ export default function EcommerceDevelopmentPage() {
     {
       name: 'Custom Headless Commerce',
       tag: 'Best for Enterprise Scale & Apps',
-      desc: 'Decoupled frontend built on React/Next.js paired with an API-first commerce engine (Shopify Storefront API, Medusa, or custom Node backend).',
+      desc: 'Decoupled frontend paired with an API-first commerce engine (Shopify Storefront API, Medusa, or custom Node backend).',
       bestFor: 'Enterprise brands demanding sub-300ms page transitions, custom mobile apps, and complex multi-region architectures.',
       highlights: ['Ultra-fast sub-second speeds', 'Total frontend UI freedom', 'Omnichannel API delivery', 'Future-proof scalability'],
     },

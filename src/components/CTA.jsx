@@ -27,7 +27,7 @@ export default function CTA() {
             viewport={{ once: true }}
             className="flex items-center justify-center gap-3 mb-6"
           >
-            {['React', 'Figma', 'WordPress', 'Spline', 'Framer'].map((tech, i) => (
+            {['Figma', 'WordPress'].map((tech, i) => (
               <motion.span
                 key={tech}
                 initial={{ opacity: 0, scale: 0.8 }}

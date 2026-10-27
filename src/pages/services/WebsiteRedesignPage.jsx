@@ -41,7 +41,7 @@ export default function WebsiteRedesignPage() {
     { title: 'Flawless Mobile Experience', desc: '100% fluid touch optimization, thumb-friendly navigation, and zero horizontal scroll.' },
     { title: 'Sub-Second Page Performance', desc: 'Optimizing Core Web Vitals to achieve 90+ PageSpeed scores and lightning-quick rendering.' },
     { title: 'High-Converting Action Paths', desc: 'Strategically placed CTAs, quick WhatsApp bridges, and low-friction contact funnels.' },
-    { title: 'Modern Technical Foundation', desc: 'Replacing antiquated code with clean semantic HTML5, modern React/WordPress, and edge CDNs.' },
+    { title: 'Modern Technical Foundation', desc: 'Replacing antiquated code with clean semantic HTML5, modern WordPress, and edge CDNs.' },
     { title: 'Rigorous SEO Migration', desc: 'Protecting your accumulated Google authority with complete 301 redirect architecture.' },
   ];
 

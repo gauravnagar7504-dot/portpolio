@@ -47,7 +47,6 @@ export default function HomePage() {
     ],
     knowsAbout: [
       'Website Design & UI/UX',
-      'React & Tailwind Development',
       'High-Speed Web Architecture',
       'Conversion Rate Optimization',
       'Luxury Brand Storytelling',

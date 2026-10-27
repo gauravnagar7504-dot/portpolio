@@ -8,7 +8,7 @@ import { blogPosts } from '../data/blog-posts';
 export default function BlogListPage() {
   const [activeCategory, setActiveCategory] = useState('All');
 
-  const categories = ['All', 'Pricing & Business', 'Design & UX', 'Hospitality', 'Web Trends'];
+  const categories = ['All', 'Website Development', 'Pricing & Business', 'Design & UX', 'Hospitality', 'Web Trends'];
 
   const filteredPosts =
     activeCategory === 'All'

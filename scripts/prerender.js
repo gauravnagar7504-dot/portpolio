@@ -133,10 +133,24 @@ const routes = [
   },
   // Blog posts
   {
+    path: 'blog/how-to-choose-website-development-company',
+    title: 'How to Choose the Right Website Development Company for Your Business | Dynamic Designing',
+    description: 'Learn how to choose the right website development company for your business. Compare experience, portfolio, technology, pricing, process, SEO, support and ownership.',
+    canonical: 'https://www.dynamicdesigninng.com/blog/how-to-choose-website-development-company',
+    ogType: 'article',
+  },
+  {
+    path: 'blog/website-development-cost-india',
+    title: 'Website Development Cost in India 2026: Complete Pricing Guide | Dynamic Designing',
+    description: 'How much does website development cost in India in 2026? Explore website pricing, development types, features, timelines and factors that affect the final cost.',
+    canonical: 'https://www.dynamicdesigninng.com/blog/website-development-cost-india',
+    ogType: 'article',
+  },
+  {
     path: 'blog/how-much-does-a-website-cost-in-india-2026',
-    title: 'How Much Does a Professional Website Cost in India? (2026 Pricing Guide) | Dynamic Designing',
-    description: 'Discover the real cost of building a professional website in India in 2026. Detailed breakdown of freelancer rates, agency packages, and hidden fees.',
-    canonical: 'https://www.dynamicdesigninng.com/blog/how-much-does-a-website-cost-in-india-2026',
+    title: 'Website Development Cost in India 2026: Complete Pricing Guide | Dynamic Designing',
+    description: 'How much does website development cost in India in 2026? Explore website pricing, development types, features, timelines and factors that affect the final cost.',
+    canonical: 'https://www.dynamicdesigninng.com/blog/website-development-cost-india',
     ogType: 'article',
   },
   {

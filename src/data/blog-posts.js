@@ -1,17 +1,31 @@
 export const blogPosts = [
   {
-    slug: 'how-much-does-a-website-cost-in-india-2026',
-    title: 'How Much Does a Professional Website Cost in India? (2026 Pricing Guide)',
-    description: 'Discover the real cost of building a professional website in India in 2026. Detailed breakdown of freelancer rates, agency packages, and hidden fees.',
-    date: 'September 5, 2026',
-    isoDate: '2026-09-05',
-    author: 'Gaurav Nagar',
-    authorRole: 'Founder & Lead Designer',
-    category: 'Pricing & Business',
-    readTime: '7 min read',
-    tags: ['Pricing', 'Web Design Cost', 'India Business', 'ROI'],
-    keywords: 'website cost in india, web design pricing india 2026, professional website development cost',
-    excerpt: 'Building a website is one of the highest ROI investments for any modern business. But pricing in India ranges from ₹5,000 to ₹5,00,000+. Here is an honest breakdown of what you actually get at each tier.',
+    slug: 'how-to-choose-website-development-company',
+    title: 'How to Choose the Right Website Development Company for Your Business',
+    description: 'Learn how to choose the right website development company for your business. Compare experience, portfolio, technology, pricing, process, SEO, support and ownership.',
+    date: 'September 2026',
+    isoDate: '2026-09-12',
+    author: 'Dynamic Designing',
+    authorRole: 'Web Design & Engineering Studio',
+    category: 'Website Development',
+    readTime: '10–12 min read',
+    tags: ['Web Agency', 'Website Development Company', 'Vendor Selection', 'B2B', 'Due Diligence'],
+    keywords: 'how to choose a website development company, website development company, web development company, best website development company, how to hire a web developer, how to choose a web development agency',
+    excerpt: 'Choosing a website development company is not simply about finding someone who can build a website. The right development partner should understand your business goals, users, technology requirements and long-term plans.',
+  },
+  {
+    slug: 'website-development-cost-india',
+    title: 'Website Development Cost in India in 2026: Complete Pricing Guide',
+    description: 'How much does website development cost in India in 2026? Explore website pricing, development types, features, timelines and factors that affect the final cost.',
+    date: 'September 2026',
+    isoDate: '2026-09-01',
+    author: 'Dynamic Designing',
+    authorRole: 'Web Design & Engineering Studio',
+    category: 'Website Development',
+    readTime: '10–12 min read',
+    tags: ['Pricing', 'Website Development Cost', 'India Business', 'Custom Web', 'ROI'],
+    keywords: 'website development cost in India, website development cost India 2026, website development price in India, website design cost in India, business website cost in India, professional website development cost',
+    excerpt: 'How much does it really cost to build a website in India in 2026? The answer depends on the type of website, design requirements, features, technology, integrations and level of customization.',
     sections: [
       {
         heading: 'The Indian Web Development Pricing Landscape in 2026',
@@ -27,7 +41,7 @@ Why the massive discrepancy? Because a "website" can mean anything from a slow, 
 Best for: Personal hobby blogs or very early-stage small tests. Usually built on basic Elementor or Wix templates. Pros: Low initial cost. Cons: Slow loading speed, zero custom branding, generic stock appearance, and fragile plugins that break often.
 
 • Tier 2: Professional Boutique Studios (₹35,000 - ₹95,000)
-Best for: Growing businesses, clinics, salons, boutique hotels, and service firms looking to build authority. Built with modern frameworks (React, Tailwind, Next.js). Pros: 95+ Google PageSpeed score, bespoke luxury UI/UX, mobile optimization, SEO foundation, and high-conversion architecture.
+Best for: Growing businesses, clinics, salons, boutique hotels, and service firms looking to build authority. Built with modern, bespoke web architecture. Pros: 95+ Google PageSpeed score, bespoke luxury UI/UX, mobile optimization, SEO foundation, and high-conversion architecture.
 
 • Tier 3: Enterprise Agency Builds (₹1,50,000 - ₹5,00,000+)
 Best for: Large corporations, multi-vendor marketplaces, complex SaaS apps with extensive custom databases and backend architectures.`
@@ -73,7 +87,7 @@ Look for:
 How to fix it:
 - Convert heavy PNGs and JPEGs to modern WebP or AVIF formats.
 - Eliminate heavy bloated theme builders with hundreds of unused scripts.
-- Use modern lightweight stacks like React, Vite, and Tailwind CSS.`
+- Use clean, lightweight code and modern performance optimization.`
       },
       {
         heading: 'Mistake 2: The Generic "Template Look"',
@@ -154,8 +168,8 @@ Luxury hospitality is about emotional resonance. Guests don't book a bed; they b
     authorRole: 'Founder & Lead Designer',
     category: 'Web Trends',
     readTime: '5 min read',
-    tags: ['Web Trends 2026', 'Dark Mode UI', 'Micro Interactions', 'Framer Motion'],
-    keywords: 'web design trends 2026, modern ui design, dark luxury website design, framer motion animation',
+    tags: ['Web Trends 2026', 'Dark Mode UI', 'Micro Interactions', 'Physics-Based Motion'],
+    keywords: 'web design trends 2026, modern ui design, dark luxury website design, kinetic ui animation',
     excerpt: 'The web has evolved beyond flat minimalism. In 2026, luxury brands are embracing depth, dark aesthetic canvases, subtle luminescent accents, and kinetic fluid interactions.',
     sections: [
       {
@@ -166,7 +180,7 @@ Dark themes reduce eye strain, convey exclusivity, and make photography pop with
       },
       {
         heading: '2. Kinetic UI and Physics-Based Motion',
-        content: `Static pages feel lifeless. Using modern animation libraries like Framer Motion, elements now glide onto the screen with natural spring damping, hover cards elevate with smooth 3D perspective, and buttons emit subtle glow auras.
+        content: `Static pages feel lifeless. Using modern physics-based motion systems, elements now glide onto the screen with natural spring damping, hover cards elevate with smooth 3D perspective, and buttons emit subtle glow auras.
         
 The key in 2026 is subtlety: animation should enhance usability and delight the user, never distract or cause lag.`
       },

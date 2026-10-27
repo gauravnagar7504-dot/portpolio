@@ -34,7 +34,7 @@ export default function WordpressDevelopmentPage() {
     { title: 'Custom Theme Development', desc: 'Zero dependency on bloated pre-packaged marketplace themes. Clean PHP, modern CSS, and Gutenberg blocks.' },
     { title: 'WooCommerce Online Stores', desc: 'Customizable shopping carts, product archives, and checkout extensions built for high conversion.' },
     { title: 'Elementor & Block Development', desc: 'Flexible visual editing setups using lightweight Elementor builds or native WordPress Full Site Editing.' },
-    { title: 'Website Migration to WordPress', desc: 'Seamless content migration from Wix, Squarespace, Webflow, or legacy Joomla with zero link breakage.' },
+    { title: 'Website Migration to WordPress', desc: 'Seamless content migration from Wix, Squarespace, or legacy Joomla with zero link breakage.' },
     { title: 'Speed & Core Web Vitals Optimization', desc: 'Dramatically lowering TTFB, configuring Redis caching, script deferral, and WebP compression.' },
     { title: 'WordPress Security Hardening', desc: 'Two-factor authentication, XML-RPC disabling, database prefix hardening, and automated malware firewalls.' },
     { title: 'Maintenance & Version Care', desc: 'Staging environment testing for core and plugin updates so your live site never encounters downtime.' },

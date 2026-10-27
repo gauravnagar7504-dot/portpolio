@@ -420,7 +420,7 @@ export default function WebsiteDevelopmentPage() {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 text-xs mb-3">
                   <span className="text-white/60 font-medium">Hospitality & Luxury Stays</span>
                   <span className="text-neon-blue font-mono text-[11px] self-start sm:self-auto px-2 py-0.5 rounded bg-neon-blue/10 border border-neon-blue/20">
-                    React · Tailwind · Booking
+                    Booking
                   </span>
                 </div>
                 <h3 className="font-display font-700 text-xl text-white mb-2">The Aravali Palace</h3>

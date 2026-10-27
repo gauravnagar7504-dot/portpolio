@@ -126,8 +126,20 @@
 
   <!-- High-Traffic Strategic Blog Posts -->
   <url>
+    <loc>https://www.dynamicdesigninng.com/blog/how-to-choose-website-development-company/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dynamicdesigninng.com/blog/website-development-cost-india/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://www.dynamicdesigninng.com/blog/how-much-does-a-website-cost-in-india-2026</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
