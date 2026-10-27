@@ -6,15 +6,72 @@ import {
 import { Link, useLocation } from 'react-router-dom';
 import { servicesData } from '../data/servicesData';
 
-const navIcons = {
-  'website-development': Globe,
-  'custom-website-development': Code2,
-  'wordpress-development': Layers,
-  'shopify-development': ShoppingBag,
-  'ecommerce-development': ShoppingCart,
-  'website-redesign': RefreshCw,
-  'ui-ux-design': Palette,
-};
+const serviceDropdownItems = [
+  {
+    id: 'website-development',
+    title: 'Website Development',
+    desc: 'Fast, responsive business websites',
+    url: '/services/website-development',
+    icon: Globe,
+    color: 'text-sky-400',
+  },
+  {
+    id: 'shopify-development',
+    title: 'Shopify Development',
+    desc: 'High-converting online stores',
+    url: '/services/shopify-development',
+    icon: ShoppingBag,
+    color: 'text-amber-400',
+  },
+  {
+    id: 'custom-website-development',
+    title: 'Custom Development',
+    desc: 'Purpose-built scalable platforms',
+    url: '/services/custom-website-development',
+    icon: Code2,
+    color: 'text-emerald-400',
+  },
+  {
+    id: 'ecommerce-development',
+    title: 'E-commerce Solutions',
+    desc: 'Complete shopping architectures',
+    url: '/services/ecommerce-development',
+    icon: ShoppingCart,
+    color: 'text-rose-400',
+  },
+  {
+    id: 'wordpress-development',
+    title: 'WordPress Development',
+    desc: 'Scalable CMS with custom themes',
+    url: '/services/wordpress-development',
+    icon: Layers,
+    color: 'text-purple-400',
+  },
+  {
+    id: 'website-redesign',
+    title: 'Website Redesign',
+    desc: 'Modernize speed & conversions',
+    url: '/services/website-redesign',
+    icon: RefreshCw,
+    color: 'text-cyan-400',
+  },
+  {
+    id: 'ui-ux-design',
+    title: 'UI/UX Design',
+    desc: 'Strategic wireframes & systems',
+    url: '/services/ui-ux-design',
+    icon: Palette,
+    color: 'text-pink-400',
+  },
+  {
+    id: 'all-services',
+    title: 'All Services',
+    desc: 'Explore full capabilities & scope',
+    url: '/services',
+    icon: ArrowRight,
+    color: 'text-neon-blue',
+  },
+];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -108,89 +165,46 @@ export default function Navbar() {
                 />
               </button>
 
-              {/* Desktop Mega Menu Dropdown */}
+              {/* Desktop Services Dropdown Popover */}
               <div
-                className={`absolute top-full left-1/2 -translate-x-1/2 w-[650px] pt-3 z-50 transition-all duration-200 ${
+                className={`absolute top-full -left-6 w-[560px] pt-3.5 z-50 transition-all duration-200 ${
                   servicesDropdownOpen
                     ? 'opacity-100 translate-y-0 pointer-events-auto visible'
                     : 'opacity-0 translate-y-2 pointer-events-none invisible'
                 }`}
               >
-                <div className="rounded-2xl border border-white/15 bg-[#0b0e1b] shadow-[0_30px_90px_rgba(0,0,0,0.98)] overflow-hidden">
-                  {/* Dropdown Header */}
-                  <div className="bg-[#070913] px-4 py-2.5 border-b border-white/10 flex items-center justify-between text-[11px] font-mono">
-                    <span className="text-white/50 uppercase tracking-wider">Web Design & Engineering</span>
-                    <span className="text-neon-blue font-semibold">7 Specialized Services</span>
-                  </div>
+                <div className="relative rounded-2xl border border-white/10 bg-[#0e1017]/95 backdrop-blur-2xl p-6 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95),0_0_1px_1px_rgba(255,255,255,0.06)]">
+                  {/* Upward Pointer Arrow / Beak */}
+                  <div className="absolute -top-[7px] left-11 w-3.5 h-3.5 bg-[#0e1017] border-t border-l border-white/10 rotate-45 rounded-tl-[2px]" />
 
                   {/* 2-Column Services Grid */}
-                  <div className="p-3 grid grid-cols-2 gap-2 bg-[#0b0e1b]">
-                    {servicesData.map((service) => {
-                      const Icon = navIcons[service.id] || Globe;
-                      const isActive = location.pathname === service.url;
+                  <div className="grid grid-cols-2 gap-x-8 gap-y-5 relative z-10">
+                    {serviceDropdownItems.map((item) => {
+                      const Icon = item.icon;
+                      const isActive = location.pathname === item.url;
                       return (
                         <Link
-                          key={service.id}
-                          to={service.url}
+                          key={item.id}
+                          to={item.url}
                           onClick={() => setServicesDropdownOpen(false)}
-                          className={`flex items-start gap-3 p-3 rounded-xl border transition-all ${
-                            isActive
-                              ? 'bg-neon-blue/15 border-neon-blue/40 text-white shadow-[0_0_15px_rgba(79,142,247,0.25)]'
-                              : 'bg-white/[0.02] border-white/5 hover:border-white/15 hover:bg-white/[0.05] text-white/80 hover:text-white'
-                          }`}
+                          className="group flex items-start gap-3.5 p-2 -m-2 rounded-xl hover:bg-white/[0.04] transition-all duration-150 cursor-pointer"
                         >
-                          <div className="w-8 h-8 rounded-lg bg-neon-blue/10 border border-neon-blue/25 flex items-center justify-center text-neon-blue shrink-0 mt-0.5">
-                            <Icon size={16} />
+                          <div className={`mt-0.5 shrink-0 ${item.color} group-hover:scale-110 transition-transform duration-200`}>
+                            <Icon size={20} strokeWidth={1.8} />
                           </div>
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-1.5">
-                              <span className="text-[10px] font-mono text-neon-blue/70">{service.number}</span>
-                              <p className="text-xs font-display font-bold leading-tight text-white">
-                                {service.title}
-                              </p>
-                            </div>
-                            <p className="text-[11px] text-white/50 line-clamp-1 mt-1 leading-snug">
-                              {service.shortDescription}
+                          <div className="min-w-0">
+                            <p className={`text-[14px] font-semibold leading-tight transition-colors ${
+                              isActive ? 'text-neon-blue' : 'text-white group-hover:text-neon-blue'
+                            }`}>
+                              {item.title}
+                            </p>
+                            <p className="text-[12px] text-white/50 group-hover:text-white/70 transition-colors mt-1 leading-snug">
+                              {item.desc}
                             </p>
                           </div>
                         </Link>
                       );
                     })}
-
-                    {/* 8th Slot: Quick Consultation Box */}
-                    <div className="flex flex-col justify-between p-3 rounded-xl bg-gradient-to-br from-neon-blue/10 via-neon-purple/10 to-transparent border border-neon-blue/20">
-                      <div>
-                        <span className="text-[10px] font-mono uppercase text-neon-blue font-semibold block mb-0.5">
-                          Direct Consultation
-                        </span>
-                        <p className="text-xs text-white/80 font-medium leading-tight">
-                          Need a custom quote or technical advice?
-                        </p>
-                      </div>
-                      <Link
-                        to="/contact"
-                        onClick={() => setServicesDropdownOpen(false)}
-                        className="inline-flex items-center gap-1 text-[11px] font-display font-semibold text-neon-blue hover:text-white transition-colors mt-2"
-                      >
-                        <span>Talk to Lead Developer</span>
-                        <ArrowRight size={12} />
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Mega Menu Footer */}
-                  <div className="bg-[#070913] px-4 py-2.5 border-t border-white/10 flex items-center justify-between">
-                    <span className="text-[11px] text-white/40">
-                      Custom code · Sub-second speeds · Zero template bloat
-                    </span>
-                    <Link
-                      to="/services"
-                      onClick={() => setServicesDropdownOpen(false)}
-                      className="inline-flex items-center gap-1.5 text-xs font-display font-bold text-neon-blue hover:text-white transition-colors"
-                    >
-                      <span>View All Services</span>
-                      <ArrowRight size={13} />
-                    </Link>
                   </div>
                 </div>
               </div>
